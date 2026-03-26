@@ -1,37 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Main Pages -->
   <url>
     <loc>https://www.gerhardprager.eu/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/"/>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/eingriffe</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/eingriffe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/procedures"/>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/ueber-mich</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/ueber-mich"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/about"/>
     <lastmod>2026-03-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/wissenschaft</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/wissenschaft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/science"/>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/presse</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/presse"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/press"/>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/contact"/>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/magenbypass-wien</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/schlauchmagen-wien</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/adipositas-operation-krankenkasse</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/bariatric-surgery-vienna</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/bariatric-surgery-vienna"/>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/best-bariatric-surgeon-vienna</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/best-bariatric-surgeon-vienna"/>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
