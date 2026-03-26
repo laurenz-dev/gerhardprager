@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Redirect old PHP URLs to new clean URLs
+RewriteRule ^index\.php/de/?$ / [R=301,L]
+RewriteRule ^index\.php/en/?$ / [R=301,L]
+RewriteRule ^index\.php/de/person-de/?$ /ueber-mich [R=301,L]
+RewriteRule ^index\.php/en/person-gb/?$ /ueber-mich [R=301,L]
+RewriteRule ^index\.php/de/leistungen(.*)$ /eingriffe [R=301,L]
+RewriteRule ^index\.php/en/leistungen(.*)$ /eingriffe [R=301,L]
+RewriteRule ^index\.php(.*)$ / [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Force www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
