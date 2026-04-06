@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2328">
   <title>Унив.-Проф. Д-р Герхард Прагер — Бариатрическая хирургия Вена | Президент IFSO</title>
   <meta name="description" content="Бывший президент IFSO проф. д-р Герхард Прагер. Более 9 900 операций. Желудочное шунтирование, рукавная гастрэктомия и эндокринная хирургия в Вене. Частная практика Кайзерштрассе.">
   <meta property="og:title" content="Унив.-Проф. Д-р Герхард Прагер — Бариатрическая хирургия Вена">
@@ -153,6 +154,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Перейти к содержанию</a>
 
   <!-- ======================== NAVIGATION ======================== -->
   <header>
@@ -203,7 +205,7 @@
         </li>
         <li><a href="contact.html" class="btn btn-accent nav__cta">Записаться на приём &rarr;</a></li>
       </ul>
-      <button class="nav__menu-btn" id="menuBtn" aria-label="Menu">
+      <button class="nav__menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -211,10 +213,10 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационное меню" aria-hidden="true">
       <div class="mobile-menu__inner">
         <div class="mobile-menu__section">
-          <button class="mobile-menu__toggle" data-target="mobileBariatric">
+          <button class="mobile-menu__toggle" data-target="mobileBariatric" aria-expanded="false">
             Бариатрическая хирургия
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
@@ -229,7 +231,7 @@
           </div>
         </div>
         <div class="mobile-menu__section">
-          <button class="mobile-menu__toggle" data-target="mobileEndocrine">
+          <button class="mobile-menu__toggle" data-target="mobileEndocrine" aria-expanded="false">
             Эндокринная хирургия
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
@@ -254,7 +256,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ======================== HERO ======================== -->
     <section class="hero" id="hero">
@@ -424,7 +426,7 @@
 
         <div class="eingriffe__grid eingriffe__grid--4 fade-up">
           <!-- 1. Gastric Bypass -->
-          <a href="procedures.html#magenbypass" class="eingr-card">
+          <a href="../magenbypass.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 8C18 8 14 8 13 12C12 16 12 20 14 22C16 24 20 24 20 28C20 32 18 38 18 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -438,7 +440,7 @@
           </a>
 
           <!-- 2. Sleeve Gastrectomy -->
-          <a href="procedures.html#schlauchmagen" class="eingr-card">
+          <a href="../schlauchmagen.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 8C22 8 18 8 17 14C16 20 17 24 18 28C19 32 20 38 20 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -452,7 +454,7 @@
           </a>
 
           <!-- 3. Omega-Loop -->
-          <a href="procedures.html#omega-loop" class="eingr-card">
+          <a href="../omega-loop.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8C20 8 16 10 15 16C14 22 16 24 18 26C20 28 22 30 22 34C22 38 20 42 20 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -466,7 +468,7 @@
           </a>
 
           <!-- 4. SADI-S -->
-          <a href="procedures.html#sadi-s" class="eingr-card">
+          <a href="../sadi-s.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 8C22 8 18 10 17 16C16 22 18 24 20 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -482,7 +484,7 @@
 
 
           <!-- 6. BPD/DS -->
-          <a href="procedures.html#bpd-ds" class="eingr-card">
+          <a href="../bpd-ds.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 8C18 8 14 12 14 18C14 24 18 26 20 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -499,7 +501,7 @@
           </a>
 
           <!-- 7. Gastric Balloon -->
-          <a href="procedures.html#magenballon" class="eingr-card">
+          <a href="../magenballon.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8C20 8 16 10 15 16C14 22 16 28 18 32C20 36 20 42 20 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -523,7 +525,7 @@
 
         <div class="eingriffe__grid eingriffe__grid--3 fade-up">
           <!-- 1. Thyroid -->
-          <a href="procedures.html#schilddruese" class="eingr-card">
+          <a href="../schilddruese.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 14V34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
@@ -537,7 +539,7 @@
           </a>
 
           <!-- 2. Parathyroid -->
-          <a href="procedures.html#nebenschilddruese" class="eingr-card">
+          <a href="../nebenschilddruese.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="18" cy="18" r="4" stroke="currentColor" stroke-width="2.5"/>
@@ -556,7 +558,7 @@
           </a>
 
           <!-- 3. Adrenal Gland -->
-          <a href="procedures.html#nebenniere" class="eingr-card">
+          <a href="../nebenniere.html" class="eingr-card">
             <div class="eingr-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 28C12 28 10 24 10 20C10 16 14 14 18 14C22 14 24 16 24 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -911,50 +913,65 @@
     'use strict';
 
     /* ---- NAV SCROLL ---- */
-    const nav = document.getElementById('nav');
-    let lastScroll = 0;
-
-    function handleNavScroll() {
-      const scrollY = window.scrollY;
-      if (scrollY > 80) {
-        nav.classList.add('nav--solid');
-      } else {
-        nav.classList.remove('nav--solid');
-      }
-      lastScroll = scrollY;
-    }
-
-    window.addEventListener('scroll', handleNavScroll, { passive: true });
-    handleNavScroll();
+    var nav = document.getElementById('nav');
 
     /* ---- MOBILE MENU ---- */
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
 
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', function() {
-        const isOpen = mobileMenu.classList.toggle('mobile-menu--open');
+        var isOpen = mobileMenu.classList.toggle('mobile-menu--open');
         menuBtn.classList.toggle('nav__menu-btn--open', isOpen);
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        mobileMenu.setAttribute('aria-hidden', String(!isOpen));
         document.body.classList.toggle('no-scroll', isOpen);
+
+        /* Focus trap: when menu opens, focus first link */
+        if (isOpen) {
+          var firstLink = mobileMenu.querySelector('a, button');
+          if (firstLink) firstLink.focus();
+        }
       });
 
-      // Mobile sub-menu toggles
+      /* Close menu on Escape */
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('mobile-menu--open')) {
+          mobileMenu.classList.remove('mobile-menu--open');
+          menuBtn.classList.remove('nav__menu-btn--open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('no-scroll');
+          menuBtn.focus();
+        }
+      });
+
+      /* Mobile sub-menu toggles */
       document.querySelectorAll('.mobile-menu__toggle').forEach(function(btn) {
         btn.addEventListener('click', function() {
-          const targetId = this.getAttribute('data-target');
-          const target = document.getElementById(targetId);
+          var targetId = this.getAttribute('data-target');
+          var target = document.getElementById(targetId);
           if (target) {
-            target.classList.toggle('mobile-menu__sub--open');
-            this.classList.toggle('mobile-menu__toggle--open');
+            var isOpen = target.classList.toggle('mobile-menu__sub--open');
+            this.classList.toggle('mobile-menu__toggle--open', isOpen);
+            this.setAttribute('aria-expanded', String(isOpen));
           }
         });
       });
     }
 
     /* ---- FADE-UP INTERSECTION OBSERVER ---- */
-    const fadeEls = document.querySelectorAll('.fade-up');
-    if ('IntersectionObserver' in window && fadeEls.length) {
-      const fadeObserver = new IntersectionObserver(function(entries) {
+    var fadeEls = document.querySelectorAll('.fade-up');
+
+    /* Respect prefers-reduced-motion */
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      fadeEls.forEach(function(el) {
+        el.classList.add('fade-up--visible');
+      });
+    } else if ('IntersectionObserver' in window && fadeEls.length) {
+      var fadeObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('fade-up--visible');
@@ -967,7 +984,7 @@
         fadeObserver.observe(el);
       });
 
-      // Fallback: make already-visible elements show immediately
+      /* Fallback: make already-visible elements show immediately */
       setTimeout(function() {
         fadeEls.forEach(function(el) {
           var rect = el.getBoundingClientRect();
@@ -981,16 +998,18 @@
     /* ---- SMOOTH SCROLL ---- */
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
+        var href = this.getAttribute('href');
         if (href === '#') return;
-        const target = document.querySelector(href);
+        var target = document.querySelector(href);
         if (target) {
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Close mobile menu if open
+          /* Close mobile menu if open */
           if (mobileMenu && mobileMenu.classList.contains('mobile-menu--open')) {
             mobileMenu.classList.remove('mobile-menu--open');
             menuBtn.classList.remove('nav__menu-btn--open');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
             document.body.classList.remove('no-scroll');
           }
         }
@@ -1003,17 +1022,17 @@
     }
 
     function animateCounter(el) {
-      const target = parseInt(el.getAttribute('data-count'), 10);
+      var target = parseInt(el.getAttribute('data-count'), 10);
       if (isNaN(target)) return;
 
-      const duration = 2000;
-      const start = performance.now();
+      var duration = 2000;
+      var start = performance.now();
 
       function update(now) {
-        const elapsed = now - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = easeOutCubic(progress);
-        const current = Math.round(eased * target);
+        var elapsed = now - start;
+        var progress = Math.min(elapsed / duration, 1);
+        var eased = easeOutCubic(progress);
+        var current = Math.round(eased * target);
 
         el.textContent = current.toLocaleString('ru-RU');
 
@@ -1025,9 +1044,9 @@
       requestAnimationFrame(update);
     }
 
-    const counterEls = document.querySelectorAll('[data-count]');
+    var counterEls = document.querySelectorAll('[data-count]');
     if ('IntersectionObserver' in window && counterEls.length) {
-      const counterObserver = new IntersectionObserver(function(entries) {
+      var counterObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             animateCounter(entry.target);
@@ -1041,63 +1060,72 @@
       });
     }
 
-    /* ---- HERO PARALLAX ---- */
-    const heroPhoto = document.querySelector('.hero__photo img');
-    if (heroPhoto) {
-      window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
-        const heroHeight = document.querySelector('.hero').offsetHeight;
-        if (scrollY < heroHeight) {
-          const offset = scrollY * 0.12;
-          heroPhoto.style.transform = 'translateY(' + offset + 'px)';
-        }
-      }, { passive: true });
-    }
-
-    /* ---- MURAL PARALLAX ---- */
-    const muralImg = document.querySelector('.mural__image');
-    const muralSection = document.querySelector('.mural');
-    if (muralImg && muralSection) {
-      window.addEventListener('scroll', function() {
-        const rect = muralSection.getBoundingClientRect();
-        const windowH = window.innerHeight;
-        if (rect.top < windowH && rect.bottom > 0) {
-          const progress = (windowH - rect.top) / (windowH + rect.height);
-          const offset = (progress - 0.5) * 60;
-          muralImg.style.transform = 'translateY(' + offset + 'px) scale(1.1)';
-        }
-      }, { passive: true });
-    }
-
-    /* ---- ANATOMY PARALLAX ---- */
+    /* ---- CONSOLIDATED SCROLL HANDLER (Performance: single listener) ---- */
+    var heroPhoto = document.querySelector('.hero__photo img');
+    var heroSection = document.querySelector('.hero');
+    var muralImg = document.querySelector('.mural__image');
+    var muralSection = document.querySelector('.mural');
     var anatomySvg = document.querySelector('.eingriffe__anatomy');
-    if (anatomySvg) {
-      window.addEventListener('scroll', function() {
-        var rect = anatomySvg.parentElement.getBoundingClientRect();
-        var windowH = window.innerHeight;
-        if (rect.top < windowH && rect.bottom > 0) {
-          var progress = (windowH - rect.top) / (windowH + rect.height);
-          var offset = (progress - 0.5) * 80;
-          anatomySvg.style.transform = 'translateY(' + offset + 'px)';
-        }
-      }, { passive: true });
-    }
+    var anatomyParent = anatomySvg ? anatomySvg.parentElement : null;
+    var journeySection = document.querySelector('.journey');
+    var journeyFill = document.getElementById('journeyFill');
 
-    /* ---- JOURNEY PROGRESS BAR ---- */
-    const journeySection = document.querySelector('.journey');
-    const journeyFill = document.getElementById('journeyFill');
-    if (journeySection && journeyFill) {
-      window.addEventListener('scroll', function() {
-        const rect = journeySection.getBoundingClientRect();
-        const windowH = window.innerHeight;
-        if (rect.top < windowH && rect.bottom > 0) {
-          const sectionVisible = windowH - rect.top;
-          const sectionTotal = rect.height + windowH;
-          const progress = Math.min(Math.max(sectionVisible / sectionTotal, 0), 1);
+    function onScroll() {
+      var scrollY = window.scrollY;
+      var windowH = window.innerHeight;
+
+      /* Nav scroll state */
+      if (nav) {
+        if (scrollY > 80) {
+          nav.classList.add('nav--solid');
+        } else {
+          nav.classList.remove('nav--solid');
+        }
+      }
+
+      /* Skip parallax if user prefers reduced motion */
+      if (prefersReducedMotion) return;
+
+      /* Hero parallax — offset factor: 0.12 */
+      if (heroPhoto && heroSection) {
+        var heroHeight = heroSection.offsetHeight;
+        if (scrollY < heroHeight) {
+          heroPhoto.style.transform = 'translateY(' + (scrollY * 0.12) + 'px)';
+        }
+      }
+
+      /* Mural parallax — offset factor: 60 */
+      if (muralImg && muralSection) {
+        var muralRect = muralSection.getBoundingClientRect();
+        if (muralRect.top < windowH && muralRect.bottom > 0) {
+          var muralProgress = (windowH - muralRect.top) / (windowH + muralRect.height);
+          muralImg.style.transform = 'translateY(' + ((muralProgress - 0.5) * 60) + 'px) scale(1.1)';
+        }
+      }
+
+      /* Anatomy SVG parallax — offset factor: 80 */
+      if (anatomySvg && anatomyParent) {
+        var anatRect = anatomyParent.getBoundingClientRect();
+        if (anatRect.top < windowH && anatRect.bottom > 0) {
+          var anatProgress = (windowH - anatRect.top) / (windowH + anatRect.height);
+          anatomySvg.style.transform = 'translateY(' + ((anatProgress - 0.5) * 80) + 'px)';
+        }
+      }
+
+      /* Journey progress bar */
+      if (journeySection && journeyFill) {
+        var journeyRect = journeySection.getBoundingClientRect();
+        if (journeyRect.top < windowH && journeyRect.bottom > 0) {
+          var sectionVisible = windowH - journeyRect.top;
+          var sectionTotal = journeyRect.height + windowH;
+          var progress = Math.min(Math.max(sectionVisible / sectionTotal, 0), 1);
           journeyFill.style.width = (progress * 100) + '%';
         }
-      }, { passive: true });
+      }
     }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 
   })();
   </script>

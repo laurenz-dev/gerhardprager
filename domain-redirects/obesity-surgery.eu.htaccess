@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# 301 Redirect: obesity-surgery.eu -> gerhardprager.eu
+# English keyword domain -> English blog content
+
+# Homepage -> English bariatric surgery guide
+RewriteRule ^$ https://www.gerhardprager.eu/blog/bariatric-surgery-vienna [R=301,L]
+
+# Alles andere -> Homepage
+RewriteRule ^(.*)$ https://www.gerhardprager.eu/$1 [R=301,L]

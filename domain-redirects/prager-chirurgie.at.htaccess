@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# 301 Redirect: prager-chirurgie.at -> gerhardprager.eu
+# Brand domain -> Hauptseite
+
+RewriteRule ^(.*)$ https://www.gerhardprager.eu/$1 [R=301,L]

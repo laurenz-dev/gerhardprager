@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# 301 Redirect: laparoscopy-vienna.at -> gerhardprager.eu
+# International medical tourism keyword
+
+RewriteRule ^$ https://www.gerhardprager.eu/blog/bariatric-surgery-vienna [R=301,L]
+RewriteRule ^(.*)$ https://www.gerhardprager.eu/$1 [R=301,L]

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2328">
   <title>Procedures &amp; Methods — Bariatric Surgery Vienna | Univ.-Prof. Dr. Gerhard Prager</title>
   <meta name="description" content="Gastric bypass, sleeve gastrectomy, SADI-S, omega-loop & more. 100% laparoscopic. 9,900+ procedures by Univ.-Prof. Dr. Gerhard Prager in Vienna.">
   <meta property="og:title" content="Procedures & Methods — Bariatric Surgery Vienna | Univ.-Prof. Dr. Gerhard Prager">
@@ -106,6 +107,8 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
 
   <!-- NAVIGATION -->
   <nav class="nav nav--hero" id="nav">
@@ -151,12 +154,12 @@
       </li>
       <li><a href="contact.html" class="btn btn-accent nav__cta">Book Appointment &rarr;</a></li>
     </ul>
-    <button class="nav__menu-btn" id="menuBtn" aria-label="Menu">
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-hidden="true" aria-label="Navigation menu">
     <div class="mobile-menu__header">Bariatric Surgery</div>
     <div class="mobile-menu__sub">
       <a href="procedures.html#bariatrisch">Gastric Bypass</a>
@@ -181,6 +184,7 @@
   </div>
 
   <!-- PAGE HERO -->
+  <main id="main-content">
   <section class="page-hero">
     <div class="container">
       <p class="overline fade-up">PROCEDURES &amp; METHODS</p>
@@ -477,6 +481,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -538,18 +544,31 @@
   </footer>
 
   <script>
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // === NAV ===
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('nav--solid', window.scrollY > 50));
 
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      var isOpen = mobileMenu.classList.contains('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', false);
+      mobileMenu.setAttribute('aria-hidden', true);
+    }));
 
     // === FADE-UP ANIMATIONS ===
     var fadeEls = document.querySelectorAll('.fade-up');
-    if ('IntersectionObserver' in window && fadeEls.length) {
+    if (prefersReducedMotion) {
+      fadeEls.forEach(function(el) { el.classList.add('fade-up--visible'); });
+    } else if ('IntersectionObserver' in window && fadeEls.length) {
       var fadeObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
@@ -581,7 +600,7 @@
         if (href === '#') return;
         e.preventDefault();
         const t = document.querySelector(href);
-        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (t) t.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
       });
     });
 

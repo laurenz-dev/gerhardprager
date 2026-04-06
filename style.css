@@ -97,6 +97,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+/* --- FOCUS STYLES (Accessibility) --- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
 
 /* ============================================================
    UTILITY
@@ -177,8 +188,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FIX: HTML uses .btn--large, not .btn-accent--large */
 .btn--large {
-  padding: 18px 48px;
-  font-size: 15px;
+  padding: 20px 56px;
+  font-size: 16px;
 }
 
 .btn-outline-white {
@@ -732,8 +743,8 @@ h1, h2, h3, h4, h5, h6 {
    EMPATHY STATEMENT
    ============================================================ */
 .empathy {
-  background: var(--bg-white);
-  padding: 6rem 0;
+  background: var(--bg-alt);
+  padding: 8rem 0;
   text-align: center;
 }
 
@@ -748,7 +759,7 @@ h1, h2, h3, h4, h5, h6 {
 /* FIX: HTML uses .empathy__headline, not .empathy h2 */
 .empathy__headline {
   font-family: var(--font-heading);
-  font-size: clamp(28px, 3.5vw, 44px);
+  font-size: clamp(32px, 4vw, 52px);
   font-weight: 400;
   color: var(--text);
   line-height: 1.3;
@@ -794,7 +805,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .trust__stat + .trust__stat {
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* FIX: HTML uses .trust__number, not .trust-bar__number */
@@ -1039,6 +1050,15 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
   line-height: 1.25;
   margin-bottom: 0.5rem;
+}
+
+.eingr-card__desc-short {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  max-width: 200px;
 }
 
 /* FIX: HTML uses span with text arrow, not SVG. Style as text element */
@@ -1656,7 +1676,9 @@ h1, h2, h3, h4, h5, h6 {
    ============================================================ */
 .kasseninfo {
   background: var(--dark);
-  padding: 3rem 0;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(122, 158, 184, 0.2);
+  border-bottom: 1px solid rgba(122, 158, 184, 0.2);
 }
 
 .kasseninfo__inner {
@@ -2535,12 +2557,19 @@ img.mural__image {
 .bio-section__image {
   border-radius: var(--radius);
   overflow: hidden;
+  position: relative;
 }
 
 .bio-section__image img {
   width: 100%;
   height: auto;
   display: block;
+  -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%),
+                      linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-composite: destination-in;
+  mask-image: linear-gradient(to right, black 70%, transparent 100%),
+              linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .bio-section__content .overline {
@@ -2812,7 +2841,8 @@ img.mural__image {
 .contact-form__group input:focus,
 .contact-form__group select:focus,
 .contact-form__group textarea:focus {
-  outline: none;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
   border-color: var(--accent);
 }
 
@@ -3027,7 +3057,55 @@ img.mural__image {
   display: block;
 }
 
-/* Page Hero with image */
+/* Page Hero with background image (full-width, overlay) */
+.page-hero--bg {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 4rem;
+  overflow: hidden;
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 35, 40, 0.3) 0%,
+    rgba(30, 35, 40, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero--bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero--bg .page-hero__title {
+  text-align: left;
+}
+
+.page-hero--bg .page-hero__subtitle {
+  text-align: left;
+  margin: 0;
+}
+
+/* Page Hero with image (side-by-side grid) */
 .page-hero--image {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3887,5 +3965,507 @@ img.mural__image {
   .page-hero {
     min-height: 30vh;
     padding: 7rem 20px 3rem;
+  }
+}
+
+/* Trust bar: better mobile layout */
+@media (max-width: 768px) {
+  .trust__grid {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .trust__stat {
+    flex: 0 0 calc(50% - 0.75rem);
+    border-left: none !important;
+    padding: 0.5rem;
+  }
+  .trust__stat:nth-child(3) {
+    flex: 0 0 100%;
+  }
+}
+
+
+/* ============================================================
+   ACCESSIBILITY: REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero__scroll { display: none; }
+  .fade-up { opacity: 1 !important; transform: none !important; }
+}
+
+
+/* ============================================================
+   ACCESSIBILITY: SKIP TO CONTENT
+   ============================================================ */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+
+/* ============================================================
+   TOUCH TARGETS & MOBILE IMPROVEMENTS
+   ============================================================ */
+.nav__lang-btn {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu__toggle {
+  min-height: 48px;
+}
+
+.mobile-menu__sub a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu__link {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__links li a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__contact li {
+  min-height: 44px;
+}
+
+.footer__bottom-links a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* ============================================================
+   PERFORMANCE: will-change for parallax elements
+   ============================================================ */
+.hero__photo img {
+  will-change: transform;
+}
+
+
+/* ============================================================
+   PROCEDURE DETAIL PAGES — REDESIGN
+   ============================================================ */
+
+/* Back Link */
+.proc-back {
+  padding: 2rem 0 0;
+}
+
+.proc-back a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s, gap 0.3s;
+}
+
+.proc-back a:hover {
+  color: var(--accent);
+  gap: 10px;
+}
+
+/* Empathy Section (procedure intro) */
+.proc-empathy {
+  background: var(--bg-white);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.proc-empathy__line {
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 auto 2rem;
+}
+
+.proc-empathy__text {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.4;
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+}
+
+.proc-empathy__sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Key Facts Bar */
+.proc-facts {
+  background: var(--dark);
+  padding: 3.5rem 0;
+}
+
+.proc-facts__grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proc-facts__item {
+  flex: 1;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.proc-facts__item + .proc-facts__item {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.proc-facts__value {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.proc-facts__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dark-muted);
+}
+
+/* Content Section (centered, breathable) */
+.proc-content {
+  background: var(--bg);
+  padding: 6rem 0;
+}
+
+.proc-content__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.proc-content__section {
+  margin-bottom: 4rem;
+}
+
+.proc-content__section:last-child {
+  margin-bottom: 0;
+}
+
+.proc-content__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.proc-content__title {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.proc-content__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.proc-content__list {
+  list-style: none;
+  padding: 0;
+}
+
+.proc-content__list li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.proc-content__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* Professor Section (like about section on main page) */
+.proc-professor {
+  background: var(--bg-white);
+  padding: 0;
+  overflow: hidden;
+}
+
+.proc-professor__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+}
+
+.proc-professor__image {
+  overflow: hidden;
+}
+
+.proc-professor__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.proc-professor__content {
+  padding: 4rem clamp(32px, 4vw, 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.proc-professor__overline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.proc-professor__name {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.proc-professor__role {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.proc-professor__cta-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.proc-professor__phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.proc-professor__phone svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
+.proc-professor__phone a {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--accent);
+  transition: opacity 0.3s;
+}
+
+.proc-professor__phone a:hover {
+  opacity: 0.7;
+}
+
+/* Procedure page responsive */
+@media (max-width: 768px) {
+  .proc-facts__grid {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .proc-facts__item {
+    flex: 0 0 calc(50% - 0.75rem);
+    border-left: none !important;
+    padding: 0.5rem;
+  }
+  .proc-facts__item:last-child {
+    flex: 0 0 100%;
+  }
+  .proc-professor__grid {
+    grid-template-columns: 1fr;
+  }
+  .proc-professor__image {
+    height: 300px;
+  }
+  .proc-content {
+    padding: 4rem 0;
+  }
+  .proc-empathy {
+    padding: 4rem 0;
+  }
+}
+
+/* ============================================================
+   PATIENT TESTIMONIAL
+   ============================================================ */
+.testimonial-section {
+  background: var(--bg-white);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.testimonial-section__overline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.testimonial-section__quote {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.45;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.testimonial-section__author {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.testimonial-section__author strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.testimonial-section__result {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* ============================================================
+   MOBILE STICKY PHONE CTA
+   ============================================================ */
+.mobile-phone-sticky {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background: var(--dark);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 998;
+  text-align: center;
+}
+
+.mobile-phone-sticky a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.mobile-phone-sticky a svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+}
+
+@media (max-width: 768px) {
+  .mobile-phone-sticky {
+    display: block;
+  }
+  /* Add bottom padding to body so content isn't hidden behind sticky */
+  body {
+    padding-bottom: 70px;
   }
 }

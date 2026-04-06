@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# 301 Redirect: fettsuchtchirurgie.eu -> gerhardprager.eu
+# Altes Keyword -> Eingriffe-Seite
+
+RewriteRule ^$ https://www.gerhardprager.eu/eingriffe [R=301,L]
+RewriteRule ^(.*)$ https://www.gerhardprager.eu/$1 [R=301,L]

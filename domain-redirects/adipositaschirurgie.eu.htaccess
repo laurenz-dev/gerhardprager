@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# 301 Redirect: adipositaschirurgie.eu -> gerhardprager.eu
+# Leitet ALLE Seiten auf die passende Unterseite um
+
+# Homepage -> Hauptseite Eingriffe (thematisch passend)
+RewriteRule ^$ https://www.gerhardprager.eu/eingriffe [R=301,L]
+
+# Alles andere -> Homepage
+RewriteRule ^(.*)$ https://www.gerhardprager.eu/$1 [R=301,L]

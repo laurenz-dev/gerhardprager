@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fettsuchtchirurgie in Wien - Spezialist: Univ.-Prof. Dr. Gerhard Prager. Bariatrische Chirurgie, Gewichtsreduktionschirurgie. 9900+ Verfahren.">
+    <meta name="keywords" content="Fettsuchtchirurgie, bariatrische Chirurgie Wien, Gewichtsreduktion, Adipositaschirurgie, Prof. Prager">
+    <meta name="author" content="Prof. Dr. Gerhard Prager">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fettsuchtchirurgie.eu">
+    <title>Fettsuchtchirurgie Wien | Prof. Dr. Gerhard Prager | Bariatrische Chirurgie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 0.5rem;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1e3a5f;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2d5a8f;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #ff6b35;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .expertise-card h3 {
+            margin-top: 0;
+        }
+
+        /* Procedures Section */
+        .procedures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .procedure-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .procedure-item h4 {
+            color: #2d5a8f;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Benefits Section */
+        .benefits-list {
+            background: #f0f4f8;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .benefits-list ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Prof. Credentials */
+        .credentials {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .credentials-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .credentials-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+
+        .credentials-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            font-weight: 600;
+            color: #1e3a5f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f0f4f8;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-item h3 {
+            color: #ffa060;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-section .cta-button {
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a2a40;
+            color: #ccc;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #f0f4f8;
+            border-left: 4px solid #ff6b35;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Fettsuchtchirurgie Wien</a>
+            <ul class="nav-links">
+                <li><a href="#info">Information</a></li>
+                <li><a href="#procedures">Verfahren</a></li>
+                <li><a href="#benefits">Vorteile</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fettsuchtchirurgie in Wien</h1>
+            <p>Ihr Spezialist: Univ.-Prof. Dr. Gerhard Prager</p>
+            <p style="font-size: 1.1rem; margin-top: 1rem;">Moderne bariatrische Chirurgie für effektive Gewichtsreduktion</p>
+            <a href="#contact" class="cta-button">Termin vereinbaren</a>
+            <a href="https://gerhardprager.eu" class="cta-button">Mehr auf gerhardprager.eu</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Information Section -->
+        <section id="info">
+            <h2>Was ist Fettsuchtchirurgie?</h2>
+            <p class="section-intro">Fettsuchtchirurgie ist eine moderne medizinische Fachrichtung, die auch als bariatrische Chirurgie oder Adipositaschirurgie bekannt ist. Der Begriff "Fettsuchtchirurgie" ist heute weniger gebräuchlich, bezieht sich aber auf dieselben modernen Verfahren zur chirurgischen Gewichtsreduktion.</p>
+
+            <div class="highlight-box">
+                <h3>Moderne Bariatrische Chirurgie</h3>
+                <p>Heute verwenden wir den Begriff "bariatrische Chirurgie" (vom Griechischen "baros" = Gewicht), um präzise und wissenschaftlich korrekt zu sein. Dies umfasst alle modernen, evidenzbasierten Verfahren zur chirurgischen Gewichtsreduktion, die Prof. Prager anbietet.</p>
+            </div>
+
+            <div class="expertise-grid" style="margin-top: 2rem;">
+                <div class="expertise-card">
+                    <h3>9.900+ Verfahren</h3>
+                    <p>Umfangreiche Erfahrung in bariatrischer und metabolischer Chirurgie mit weltweitem Standard.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>IFSO Weltpräsident</h3>
+                    <p>Führung der International Federation for the Surgery of Obesity and Metabolic Diseases 2023/2024.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>435+ Publikationen</h3>
+                    <p>Extensive Forschung und wissenschaftliche Beiträge zur Adipositaschirurgie.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Wien Spezialist</h3>
+                    <p>Führendes Zentrum für bariatrische und metabolische Chirurgie in Österreich.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Procedures Section -->
+        <section id="procedures">
+            <h2>Bariatrische Verfahren</h2>
+            <p class="section-intro">Prof. Prager bietet alle modernen bariatrischen und metabolischen Verfahren mit minimalinvasiver laparoskopischer Technik an:</p>
+
+            <div class="procedures-grid">
+                <div class="procedure-item">
+                    <h4>Magenbypass (Gastric Bypass)</h4>
+                    <p>Kombiniert Magenverkleinerung und Darmumleitung für optimale Gewichtsreduktion.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Magenhülle (Gastric Sleeve)</h4>
+                    <p>Der Magen wird auf etwa 20% seiner ursprünglichen Größe reduziert.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Duodenales Bypass-Verfahren</h4>
+                    <p>Fortgeschrittenes Verfahren für besondere Indikationen mit hoher Effektivität.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Magenband</h4>
+                    <p>Verstellbares Silikonband zur graduellen Gewichtsreduktion.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Revisionsverfahren</h4>
+                    <p>Korrektur und Verbesserung früherer bariatrischer Operationen.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Metabolische Chirurgie</h4>
+                    <p>Spezielle Verfahren zur Verbesserung von Diabetes und Stoffwechsel.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits">
+            <h2>Vorteile der Bariatrischen Chirurgie</h2>
+            <div class="benefits-list">
+                <ul>
+                    <li><strong>Effektive Gewichtsreduktion:</strong> Nachhaltiger Gewichtsverlust von 50-80% des Übergewichts innerhalb von 12-24 Monaten.</li>
+                    <li><strong>Verbesserung von Diabetes:</strong> Viele Patienten erreichen Blutzuckernormalisierung oder können Medikation reduzieren.</li>
+                    <li><strong>Bessere Herz-Kreislauf-Gesundheit:</strong> Normalisierung von Blutdruck und Cholesterin.</li>
+                    <li><strong>Verbesserung von Schlafapnoe:</strong> Deutliche Verbesserung oder Heilung der Schlafapnoe in den meisten Fällen.</li>
+                    <li><strong>Lebensqualität:</strong> Verbesserte Mobilität, Energie und psychisches Wohlbefinden.</li>
+                    <li><strong>Reduzierte Komplikationen:</strong> Minimales Infektionsrisiko durch minimalinvasive Technik.</li>
+                    <li><strong>Schnelle Genesung:</strong> Die meisten Patienten kehren in 2-3 Wochen zur Normalität zurück.</li>
+                    <li><strong>Langfristige Ergebnisse:</strong> Stabile Gewichtsreduktion über viele Jahre.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Prof. Credentials -->
+        <section>
+            <h2>Prof. Dr. Gerhard Prager - Ihr Spezialist</h2>
+            <p class="section-intro">Mit jahrzehntelanger Erfahrung und Tausenden erfolgreicher Verfahren ist Prof. Prager einer der führendsten Spezialisten für bariatrische Chirurgie in Europa.</p>
+
+            <div class="credentials">
+                <h3>Qualifikationen und Erfolge</h3>
+                <div class="credentials-grid">
+                    <div class="credentials-item">
+                        <div class="credentials-number">9.900+</div>
+                        <div class="credentials-label">Bariatrische Verfahren</div>
+                    </div>
+                    <div class="credentials-item">
+                        <div class="credentials-number">435+</div>
+                        <div class="credentials-label">Wissenschaftliche Publikationen</div>
+                    </div>
+                    <div class="credentials-item">
+                        <div class="credentials-number">40+</div>
+                        <div class="credentials-label">Jahre chirurgische Erfahrung</div>
+                    </div>
+                    <div class="credentials-item">
+                        <div class="credentials-number">IFSO</div>
+                        <div class="credentials-label">Weltpräsident 2023/24</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>Häufig Gestellte Fragen</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Ist Fettsuchtchirurgie noch der aktuelle Begriff?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Der Begriff "Fettsuchtchirurgie" ist älter und wird heute weniger häufig verwendet. Die modernen, wissenschaftlichen Begriffe sind "bariatrische Chirurgie" oder "Adipositaschirurgie". Die Verfahren sind jedoch dieselben modernen Techniken, die Prof. Prager anbietet. Wir verstehen diese älteren Suchbegriffe und verwenden sie für Patienten, die danach suchen.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Welche Gewichtsreduktion kann ich erwarten?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Das hängt vom Verfahren ab. Im Durchschnitt verlieren Patienten 50-80% ihres Übergewichts in den ersten 12-24 Monaten nach der Operation. Beim Magenbypass sind die Ergebnisse oft am besten mit 70-80% Gewichtsverlust. Die genaue Menge hängt von Ihrer Ausgangssituation und Ihrer Mitarbeit bei Ernährung und Bewegung ab.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Ist bariatrische Chirurgie sicher?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, bariatrische Chirurgie ist eine sichere Prozedur, wenn sie von erfahrenen Chirurgen wie Prof. Prager durchgeführt wird. Mit fast 10.000 Verfahren hat Prof. Prager umfangreiche Sicherheitsdaten. Die Komplikationsrate ist niedrig, besonders bei Verwendung moderner minimalinvasiver Techniken.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Wie lange dauert die Genesung?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Die meisten Patienten können nach 1-2 Wochen zu leichten Aktivitäten zurückkehren. Innerhalb von 3-4 Wochen ist die Rückkehr zu normalen Aktivitäten möglich. Die vollständige Genesung dauert typischerweise 6-8 Wochen. Dies ist ein großer Vorteil der minimalinvasiven Laparoskopie im Vergleich zur offenen Chirurgie.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Kann bariatrische Chirurgie Diabetes heilen?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Viele Patienten mit Typ-2-Diabetes erleben eine vollständige Remission nach bariatrischer Chirurgie, besonders mit einem Magenbypass. Bei anderen verbessert sich der Blutzucker erheblich, und die Medikation kann reduziert werden. Dies ist einer der größten Vorteile der Chirurgie bei metabolisch erkrankten Patienten.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Kann ich nach bariatrischer Chirurgie schwanger werden?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, viele Frauen werden nach bariatrischer Chirurgie schwanger. Es ist jedoch ratsam, mindestens 18-24 Monate nach der Operation zu warten, bis die Gewichtsreduktion stabil ist. Die Schwangerschaft ist nach bariatrischer Chirurgie in der Regel ohne Probleme möglich mit angemessener ärztlicher Betreuung.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Welche Ernährungsänderungen sind notwendig?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nach bariatrischer Chirurgie ist es notwendig, die Ernährung permanent umzustellen. Die Portionsgrößen sind deutlich kleiner, und eine ausreichende Protein- und Mikronährstoffzufuhr ist wichtig. Prof. Pragers Team bietet umfangreiche Ernährungsberatung und Nachbetreuung an.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Wie vereinbare ich einen Termin mit Prof. Prager?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bitte kontaktieren Sie das Büro von Prof. Prager telefonisch, per E-Mail oder über das Online-Kontaktformular. Das Team wird einen Zeitpunkt für eine umfassende Beratung vereinbaren, bei der Ihre individuelle Situation besprochen und ein Behandlungsplan erstellt wird.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Kontaktieren Sie Prof. Dr. Gerhard Prager</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">Vereinbaren Sie einen Termin zur Beratung über Ihre bariatrische Chirurgie-Optionen</p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Telefon</h3>
+                    <p><a href="tel:+43143111111">+43 (1) 4311-1111</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>E-Mail</h3>
+                    <p><a href="mailto:office@gerhardprager.eu">office@gerhardprager.eu</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Website</h3>
+                    <p><a href="https://gerhardprager.eu">gerhardprager.eu</a></p>
+                </div>
+            </div>
+
+            <a href="https://gerhardprager.eu/contact" class="cta-button">Online Terminanfrage</a>
+        </section>
+    </main>
+
+    <!-- Related Links Section -->
+    <section style="padding: 3rem 1rem; background-color: white;">
+        <div class="container">
+            <h2>Weitere Informationen</h2>
+            <p style="margin-bottom: 2rem;">Umfassende Informationen über bariatrische Chirurgie finden Sie auf der Hauptwebsite von Prof. Prager:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <a href="https://gerhardprager.eu" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Hauptwebsite</a>
+                <a href="https://gerhardprager.eu/bariatric-surgery" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Bariatrische Chirurgie</a>
+                <a href="https://gerhardprager.eu/weight-loss-surgery" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Gewichtsreduktionschirurgie</a>
+                <a href="https://gerhardprager.eu/gastric-bypass" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Magenbypass</a>
+                <a href="https://gerhardprager.eu/gastric-sleeve" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Magenhülle</a>
+                <a href="https://gerhardprager.eu/publications" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Publikationen</a>
+                <a href="https://gerhardprager.eu/about-prof-prager" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Über Prof. Prager</a>
+                <a href="https://gerhardprager.eu/patient-testimonials" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Patientenerfahrungen</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://gerhardprager.eu/privacy">Datenschutz</a>
+            <a href="https://gerhardprager.eu/impressum">Impressum</a>
+            <a href="https://gerhardprager.eu/sitemap.xml">Sitemap</a>
+            <a href="https://gerhardprager.eu">Hauptwebsite</a>
+        </div>
+        <p>&copy; 2024 Prof. Dr. Gerhard Prager. Alle Rechte vorbehalten. | Fettsuchtchirurgie Wien</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Prof. Dr. Gerhard Prager - Fettsuchtchirurgie Wien",
+        "url": "https://fettsuchtchirurgie.eu",
+        "description": "Fettsuchtchirurgie und bariatrische Chirurgie in Wien von Prof. Dr. Gerhard Prager",
+        "image": "https://fettsuchtchirurgie.eu/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AT",
+            "addressLocality": "Vienna"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+43-1-4311-1111",
+            "contactType": "Patient Service",
+            "email": "office@gerhardprager.eu"
+        },
+        "areaServed": ["AT", "DE", "CH", "International"],
+        "expertise": ["Bariatric Surgery", "Obesity Surgery", "Gastric Bypass", "Gastric Sleeve", "Weight Loss Surgery"],
+        "knowsAbout": ["Fettsuchtchirurgie", "Adipositaschirurgie", "Gewichtsreduktionschirurgie", "Metabolische Chirurgie"],
+        "sameAs": ["https://gerhardprager.eu"]
+    }
+    </script>
+</body>
+</html>

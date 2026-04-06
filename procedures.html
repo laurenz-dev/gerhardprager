@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2328">
   <title>Eingriffe &amp; Verfahren — Bariatrische Chirurgie Wien | Univ.-Prof. Dr. Gerhard Prager</title>
   <meta name="description" content="Magenbypass, Schlauchmagen, SADI-S, Omega-Loop & mehr. 100% laparoskopisch. 9.900+ Eingriffe durch Univ.-Prof. Dr. Gerhard Prager in Wien.">
   <meta property="og:title" content="Eingriffe & Verfahren — Bariatrische Chirurgie Wien | Univ.-Prof. Dr. Gerhard Prager">
@@ -109,6 +110,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a>
 
   <!-- NAVIGATION -->
   <nav class="nav nav--hero" id="nav">
@@ -154,12 +156,12 @@
       </li>
       <li><a href="contact.html" class="btn btn-accent nav__cta">Termin vereinbaren &rarr;</a></li>
     </ul>
-    <button class="nav__menu-btn" id="menuBtn" aria-label="Men&uuml;">
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Men&uuml;" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigationsmenü" aria-hidden="true">
     <div class="mobile-menu__header">Bariatrische Chirurgie</div>
     <div class="mobile-menu__sub">
       <a href="procedures.html#bariatrisch">Magenbypass</a>
@@ -184,7 +186,7 @@
   </div>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
+  <section class="page-hero" id="main-content">
     <div class="container">
       <p class="overline fade-up">EINGRIFFE &amp; VERFAHREN</p>
       <h1 class="page-hero__title page-hero__title--large fade-up">Eingriffe &amp; Verfahren</h1>
@@ -542,89 +544,117 @@
   </footer>
 
   <script>
-    // === NAV ===
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('nav--solid', window.scrollY > 50));
+    (function() {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    // === NAV ===
+    var nav = document.getElementById('nav');
+    if (nav) {
+      window.addEventListener('scroll', function() { nav.classList.toggle('nav--solid', window.scrollY > 50); }, { passive: true });
+    }
+
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+      });
+      mobileMenu.querySelectorAll('a').forEach(function(l) {
+        l.addEventListener('click', function() {
+          mobileMenu.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
 
     // === FADE-UP ANIMATIONS ===
-    var fadeEls = document.querySelectorAll('.fade-up');
-    if ('IntersectionObserver' in window && fadeEls.length) {
-      var fadeObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-up--visible');
-            fadeObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.05 });
+    if (!prefersReducedMotion) {
+      var fadeEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window && fadeEls.length) {
+        var fadeObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-up--visible');
+              fadeObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.05 });
 
-      fadeEls.forEach(function(el) {
-        fadeObserver.observe(el);
-      });
-
-      // Fallback: show elements already in viewport
-      setTimeout(function() {
         fadeEls.forEach(function(el) {
-          var rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight) {
-            el.classList.add('fade-up--visible');
-          }
+          fadeObserver.observe(el);
         });
-      }, 200);
+
+        // Fallback: show elements already in viewport
+        setTimeout(function() {
+          fadeEls.forEach(function(el) {
+            var rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+              el.classList.add('fade-up--visible');
+            }
+          });
+        }, 200);
+      }
+    } else {
+      document.querySelectorAll('.fade-up').forEach(function(el) {
+        el.classList.add('fade-up--visible');
+      });
     }
 
     // === SMOOTH SCROLL ===
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
       a.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
+        var href = this.getAttribute('href');
         if (href === '#') return;
         e.preventDefault();
-        const t = document.querySelector(href);
+        var t = document.querySelector(href);
         if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
     // === BODY NAV TOOLTIPS ===
-    const bodyPoints = document.querySelectorAll('.body-nav__point');
-    const tooltip = document.getElementById('bodyNavTooltip');
-    bodyPoints.forEach(point => {
-      point.addEventListener('mouseenter', function(e) {
-        const label = this.getAttribute('data-label');
-        tooltip.textContent = label;
-        tooltip.classList.add('visible');
-        const rect = this.getBoundingClientRect();
-        const parentRect = this.closest('.body-nav__inner').getBoundingClientRect();
-        tooltip.style.left = (rect.left - parentRect.left + rect.width / 2) + 'px';
-        tooltip.style.top = (rect.top - parentRect.top - 32) + 'px';
+    var bodyPoints = document.querySelectorAll('.body-nav__point');
+    var tooltip = document.getElementById('bodyNavTooltip');
+    if (tooltip) {
+      bodyPoints.forEach(function(point) {
+        point.addEventListener('mouseenter', function(e) {
+          var label = this.getAttribute('data-label');
+          tooltip.textContent = label;
+          tooltip.classList.add('visible');
+          var rect = this.getBoundingClientRect();
+          var parentRect = this.closest('.body-nav__inner').getBoundingClientRect();
+          tooltip.style.left = (rect.left - parentRect.left + rect.width / 2) + 'px';
+          tooltip.style.top = (rect.top - parentRect.top - 32) + 'px';
+        });
+        point.addEventListener('mouseleave', function() { tooltip.classList.remove('visible'); });
+        point.addEventListener('click', function() {
+          var target = this.getAttribute('data-target');
+          var el = document.querySelector(target);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        point.style.cursor = 'pointer';
       });
-      point.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
-      point.addEventListener('click', function() {
-        const target = this.getAttribute('data-target');
-        const el = document.querySelector(target);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-      point.style.cursor = 'pointer';
-    });
+    }
 
     // === JOURNEY PROGRESS LINE ===
-    const journeySection = document.querySelector('.journey');
-    const journeyFill = document.getElementById('journeyFill');
-    if (journeySection && journeyFill) {
-      window.addEventListener('scroll', () => {
-        const rect = journeySection.getBoundingClientRect();
-        const sectionHeight = rect.height;
-        const viewportHeight = window.innerHeight;
-        if (rect.top < viewportHeight && rect.bottom > 0) {
-          const progress = Math.min(Math.max((viewportHeight - rect.top) / (sectionHeight + viewportHeight * 0.3), 0), 1);
-          journeyFill.style.width = `${progress * 100}%`;
-        }
-      }, { passive: true });
+    if (!prefersReducedMotion) {
+      var journeySection = document.querySelector('.journey');
+      var journeyFill = document.getElementById('journeyFill');
+      if (journeySection && journeyFill) {
+        window.addEventListener('scroll', function() {
+          var rect = journeySection.getBoundingClientRect();
+          var sectionHeight = rect.height;
+          var viewportHeight = window.innerHeight;
+          if (rect.top < viewportHeight && rect.bottom > 0) {
+            var progress = Math.min(Math.max((viewportHeight - rect.top) / (sectionHeight + viewportHeight * 0.3), 0), 1);
+            journeyFill.style.width = progress * 100 + '%';
+          }
+        }, { passive: true });
+      }
     }
+    })();
   </script>
 </body>
 </html>

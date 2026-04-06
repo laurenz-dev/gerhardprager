@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2328">
   <title>Über Univ.-Prof. Dr. Gerhard Prager — IFSO Weltpräsident, MedUni Wien</title>
   <meta name="description" content="Lebenslauf, Karriere und Philosophie von Prof. Gerhard Prager. IFSO-Weltpräsident, 435+ Publikationen, Leiter der Adipositas-Ambulanz AKH Wien.">
   <meta property="og:title" content="Über Univ.-Prof. Dr. Gerhard Prager — IFSO Weltpräsident, MedUni Wien">
@@ -140,6 +141,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a>
 
   <!-- NAVIGATION -->
   <nav class="nav nav--hero" id="nav">
@@ -185,12 +187,12 @@
       </li>
       <li><a href="contact.html" class="btn btn-accent nav__cta">Termin vereinbaren &rarr;</a></li>
     </ul>
-    <button class="nav__menu-btn" id="menuBtn" aria-label="Men&uuml;">
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Men&uuml;" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigationsmenü" aria-hidden="true">
     <div class="mobile-menu__header">Bariatrische Chirurgie</div>
     <div class="mobile-menu__sub">
       <a href="procedures.html#bariatrisch">Magenbypass</a>
@@ -215,7 +217,7 @@
   </div>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
+  <section class="page-hero" id="main-content">
     <div class="container">
       <p class="overline fade-up">&Uuml;BER PROF. PRAGER</p>
       <h1 class="page-hero__title fade-up">Chirurg. Forscher. Professor.</h1>
@@ -517,52 +519,76 @@
   </footer>
 
   <script>
-    // === NAV ===
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('nav--solid', window.scrollY > 50));
+    (function() {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    // === NAV ===
+    var nav = document.getElementById('nav');
+    if (nav) {
+      window.addEventListener('scroll', function() { nav.classList.toggle('nav--solid', window.scrollY > 50); }, { passive: true });
+    }
+
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+      });
+      mobileMenu.querySelectorAll('a').forEach(function(l) {
+        l.addEventListener('click', function() {
+          mobileMenu.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
 
     // === FADE-UP ANIMATIONS ===
-    var fadeEls = document.querySelectorAll('.fade-up');
-    if ('IntersectionObserver' in window && fadeEls.length) {
-      var fadeObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-up--visible');
-            fadeObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.05 });
+    if (!prefersReducedMotion) {
+      var fadeEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window && fadeEls.length) {
+        var fadeObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-up--visible');
+              fadeObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.05 });
 
-      fadeEls.forEach(function(el) {
-        fadeObserver.observe(el);
-      });
-
-      // Fallback: show elements already in viewport
-      setTimeout(function() {
         fadeEls.forEach(function(el) {
-          var rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight) {
-            el.classList.add('fade-up--visible');
-          }
+          fadeObserver.observe(el);
         });
-      }, 200);
+
+        // Fallback: show elements already in viewport
+        setTimeout(function() {
+          fadeEls.forEach(function(el) {
+            var rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+              el.classList.add('fade-up--visible');
+            }
+          });
+        }, 200);
+      }
+    } else {
+      document.querySelectorAll('.fade-up').forEach(function(el) {
+        el.classList.add('fade-up--visible');
+      });
     }
 
     // === SMOOTH SCROLL ===
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
       a.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
+        var href = this.getAttribute('href');
         if (href === '#') return;
         e.preventDefault();
-        const t = document.querySelector(href);
+        var t = document.querySelector(href);
         if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+    })();
   </script>
 </body>
 </html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weiterleitung zu Prof. Dr. Gerhard Prager's Praxis - Bariatric and Endocrine Surgery Vienna">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://prager-chirurgie.at">
+    <title>Prof. Dr. Gerhard Prager - Chirurgie</title>
+
+    <!-- Meta Refresh Redirect -->
+    <meta http-equiv="refresh" content="5; url=https://gerhardprager.eu">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #1e3a5f;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .message {
+            background: #f0f4f8;
+            border-left: 4px solid #ff6b35;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        .message p {
+            color: #333;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .message strong {
+            color: #1e3a5f;
+        }
+
+        .redirect-notice {
+            background: #e8f4f8;
+            border: 1px solid #b0dae8;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #ff6b35;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 1.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        .manual-link {
+            display: block;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .manual-link a {
+            color: #2d5a8f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .manual-link a:hover {
+            color: #ff6b35;
+            text-decoration: underline;
+        }
+
+        .footer-text {
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            line-height: 1.6;
+        }
+
+        .countdown {
+            font-weight: 700;
+            color: #ff6b35;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Prof. Dr. Gerhard Prager</h1>
+            <p class="subtitle">Bariatric & Endocrine Surgery Vienna</p>
+        </div>
+
+        <div class="message">
+            <p><strong>Sie werden weitergeleitet...</strong></p>
+            <p>Vielen Dank für Ihren Besuch. Diese Seite wird automatisch zur Hauptwebsite von Prof. Dr. Gerhard Prager weitergeleitet.</p>
+        </div>
+
+        <div class="redirect-notice">
+            <p><span class="spinner"></span><strong>Weiterleitung in <span class="countdown" id="countdown">5</span> Sekunden...</strong></p>
+        </div>
+
+        <p style="color: #666; margin: 1.5rem 0;">Wenn die automatische Weiterleitung nicht funktioniert, klicken Sie bitte auf den Button unten:</p>
+
+        <a href="https://gerhardprager.eu" class="cta-button">Zur Hauptwebsite</a>
+
+        <div class="manual-link">
+            <p>Sie können auch direkt auf folgende Links zugreifen:</p>
+            <p style="margin-top: 1rem;">
+                <a href="https://gerhardprager.eu/bariatric-surgery">Bariatrische Chirurgie</a><br>
+                <a href="https://gerhardprager.eu/endocrine-surgery">Endokrine Chirurgie</a><br>
+                <a href="https://gerhardprager.eu/contact">Kontakt & Termin</a>
+            </p>
+        </div>
+
+        <p class="footer-text">
+            prager-chirurgie.at wird weitergeleitet zu gerhardprager.eu<br>
+            © Prof. Dr. Gerhard Prager
+        </p>
+    </div>
+
+    <!-- JavaScript Redirect (fallback) -->
+    <script>
+        // Countdown timer
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown <= 0) {
+                // Redirect to main website
+                window.location.href = 'https://gerhardprager.eu';
+            } else {
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+
+        // Start countdown after a brief delay to ensure page is ready
+        setTimeout(updateCountdown, 1000);
+    </script>
+
+    <!-- Schema.org Markup for Redirect -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Prof. Dr. Gerhard Prager - Chirurgie",
+        "url": "https://prager-chirurgie.at",
+        "description": "Weiterleitung zur Hauptwebsite von Prof. Dr. Gerhard Prager - Bariatric and Endocrine Surgery Vienna",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Prof. Dr. Gerhard Prager",
+            "url": "https://gerhardprager.eu",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://gerhardprager.eu/logo.png"
+            }
+        },
+        "relatedLink": "https://gerhardprager.eu",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Prof. Dr. Gerhard Prager",
+            "url": "https://gerhardprager.eu"
+        }
+    }
+    </script>
+
+    <!-- Additional Redirect Metadata -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Prof. Dr. Gerhard Prager",
+        "url": "https://gerhardprager.eu",
+        "alternateName": ["prager-chirurgie.at", "Prager Chirurgie"],
+        "description": "Bariatric and endocrine surgery by Prof. Dr. Gerhard Prager, IFSO World President 2023/2024",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AT",
+            "addressLocality": "Vienna"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+43-1-4311-1111",
+            "contactType": "Patient Service",
+            "email": "office@gerhardprager.eu"
+        },
+        "areaServed": ["AT", "DE", "CH", "International"],
+        "sameAs": [
+            "https://gerhardprager.eu",
+            "https://prager-chirurgie.at"
+        ]
+    }
+    </script>
+</body>
+</html>

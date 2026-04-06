@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2328">
   <title>Roux-en-Y Magenbypass &mdash; Univ.-Prof. Dr. Gerhard Prager</title>
   <meta name="description" content="Roux-en-Y Magenbypass: Goldstandard der bariatrischen Chirurgie. Informationen zu Ablauf, Vorteilen und Ergebnissen von Univ.-Prof. Dr. Gerhard Prager.">
   <meta property="og:title" content="Roux-en-Y Magenbypass &mdash; Univ.-Prof. Dr. Gerhard Prager">
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a>
 
   <!-- NAVIGATION -->
   <nav class="nav nav--hero" id="nav">
@@ -59,12 +61,12 @@
       </li>
       <li><a href="contact.html" class="btn btn-accent nav__cta">Termin vereinbaren &rarr;</a></li>
     </ul>
-    <button class="nav__menu-btn" id="menuBtn" aria-label="Men&uuml;">
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Men&uuml;" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigationsmen&uuml;" aria-hidden="true">
     <div class="mobile-menu__header">Bariatrische Chirurgie</div>
     <div class="mobile-menu__sub">
       <a href="magenbypass.html">Magenbypass</a>
@@ -88,7 +90,7 @@
   </div>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
+  <section class="page-hero" id="main-content">
     <div class="container">
       <p class="overline fade-up">BARIATRISCHE CHIRURGIE</p>
       <h1 class="page-hero__title fade-up">Roux-en-Y Magenbypass</h1>
@@ -97,60 +99,88 @@
   </section>
 
   <!-- BACK LINK -->
-  <div class="container" style="padding-top:2rem;">
-    <a href="procedures.html" style="font-size:14px;color:var(--text-secondary);display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;">&larr; Zur&uuml;ck zur &Uuml;bersicht</a>
+  <div class="container proc-back">
+    <a href="procedures.html" class="fade-up">&larr; Alle Eingriffe</a>
   </div>
 
-  <!-- DETAIL SECTION -->
-  <section class="detail-section detail-section--open">
+  <!-- EMPATHY SECTION -->
+  <section class="proc-empathy">
     <div class="container">
-      <div class="detail-layout">
-        <div class="detail-main">
-          <h2>Roux-en-Y Magenbypass</h2>
-          <p>Der Magenbypass gilt als Goldstandard der bariatrischen Chirurgie. Bei diesem Eingriff wird ein kleiner Magenpouch gebildet und direkt mit dem D&uuml;nndarm verbunden. Der gr&ouml;&szlig;te Teil des Magens und der obere D&uuml;nndarm werden dabei umgangen, was sowohl zu einer Reduktion der Nahrungsaufnahme als auch zu einer verminderten N&auml;hrstoffabsorption f&uuml;hrt.</p>
+      <div class="proc-empathy__line"></div>
+      <p class="proc-empathy__text fade-up">Der Magenbypass gilt als Goldstandard der bariatrischen Chirurgie &ndash; und das seit Jahrzehnten.</p>
+      <p class="proc-empathy__sub fade-up">Ein bew&auml;hrtes Verfahren mit den besten Langzeitergebnissen, besonders wenn Diabetes oder Reflux den Alltag belasten.</p>
+    </div>
+  </section>
 
-          <h3>Vorteile</h3>
-          <ul>
+  <!-- KEY FACTS -->
+  <section class="proc-facts">
+    <div class="container">
+      <div class="proc-facts__grid fade-up">
+        <div class="proc-facts__item">
+          <div class="proc-facts__value">2&ndash;3 h</div>
+          <div class="proc-facts__label">OP-Dauer</div>
+        </div>
+        <div class="proc-facts__item">
+          <div class="proc-facts__value">3&ndash;5 Tage</div>
+          <div class="proc-facts__label">Station&auml;r</div>
+        </div>
+        <div class="proc-facts__item">
+          <div class="proc-facts__value">2&ndash;3 Wo.</div>
+          <div class="proc-facts__label">Erholung</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="proc-content">
+    <div class="container">
+      <div class="proc-content__inner">
+
+        <div class="proc-content__section fade-up">
+          <p class="proc-content__label">Das Verfahren</p>
+          <h2 class="proc-content__title">Roux-en-Y Gastric Bypass</h2>
+          <p class="proc-content__text">Der Magenbypass gilt als Goldstandard der bariatrischen Chirurgie. Bei diesem Eingriff wird ein kleiner Magenpouch gebildet und direkt mit dem D&uuml;nndarm verbunden. Der gr&ouml;&szlig;te Teil des Magens und der obere D&uuml;nndarm werden dabei umgangen, was sowohl zu einer Reduktion der Nahrungsaufnahme als auch zu einer verminderten N&auml;hrstoffabsorption f&uuml;hrt.</p>
+        </div>
+
+        <div class="proc-content__section fade-up">
+          <p class="proc-content__label">Vorteile</p>
+          <h2 class="proc-content__title">Warum der Magenbypass?</h2>
+          <ul class="proc-content__list">
             <li>H&ouml;chste Langzeit-Evidenz</li>
             <li>Exzellente Diabetes-Ergebnisse (Remission &gt;80%)</li>
             <li>Nachhaltiger Gewichtsverlust 60&ndash;75%</li>
             <li>Verbesserung von Begleiterkrankungen</li>
           </ul>
-
-          <h3>F&uuml;r wen?</h3>
-          <p>Der Roux-en-Y Magenbypass ist besonders geeignet f&uuml;r Patienten mit einem BMI &uuml;ber 40 oder einem BMI &uuml;ber 35 mit Begleiterkrankungen &ndash; insbesondere bei Typ-2-Diabetes oder Reflux.</p>
-
-          <div class="detail-facts">
-            <div class="detail-fact">
-              <span class="detail-fact__value">2&ndash;3 h</span>
-              <div class="detail-fact__label">OP-Dauer</div>
-            </div>
-            <div class="detail-fact">
-              <span class="detail-fact__value">3&ndash;5 Tage</span>
-              <div class="detail-fact__label">Station&auml;r</div>
-            </div>
-            <div class="detail-fact">
-              <span class="detail-fact__value">2&ndash;3 Wo.</span>
-              <div class="detail-fact__label">Erholung</div>
-            </div>
-          </div>
         </div>
 
-        <div class="detail-sidebar">
-          <div class="sidebar-card">
-            <img src="images/foto-3.jpeg" alt="Univ.-Prof. Dr. Gerhard Prager" class="sidebar-card__image">
-            <div class="sidebar-card__body">
-              <div class="sidebar-card__name">Univ.-Prof. Dr. Gerhard Prager</div>
-              <div class="sidebar-card__role">Bariatrische &amp; Endokrine Chirurgie</div>
-              <div class="sidebar-card__cta">Fragen zum Magenbypass?</div>
-              <div class="sidebar-card__phone">
-                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <a href="tel:+436604895851">+43 660 489 58 51</a>
-              </div>
-              <a href="contact.html" class="btn btn-accent">Termin vereinbaren &rarr;</a>
-            </div>
-          </div>
+        <div class="proc-content__section fade-up">
+          <p class="proc-content__label">Eignung</p>
+          <h2 class="proc-content__title">F&uuml;r wen ist dieser Eingriff geeignet?</h2>
+          <p class="proc-content__text">Der Roux-en-Y Magenbypass ist besonders geeignet f&uuml;r Patienten mit einem BMI &uuml;ber 40 oder einem BMI &uuml;ber 35 mit Begleiterkrankungen &ndash; insbesondere bei Typ-2-Diabetes oder Reflux.</p>
+          <p class="proc-content__text">Die genaue Eignung wird im pers&ouml;nlichen Erstgespr&auml;ch mit Univ.-Prof. Dr. Gerhard Prager besprochen.</p>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSOR -->
+  <section class="proc-professor">
+    <div class="proc-professor__grid">
+      <div class="proc-professor__image fade-up">
+        <img src="images/foto-3.jpeg" alt="Univ.-Prof. Dr. Gerhard Prager" loading="lazy">
+      </div>
+      <div class="proc-professor__content fade-up">
+        <p class="proc-professor__overline">IHR CHIRURG</p>
+        <h2 class="proc-professor__name">Univ.-Prof. Dr. Gerhard Prager</h2>
+        <p class="proc-professor__role">Ehem. Weltpr&auml;sident der IFSO. &Uuml;ber 9.900 Eingriffe. Professor an der MedUni Wien.</p>
+        <p class="proc-professor__cta-text">Fragen zum Magenbypass?</p>
+        <div class="proc-professor__phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+436604895851">+43 660 489 58 51</a>
+        </div>
+        <a href="contact.html" class="btn btn-accent">Termin vereinbaren &rarr;</a>
       </div>
     </div>
   </section>

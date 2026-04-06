@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2328">
   <title>اتصل بنا وحجز موعد — Univ.-Prof. Dr. Gerhard Prager | العيادة الخاصة فيينا 7</title>
   <meta name="description" content="حجز موعد مع البروفيسور براغر: +43 660 489 58 51. Kaiserstraße 43/4a، 1070 فيينا. الأربعاء 4-8 مساءً. طبيب خاص.">
   <meta property="og:title" content="اتصل بنا وحجز موعد — Univ.-Prof. Dr. Gerhard Prager | العيادة الخاصة فيينا 7">
@@ -42,6 +43,8 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">انتقل إلى المحتوى</a>
+
 
   <!-- NAVIGATION -->
   <nav class="nav nav--hero" id="nav">
@@ -87,12 +90,12 @@
       </li>
       <li><a href="contact.html" class="btn btn-accent nav__cta">حجز موعد &larr;</a></li>
     </ul>
-    <button class="nav__menu-btn" id="menuBtn" aria-label="القائمة">
+    <button class="nav__menu-btn" id="menuBtn" aria-label="القائمة" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-hidden="true" aria-label="قائمة التنقل">
     <div class="mobile-menu__header">جراحة السمنة</div>
     <div class="mobile-menu__sub">
       <a href="procedures.html#bariatrisch">تحويل مسار المعدة</a>
@@ -117,6 +120,7 @@
   </div>
 
   <!-- PAGE HERO WITH BG IMAGE -->
+  <main id="main-content">
   <section class="page-hero page-hero--image">
     <div class="page-hero__bg">
       <img src="../images/foto-7.jpeg" alt="Univ.-Prof. Dr. Gerhard Prager" loading="eager">
@@ -267,6 +271,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -328,18 +334,31 @@
   </footer>
 
   <script>
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // === NAV ===
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('nav--solid', window.scrollY > 50));
 
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      var isOpen = mobileMenu.classList.contains('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', false);
+      mobileMenu.setAttribute('aria-hidden', true);
+    }));
 
     // === FADE-UP ANIMATIONS ===
     var fadeEls = document.querySelectorAll('.fade-up');
-    if ('IntersectionObserver' in window && fadeEls.length) {
+    if (prefersReducedMotion) {
+      fadeEls.forEach(function(el) { el.classList.add('fade-up--visible'); });
+    } else if ('IntersectionObserver' in window && fadeEls.length) {
       var fadeObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
@@ -371,7 +390,7 @@
         if (href === '#') return;
         e.preventDefault();
         const t = document.querySelector(href);
-        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (t) t.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
       });
     });
 

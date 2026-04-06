@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laparoscopic surgery Vienna - Minimally invasive bariatric and endocrine surgery by Prof. Dr. Gerhard Prager, IFSO World President. 9900+ laparoscopic procedures.">
+    <meta name="keywords" content="laparoscopic surgery Vienna, minimal invasive chirurgie Wien, bariatric surgery, laparoscopy, Prof. Prager">
+    <meta name="author" content="Prof. Dr. Gerhard Prager">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://laparoscopy-vienna.at">
+    <title>Laparoscopic Surgery Vienna | Prof. Dr. Gerhard Prager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+            transition: border-color 0.3s;
+        }
+
+        .lang-switch a.active {
+            border-bottom-color: white;
+        }
+
+        .lang-switch a:hover {
+            border-bottom-color: rgba(255,255,255,0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 0.5rem;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1e3a5f;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2d5a8f;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #ff6b35;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .expertise-card h3 {
+            margin-top: 0;
+        }
+
+        /* Procedures Section */
+        .procedures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .procedure-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .procedure-item h4 {
+            color: #2d5a8f;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Benefits Section */
+        .benefits-list {
+            background: #f0f4f8;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .benefits-list ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Prof. Credentials */
+        .credentials {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .credentials-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .credentials-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+
+        .credentials-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            font-weight: 600;
+            color: #1e3a5f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f0f4f8;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-item h3 {
+            color: #ffa060;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-section .cta-button {
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a2a40;
+            color: #ccc;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Laparoscopy Vienna</a>
+            <ul class="nav-links">
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#procedures">Procedures</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="lang-switch">
+                <a href="#" class="active" onclick="switchLang('de'); return false;">DE</a>
+                <a href="#" onclick="switchLang('en'); return false;">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title">Laparoscopic Surgery Vienna — Minimally Invasive Excellence</h1>
+            <p id="hero-subtitle">Advanced laparoscopic bariatric and endocrine surgery by Prof. Dr. Gerhard Prager, IFSO World President 2023/2024</p>
+            <a href="#contact" class="cta-button" id="hero-cta">Schedule Consultation</a>
+            <a href="https://gerhardprager.eu" class="cta-button" id="hero-cta2">Learn More at gerhardprager.eu</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Expertise Section -->
+        <section id="expertise">
+            <h2 id="expertise-title">Prof. Dr. Gerhard Prager's Expertise</h2>
+            <p class="section-intro" id="expertise-intro">As IFSO World President 2023/2024 with over 9,900 laparoscopic surgeries, Prof. Prager is a leading expert in minimally invasive bariatric and endocrine surgery.</p>
+
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3 id="exp1-title">9,900+ Laparoscopic Procedures</h3>
+                    <p id="exp1-text">Extensive experience with laparoscopic bariatric and endocrine surgery, setting a global standard for minimally invasive excellence.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3 id="exp2-title">IFSO World President 2023/2024</h3>
+                    <p id="exp2-text">Leading the International Federation for the Surgery of Obesity and Metabolic Diseases, shaping global standards in bariatric surgery.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3 id="exp3-title">435+ Scientific Publications</h3>
+                    <p id="exp3-text">Extensive research contribution advancing the field of minimally invasive and bariatric surgery with peer-reviewed publications.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3 id="exp4-title">Vienna Innovation Center</h3>
+                    <p id="exp4-text">Leading bariatric and endocrine surgery center in Vienna, equipped with advanced laparoscopic technology and expert surgical team.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Procedures Section -->
+        <section id="procedures">
+            <h2 id="procedures-title">Laparoscopic Procedures Offered</h2>
+            <p class="section-intro" id="procedures-intro">All procedures performed with minimally invasive laparoscopic techniques to reduce trauma and accelerate recovery.</p>
+
+            <div class="procedures-grid">
+                <div class="procedure-item">
+                    <h4>Gastric Bypass</h4>
+                    <p id="proc1-text">Gold standard weight loss procedure using laparoscopy for minimal incisions and optimal results.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Gastric Sleeve</h4>
+                    <p id="proc2-text">Restrictive laparoscopic procedure creating a tube-shaped stomach for appetite reduction.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Duodenal Switch</h4>
+                    <p id="proc3-text">Advanced malabsorptive and restrictive procedure for patients with higher BMI.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Lap-Band Surgery</h4>
+                    <p id="proc4-text">Adjustable gastric band placement via laparoscopy for gradual weight loss.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Endocrine Surgery</h4>
+                    <p id="proc5-text">Laparoscopic thyroid, adrenal, and parathyroid surgery with superior cosmetic outcomes.</p>
+                </div>
+                <div class="procedure-item">
+                    <h4>Revisional Surgery</h4>
+                    <p id="proc6-text">Laparoscopic correction of previous bariatric procedures with specialized expertise.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits">
+            <h2 id="benefits-title">Benefits of Laparoscopic Surgery</h2>
+            <div class="benefits-list">
+                <ul>
+                    <li id="benefit1"><strong>Smaller Incisions:</strong> Typically 2-4 small cuts instead of one large incision, reducing tissue trauma.</li>
+                    <li id="benefit2"><strong>Faster Recovery:</strong> Most patients return to normal activities within 2-3 weeks versus 4-6 weeks for open surgery.</li>
+                    <li id="benefit3"><strong>Less Pain:</strong> Minimal incision size means reduced post-operative pain and lower analgesic requirements.</li>
+                    <li id="benefit4"><strong>Reduced Infection Risk:</strong> Smaller incisions mean lower risk of surgical site infections and complications.</li>
+                    <li id="benefit5"><strong>Better Cosmetic Results:</strong> Tiny scars are virtually invisible, allowing for faster confidence restoration.</li>
+                    <li id="benefit6"><strong>Shorter Hospital Stay:</strong> Most laparoscopic bariatric patients go home same day or next day.</li>
+                    <li id="benefit7"><strong>Reduced Blood Loss:</strong> Minimally invasive approach preserves patient blood volume and reduces transfusion risk.</li>
+                    <li id="benefit8"><strong>Lower Complication Rates:</strong> Advanced laparoscopic technique minimizes surgical complications and re-operation risk.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Why Prof. Prager Section -->
+        <section>
+            <h2 id="why-prager-title">Why Choose Prof. Dr. Gerhard Prager?</h2>
+            <p class="section-intro" id="why-prager-intro">With nearly 10,000 laparoscopic procedures and recognition as a global leader, Prof. Prager offers unparalleled expertise in minimally invasive surgery.</p>
+
+            <div class="credentials">
+                <h3 id="cred-title">Professional Achievements</h3>
+                <div class="credentials-grid">
+                    <div class="credentials-item">
+                        <div class="credentials-number">9,900+</div>
+                        <div class="credentials-label" id="cred1">Laparoscopic Surgeries</div>
+                    </div>
+                    <div class="credentials-item">
+                        <div class="credentials-number">435+</div>
+                        <div class="credentials-label" id="cred2">Scientific Publications</div>
+                    </div>
+                    <div class="credentials-item">
+                        <div class="credentials-number">40+</div>
+                        <div class="credentials-label" id="cred3">Years Experience</div>
+                    </div>
+                    <div class="credentials-item">
+                        <div class="credentials-number">IFSO</div>
+                        <div class="credentials-label" id="cred4">World President 2023/24</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q1">What is the difference between laparoscopic and open bariatric surgery?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a1">Laparoscopic surgery uses small incisions (typically 2-4 cuts of 5-12mm) with a camera to visualize the operative field. Open surgery requires one larger incision (15-20cm). Laparoscopic surgery results in less pain, faster recovery, smaller scars, and reduced infection risk while achieving the same results.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q2">How long is recovery after laparoscopic bariatric surgery?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a2">Most patients return to light activities within 1-2 weeks and normal activities within 3-4 weeks. Full recovery, including complete scar healing and return to full exercise, typically takes 6-8 weeks. This is significantly faster than open surgery recovery of 12+ weeks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q3">Is laparoscopic bariatric surgery safe?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a3">Yes, laparoscopic bariatric surgery is safe when performed by experienced surgeons like Prof. Prager. With nearly 10,000 procedures, Prof. Prager has extensive data on safety outcomes. Complication rates are generally lower than open surgery, with reduced infection risk, less bleeding, and shorter hospital stays.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q4">What are the benefits of endocrine surgery by laparoscopy?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a4">Laparoscopic endocrine surgery (thyroid, adrenal, parathyroid) offers superior cosmetic results with minimal neck or abdominal scarring. The magnified view provided by the laparoscope improves precision and reduces nerve injury risk. Hospital stays are shortened and patients recover faster with less pain.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q5">Can revisional bariatric surgery be done laparoscopically?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a5">Yes, Prof. Prager specializes in laparoscopic revisional bariatric surgery, correcting previous weight loss procedures that didn't achieve desired results. The laparoscopic approach minimizes additional trauma and achieves optimal outcomes with the same recovery benefits as primary laparoscopic surgery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q6">What makes Prof. Prager's approach to laparoscopy unique?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a6">With nearly 10,000 laparoscopic procedures and as IFSO World President, Prof. Prager brings unparalleled expertise and innovation. His extensive experience allows for complex cases that many surgeons handle only via open surgery, combined with the benefits of minimally invasive techniques.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q7">How do I schedule a consultation for laparoscopic surgery?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a7">Please contact our office via phone, email, or our online form. Prof. Prager's team will schedule a comprehensive consultation where your case is reviewed, options are discussed, and a personalized surgical plan is created.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span id="q8">Is international patient care available?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p id="a8">Yes, Prof. Prager's center welcomes international patients. We assist with travel arrangements, pre-operative consultations, post-operative follow-up via video conference, and coordinate care with referring physicians worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 id="contact-title">Schedule Your Consultation Today</h2>
+            <p id="contact-intro" style="font-size: 1.1rem; margin-bottom: 1rem;">Contact Prof. Dr. Gerhard Prager's office to discuss your laparoscopic surgery options</p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3 id="contact-phone-label">Phone</h3>
+                    <p><a href="tel:+43143111111">+43 (1) 4311-1111</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3 id="contact-email-label">Email</h3>
+                    <p><a href="mailto:office@gerhardprager.eu">office@gerhardprager.eu</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3 id="contact-web-label">Website</h3>
+                    <p><a href="https://gerhardprager.eu">gerhardprager.eu</a></p>
+                </div>
+            </div>
+
+            <a href="https://gerhardprager.eu/contact" class="cta-button" id="contact-cta">Online Appointment Request</a>
+        </section>
+    </main>
+
+    <!-- Related Links Section -->
+    <section style="padding: 3rem 1rem; background-color: white;">
+        <div class="container">
+            <h2 id="related-title">Learn More About Prof. Prager</h2>
+            <p id="related-intro" style="margin-bottom: 2rem;">For comprehensive information about bariatric and endocrine surgery, visit Prof. Prager's main website:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <a href="https://gerhardprager.eu" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Main Website</a>
+                <a href="https://gerhardprager.eu/bariatric-surgery" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Bariatric Surgery</a>
+                <a href="https://gerhardprager.eu/endocrine-surgery" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Endocrine Surgery</a>
+                <a href="https://gerhardprager.eu/publications" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Publications</a>
+                <a href="https://gerhardprager.eu/about-prof-prager" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">About Prof. Prager</a>
+                <a href="https://gerhardprager.eu/ifso-president" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">IFSO Leadership</a>
+                <a href="https://gerhardprager.eu/patient-testimonials" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Patient Testimonials</a>
+                <a href="https://gerhardprager.eu/contact" style="display: block; padding: 1.5rem; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #1e3a5f; font-weight: 600; transition: background 0.3s;">Contact & Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://gerhardprager.eu/privacy" id="footer-privacy">Privacy Policy</a>
+            <a href="https://gerhardprager.eu/impressum" id="footer-impressum">Impressum</a>
+            <a href="https://gerhardprager.eu/sitemap.xml" id="footer-sitemap">Sitemap</a>
+            <a href="https://gerhardprager.eu" id="footer-home">Main Website</a>
+        </div>
+        <p id="footer-copyright">&copy; 2024 Prof. Dr. Gerhard Prager. All rights reserved. | Laparoscopic Surgery Vienna</p>
+    </footer>
+
+    <script>
+        // Language switching
+        function switchLang(lang) {
+            const translations = {
+                de: {
+                    'hero-title': 'Laparoskopische Chirurgie Wien — Minimalinvasive Exzellenz',
+                    'hero-subtitle': 'Fortgeschrittene laparoskopische bariatrische und endokrine Chirurgie von Univ.-Prof. Dr. Gerhard Prager, IFSO Weltpräsident 2023/2024',
+                    'hero-cta': 'Termin vereinbaren',
+                    'hero-cta2': 'Mehr erfahren auf gerhardprager.eu',
+                    'expertise-title': 'Expertise von Univ.-Prof. Dr. Gerhard Prager',
+                    'expertise-intro': 'Mit über 9.900 laparoskopischen Operationen und als IFSO-Weltpräsident 2023/2024 ist Prof. Prager führender Experte für minimalinvasive bariatrische und endokrine Chirurgie.',
+                    'exp1-title': '9.900+ Laparoskopische Eingriffe',
+                    'exp1-text': 'Umfangreiche Erfahrung in der laparoskopischen bariatrischen und endokrinen Chirurgie mit weltweitem Standard für minimalinvasive Exzellenz.',
+                    'exp2-title': 'IFSO Weltpräsident 2023/2024',
+                    'exp2-text': 'Führung der International Federation for the Surgery of Obesity and Metabolic Diseases mit Prägung globaler Standards in der bariatrischen Chirurgie.',
+                    'exp3-title': '435+ Wissenschaftliche Publikationen',
+                    'exp3-text': 'Umfangreiches Forschungsbeiträge zur Förderung von minimalinvasiven und bariatrischen Chirurgie mit begutachteten Publikationen.',
+                    'exp4-title': 'Wien Innovationszentrum',
+                    'exp4-text': 'Führendes bariatrisches und endokrines Chirurgiezentrum in Wien mit modernster laparoskopischer Technologie und Expertenteam.',
+                    'procedures-title': 'Angebotene Laparoskopische Eingriffe',
+                    'procedures-intro': 'Alle Eingriffe werden mit minimalinvasiven laparoskopischen Techniken durchgeführt, um Trauma zu reduzieren und Genesung zu beschleunigen.',
+                    'proc1-text': 'Goldstandard-Gewichtsverlustverfahren mittels Laparoskopie mit minimalen Schnitten und optimalen Ergebnissen.',
+                    'proc2-text': 'Restriktives laparoskopisches Verfahren, das den Magen röhrenförmig gestaltet, um Appetit zu reduzieren.',
+                    'proc3-text': 'Fortgeschrittenes malabsorptives und restriktives Verfahren für Patienten mit höherem BMI.',
+                    'proc4-text': 'Verstellbare Magenband-Platzierung mittels Laparoskopie für schrittweisen Gewichtsverlust.',
+                    'proc5-text': 'Laparoskopische Schilddrüsen-, Nebennieren- und Nebenschilddrüsenchirurgie mit überlegenem kosmetischen Ergebnis.',
+                    'proc6-text': 'Laparoskopische Korrektur früherer bariatrischer Verfahren mit spezialisierter Expertise.',
+                    'benefits-title': 'Vorteile der Laparoskopischen Chirurgie',
+                    'benefit1': 'Kleinere Schnitte: Typischerweise 2-4 kleine Schnitte statt einen großen Schnitt, Gewebeverletzungen reduzierend.',
+                    'benefit2': 'Schnellere Genesung: Die meisten Patienten kehren innerhalb von 2-3 Wochen zur Normalität zurück, statt 4-6 Wochen bei offener Chirurgie.',
+                    'benefit3': 'Weniger Schmerzen: Minimale Schnittgröße bedeutet weniger postoperative Schmerzen und niedrigere Analgetikabedarf.',
+                    'benefit4': 'Reduziertes Infektionsrisiko: Kleinere Schnitte bedeuten niedriges Risiko für chirurgische Infektionen und Komplikationen.',
+                    'benefit5': 'Bessere kosmetische Ergebnisse: Winzige Narben sind nahezu unsichtbar, schnellere Wiederherstellung des Selbstvertrauens.',
+                    'benefit6': 'Kürzerer Krankenhausaufenthalt: Die meisten laparoskopischen bariatrischen Patienten gehen am selben Tag oder nächsten Tag nach Hause.',
+                    'benefit7': 'Reduzierter Blutverlust: Minimalinvasiver Ansatz bewahrt Patientenblutvolumen und senkt Transfusionsrisiko.',
+                    'benefit8': 'Niedrigere Komplikationsraten: Fortgeschrittene laparoskopische Technik minimiert chirurgische Komplikationen und Wiederholoperation.',
+                    'why-prager-title': 'Warum Prof. Dr. Gerhard Prager wählen?',
+                    'why-prager-intro': 'Mit knapp 10.000 laparoskopischen Operationen und Anerkennung als führender Experte bietet Prof. Prager unvergleichliche Expertise in minimalinvasiven Operationen.',
+                    'cred-title': 'Professionelle Leistungen',
+                    'cred1': 'Laparoskopische Operationen',
+                    'cred2': 'Wissenschaftliche Publikationen',
+                    'cred3': 'Jahre Erfahrung',
+                    'cred4': 'Weltpräsident 2023/24',
+                    'faq-title': 'Häufig Gestellte Fragen',
+                    'q1': 'Was ist der Unterschied zwischen laparoskopischer und offener bariatrischer Chirurgie?',
+                    'a1': 'Die laparoskopische Chirurgie verwendet kleine Schnitte (typischerweise 2-4 Schnitte von 5-12mm) mit einer Kamera. Die offene Chirurgie erfordert einen großen Schnitt (15-20cm). Die laparoskopische Chirurgie führt zu weniger Schmerzen, schnellerer Genesung, kleineren Narben und niedrigerem Infektionsrisiko.',
+                    'q2': 'Wie lange ist die Erholung nach laparoskopischer bariatrischer Chirurgie?',
+                    'a2': 'Die meisten Patienten kehren innerhalb von 1-2 Wochen zu leichten Aktivitäten zurück und innerhalb von 3-4 Wochen zu normalen Aktivitäten. Die vollständige Genesung dauert typischerweise 6-8 Wochen. Dies ist deutlich schneller als die offene Chirurgie Erholung von 12+ Wochen.',
+                    'q3': 'Ist die laparoskopische bariatrische Chirurgie sicher?',
+                    'a3': 'Ja, die laparoskopische bariatrische Chirurgie ist sicher, wenn sie von erfahrenen Chirurgen wie Prof. Prager durchgeführt wird. Mit knapp 10.000 Verfahren hat Prof. Prager umfangreiche Sicherheitsdaten. Die Komplikationsraten sind in der Regel niedriger als bei offener Chirurgie.',
+                    'q4': 'Was sind die Vorteile der endokrinen Chirurgie durch Laparoskopie?',
+                    'a4': 'Die laparoskopische endokrine Chirurgie bietet überlegene kosmetische Ergebnisse mit minimalen Narben am Hals oder Bauch. Die vergrößerte Sicht durch das Laparoskop verbessert die Genauigkeit und reduziert das Nervenverletzungsrisiko. Krankenhausaufenthalte werden verkürzt und Patienten erholen sich schneller mit weniger Schmerzen.',
+                    'q5': 'Kann revisionale bariatrische Chirurgie laparoskopisch durchgeführt werden?',
+                    'a5': 'Ja, Prof. Prager spezialisiert sich auf laparoskopische revisionale bariatrische Chirurgie, die vorherige Gewichtsverlustverfahren korrigiert. Der laparoskopische Ansatz minimiert zusätzliches Trauma und erzielt optimale Ergebnisse mit den gleichen Genesungsvorteilen wie die primäre laparoskopische Chirurgie.',
+                    'q6': 'Was macht Prof. Pragers Ansatz zur Laparoskopie einzigartig?',
+                    'a6': 'Mit knapp 10.000 laparoskopischen Operationen und als IFSO Weltpräsident bringt Prof. Prager unvergleichliche Expertise und Innovation. Seine umfangreiche Erfahrung ermöglicht komplexe Fälle, die viele Chirurgen nur mittels offener Chirurgie durchführen.',
+                    'q7': 'Wie vereinbare ich einen Termin für eine Beratung zur laparoskopischen Chirurgie?',
+                    'a7': 'Bitte kontaktieren Sie unser Büro per Telefon, E-Mail oder Online-Formular. Prof. Pragers Team wird einen umfassenden Termin vereinbaren, in dem Ihr Fall überprüft wird und Optionen diskutiert werden.',
+                    'q8': 'Ist die Betreuung von internationalen Patienten verfügbar?',
+                    'a8': 'Ja, Prof. Pragers Zentrum heißt internationale Patienten willkommen. Wir helfen bei Reisearrangements, präoperativen Konsultationen, postoperativen Nachverfolgungen per Videokonferenz und koordinieren die Betreuung mit überweisenden Ärzten weltweit.',
+                    'contact-title': 'Vereinbaren Sie heute Ihren Termin',
+                    'contact-intro': 'Kontaktieren Sie Prof. Dr. Gerhard Pragers Büro, um Ihre laparoskopischen Chirurgiemöglichkeiten zu besprechen',
+                    'contact-phone-label': 'Telefon',
+                    'contact-email-label': 'E-Mail',
+                    'contact-web-label': 'Website',
+                    'contact-cta': 'Online Terminanfrage',
+                    'related-title': 'Mehr über Prof. Prager erfahren',
+                    'related-intro': 'Für umfassende Informationen zur bariatrischen und endokrinen Chirurgie besuchen Sie die Hauptwebsite von Prof. Prager:',
+                    'footer-privacy': 'Datenschutz',
+                    'footer-impressum': 'Impressum',
+                    'footer-sitemap': 'Sitemap',
+                    'footer-home': 'Hauptwebsite',
+                    'footer-copyright': '© 2024 Prof. Dr. Gerhard Prager. Alle Rechte vorbehalten. | Laparoskopische Chirurgie Wien'
+                },
+                en: {
+                    'hero-title': 'Laparoscopic Surgery Vienna — Minimally Invasive Excellence',
+                    'hero-subtitle': 'Advanced laparoscopic bariatric and endocrine surgery by Prof. Dr. Gerhard Prager, IFSO World President 2023/2024',
+                    'hero-cta': 'Schedule Consultation',
+                    'hero-cta2': 'Learn More at gerhardprager.eu',
+                    'expertise-title': 'Prof. Dr. Gerhard Prager\'s Expertise',
+                    'expertise-intro': 'As IFSO World President 2023/2024 with over 9,900 laparoscopic surgeries, Prof. Prager is a leading expert in minimally invasive bariatric and endocrine surgery.',
+                    'exp1-title': '9,900+ Laparoscopic Procedures',
+                    'exp1-text': 'Extensive experience with laparoscopic bariatric and endocrine surgery, setting a global standard for minimally invasive excellence.',
+                    'exp2-title': 'IFSO World President 2023/2024',
+                    'exp2-text': 'Leading the International Federation for the Surgery of Obesity and Metabolic Diseases, shaping global standards in bariatric surgery.',
+                    'exp3-title': '435+ Scientific Publications',
+                    'exp3-text': 'Extensive research contribution advancing the field of minimally invasive and bariatric surgery with peer-reviewed publications.',
+                    'exp4-title': 'Vienna Innovation Center',
+                    'exp4-text': 'Leading bariatric and endocrine surgery center in Vienna, equipped with advanced laparoscopic technology and expert surgical team.',
+                    'procedures-title': 'Laparoscopic Procedures Offered',
+                    'procedures-intro': 'All procedures performed with minimally invasive laparoscopic techniques to reduce trauma and accelerate recovery.',
+                    'proc1-text': 'Gold standard weight loss procedure using laparoscopy for minimal incisions and optimal results.',
+                    'proc2-text': 'Restrictive laparoscopic procedure creating a tube-shaped stomach for appetite reduction.',
+                    'proc3-text': 'Advanced malabsorptive and restrictive procedure for patients with higher BMI.',
+                    'proc4-text': 'Adjustable gastric band placement via laparoscopy for gradual weight loss.',
+                    'proc5-text': 'Laparoscopic thyroid, adrenal, and parathyroid surgery with superior cosmetic outcomes.',
+                    'proc6-text': 'Laparoscopic correction of previous bariatric procedures with specialized expertise.',
+                    'benefits-title': 'Benefits of Laparoscopic Surgery',
+                    'benefit1': 'Smaller Incisions: Typically 2-4 small cuts instead of one large incision, reducing tissue trauma.',
+                    'benefit2': 'Faster Recovery: Most patients return to normal activities within 2-3 weeks versus 4-6 weeks for open surgery.',
+                    'benefit3': 'Less Pain: Minimal incision size means reduced post-operative pain and lower analgesic requirements.',
+                    'benefit4': 'Reduced Infection Risk: Smaller incisions mean lower risk of surgical site infections and complications.',
+                    'benefit5': 'Better Cosmetic Results: Tiny scars are virtually invisible, allowing for faster confidence restoration.',
+                    'benefit6': 'Shorter Hospital Stay: Most laparoscopic bariatric patients go home same day or next day.',
+                    'benefit7': 'Reduced Blood Loss: Minimally invasive approach preserves patient blood volume and reduces transfusion risk.',
+                    'benefit8': 'Lower Complication Rates: Advanced laparoscopic technique minimizes surgical complications and re-operation risk.',
+                    'why-prager-title': 'Why Choose Prof. Dr. Gerhard Prager?',
+                    'why-prager-intro': 'With nearly 10,000 laparoscopic procedures and recognition as a global leader, Prof. Prager offers unparalleled expertise in minimally invasive surgery.',
+                    'cred-title': 'Professional Achievements',
+                    'cred1': 'Laparoscopic Surgeries',
+                    'cred2': 'Scientific Publications',
+                    'cred3': 'Years Experience',
+                    'cred4': 'World President 2023/24',
+                    'faq-title': 'Frequently Asked Questions',
+                    'q1': 'What is the difference between laparoscopic and open bariatric surgery?',
+                    'a1': 'Laparoscopic surgery uses small incisions (typically 2-4 cuts of 5-12mm) with a camera to visualize the operative field. Open surgery requires one larger incision (15-20cm). Laparoscopic surgery results in less pain, faster recovery, smaller scars, and reduced infection risk while achieving the same results.',
+                    'q2': 'How long is recovery after laparoscopic bariatric surgery?',
+                    'a2': 'Most patients return to light activities within 1-2 weeks and normal activities within 3-4 weeks. Full recovery, including complete scar healing and return to full exercise, typically takes 6-8 weeks. This is significantly faster than open surgery recovery of 12+ weeks.',
+                    'q3': 'Is laparoscopic bariatric surgery safe?',
+                    'a3': 'Yes, laparoscopic bariatric surgery is safe when performed by experienced surgeons like Prof. Prager. With nearly 10,000 procedures, Prof. Prager has extensive data on safety outcomes. Complication rates are generally lower than open surgery, with reduced infection risk, less bleeding, and shorter hospital stays.',
+                    'q4': 'What are the benefits of endocrine surgery by laparoscopy?',
+                    'a4': 'Laparoscopic endocrine surgery (thyroid, adrenal, parathyroid) offers superior cosmetic results with minimal neck or abdominal scarring. The magnified view provided by the laparoscope improves precision and reduces nerve injury risk. Hospital stays are shortened and patients recover faster with less pain.',
+                    'q5': 'Can revisional bariatric surgery be done laparoscopically?',
+                    'a5': 'Yes, Prof. Prager specializes in laparoscopic revisional bariatric surgery, correcting previous weight loss procedures that didn\'t achieve desired results. The laparoscopic approach minimizes additional trauma and achieves optimal outcomes with the same recovery benefits as primary laparoscopic surgery.',
+                    'q6': 'What makes Prof. Prager\'s approach to laparoscopy unique?',
+                    'a6': 'With nearly 10,000 laparoscopic procedures and as IFSO World President, Prof. Prager brings unparalleled expertise and innovation. His extensive experience allows for complex cases that many surgeons handle only via open surgery, combined with the benefits of minimally invasive techniques.',
+                    'q7': 'How do I schedule a consultation for laparoscopic surgery?',
+                    'a7': 'Please contact our office via phone, email, or our online form. Prof. Prager\'s team will schedule a comprehensive consultation where your case is reviewed, options are discussed, and a personalized surgical plan is created.',
+                    'q8': 'Is international patient care available?',
+                    'a8': 'Yes, Prof. Prager\'s center welcomes international patients. We assist with travel arrangements, pre-operative consultations, post-operative follow-up via video conference, and coordinate care with referring physicians worldwide.',
+                    'contact-title': 'Schedule Your Consultation Today',
+                    'contact-intro': 'Contact Prof. Dr. Gerhard Prager\'s office to discuss your laparoscopic surgery options',
+                    'contact-phone-label': 'Phone',
+                    'contact-email-label': 'Email',
+                    'contact-web-label': 'Website',
+                    'contact-cta': 'Online Appointment Request',
+                    'related-title': 'Learn More About Prof. Prager',
+                    'related-intro': 'For comprehensive information about bariatric and endocrine surgery, visit Prof. Prager\'s main website:',
+                    'footer-privacy': 'Privacy Policy',
+                    'footer-impressum': 'Impressum',
+                    'footer-sitemap': 'Sitemap',
+                    'footer-home': 'Main Website',
+                    'footer-copyright': '© 2024 Prof. Dr. Gerhard Prager. All rights reserved. | Laparoscopic Surgery Vienna'
+                }
+            };
+
+            const trans = translations[lang];
+            for (const key in trans) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = trans[key];
+                }
+            }
+
+            // Update active language indicator
+            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update document language
+            document.documentElement.lang = lang;
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Prof. Dr. Gerhard Prager - Laparoscopic Surgery Vienna",
+        "url": "https://laparoscopy-vienna.at",
+        "description": "Laparoscopic bariatric and endocrine surgery in Vienna by Prof. Dr. Gerhard Prager, IFSO World President",
+        "image": "https://laparoscopy-vienna.at/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AT",
+            "addressLocality": "Vienna"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+43-1-4311-1111",
+            "contactType": "Patient Service",
+            "email": "office@gerhardprager.eu"
+        },
+        "areaServed": ["AT", "DE", "CH", "International"],
+        "expertise": ["Laparoscopic Surgery", "Bariatric Surgery", "Endocrine Surgery", "Minimal Invasive Surgery"],
+        "knowsAbout": ["Gastric Bypass", "Gastric Sleeve", "Duodenal Switch", "Lap-Band Surgery", "Thyroid Surgery", "Adrenal Surgery"],
+        "sameAs": ["https://gerhardprager.eu"]
+    }
+    </script>
+</body>
+</html>
