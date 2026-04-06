@@ -4086,6 +4086,151 @@ img.mural__image {
 
 
 /* ============================================================
+   WEIGHT LOSS STEP CHART
+   ============================================================ */
+.wl-chart {
+  background: var(--bg);
+  padding: 6rem 0;
+}
+
+.wl-chart__steps {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.wl-chart__step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.wl-chart__step:hover {
+  transform: translateY(-6px);
+}
+
+.wl-chart__bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.wl-chart__step:hover .wl-chart__bar {
+  box-shadow: 0 8px 24px rgba(42, 58, 74, 0.2);
+}
+
+/* Step heights - ascending staircase */
+.wl-chart__step--1 .wl-chart__bar {
+  height: 80px;
+  background: rgba(122, 158, 184, 0.25);
+}
+
+.wl-chart__step--2 .wl-chart__bar {
+  height: 140px;
+  background: rgba(122, 158, 184, 0.45);
+}
+
+.wl-chart__step--3 .wl-chart__bar {
+  height: 210px;
+  background: var(--accent);
+}
+
+.wl-chart__step--4 .wl-chart__bar {
+  height: 270px;
+  background: var(--power);
+  border-top: 3px solid var(--warm);
+}
+
+.wl-chart__label {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background: var(--bg-white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.wl-chart__pct {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 400;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.wl-chart__step--4 .wl-chart__pct {
+  color: var(--warm);
+}
+
+.wl-chart__method {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  display: block;
+}
+
+/* Mobile: horizontal bars */
+@media (max-width: 768px) {
+  .wl-chart__steps {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .wl-chart__step {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .wl-chart__step:hover {
+    transform: translateX(6px);
+  }
+
+  .wl-chart__bar {
+    border-radius: 4px 0 0 4px;
+    height: 56px !important;
+  }
+
+  .wl-chart__step--1 .wl-chart__bar { width: 25%; flex-shrink: 0; }
+  .wl-chart__step--2 .wl-chart__bar { width: 45%; flex-shrink: 0; }
+  .wl-chart__step--3 .wl-chart__bar { width: 70%; flex-shrink: 0; }
+  .wl-chart__step--4 .wl-chart__bar { width: 90%; flex-shrink: 0; border-top: none; border-left: 3px solid var(--warm); }
+
+  .wl-chart__label {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .wl-chart__pct {
+    font-size: 20px;
+    min-width: 70px;
+    margin-bottom: 0;
+  }
+
+  .wl-chart__method {
+    font-size: 13px;
+  }
+}
+
+
+/* ============================================================
    PROCEDURE DETAIL PAGES — REDESIGN
    ============================================================ */
 
