@@ -1130,6 +1130,12 @@ button:focus:not(:focus-visible) {
   margin-bottom: 2rem;
 }
 
+.eingr-grid--2,
+.eingriffe__grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 66.666%;
+}
+
 /* Procedures page: horizontal card layout with content wrapper */
 .eingr-grid .eingr-card {
   flex-direction: row;
