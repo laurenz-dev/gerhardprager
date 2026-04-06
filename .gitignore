@@ -3,3 +3,9 @@ _backup/
 node_modules/
 *.pem
 .env
+awesome-claude-code-main/
+claude-mem-main/
+claude-skills-main/
+superpowers-main/
+ui-ux-pro-max-skill-main/
+_backup/
