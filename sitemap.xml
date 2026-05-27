@@ -6,7 +6,7 @@
     <loc>https://www.gerhardprager.eu/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,7 +14,7 @@
     <loc>https://www.gerhardprager.eu/eingriffe</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/eingriffe"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/procedures"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -22,7 +22,7 @@
     <loc>https://www.gerhardprager.eu/ueber-mich</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/ueber-mich"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/about"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -30,7 +30,7 @@
     <loc>https://www.gerhardprager.eu/wissenschaft</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/wissenschaft"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/science"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -38,7 +38,7 @@
     <loc>https://www.gerhardprager.eu/presse</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/presse"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/press"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -46,110 +46,168 @@
     <loc>https://www.gerhardprager.eu/kontakt</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/kontakt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/contact"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Bariatrische Chirurgie -->
+  <url><loc>https://www.gerhardprager.eu/magenbypass</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.gerhardprager.eu/schlauchmagen</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.gerhardprager.eu/omega-loop</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.gerhardprager.eu/sadi-s</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/bpd-ds</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/magenballon</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Endokrine Chirurgie -->
+  <url><loc>https://www.gerhardprager.eu/schilddruese</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/nebenschilddruese</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/nebenniere</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Endoskopische Verfahren -->
+  <url><loc>https://www.gerhardprager.eu/esg</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/tore</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Allgemeinchirurgie -->
+  <url><loc>https://www.gerhardprager.eu/hernienchirurgie</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/hiatushernie</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/gallenblasenentfernung</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gerhardprager.eu/darmchirurgie</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Rechtliches -->
+  <url><loc>https://www.gerhardprager.eu/impressum</loc><lastmod>2026-04-07</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
   <!-- Blog Articles -->
   <url>
     <loc>https://www.gerhardprager.eu/blog/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/magenbypass-wien</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/schlauchmagen-wien</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/adipositas-operation-krankenkasse</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/bariatric-surgery-vienna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/bariatric-surgery-vienna"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/best-bariatric-surgeon-vienna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/best-bariatric-surgeon-vienna"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/adipositas-behandlung-wien</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/magenverkleinerung-kosten-oesterreich</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/diabetes-typ-2-operation</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/obesity-surgery-europe</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/obesity-surgery-europe"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/gastric-sleeve-vienna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/gastric-sleeve-vienna"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/schilddruese-operation-wien</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/omega-loop-magenbypass</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/weight-loss-surgery-cost-austria</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/weight-loss-surgery-cost-austria"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/bmi-rechner-adipositas</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gerhardprager.eu/blog/life-after-bariatric-surgery</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/blog/life-after-bariatric-surgery"/>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- New Blog Articles April 2026 -->
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/magenbypass-vs-schlauchmagen</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/leben-nach-magenbypass</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/reflux-operation-wien</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/schilddruese-operation-ablauf</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gerhardprager.eu/blog/adipositas-chirurgie-krankenkasse-oesterreich</loc>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

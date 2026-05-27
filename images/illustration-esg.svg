@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .scope { stroke: #2b3a4a; fill: none; stroke-width: 1.3; stroke-linecap: round; }
+      .suture { stroke: #2b3a4a; stroke-width: 1; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Esophagus -->
+  <path d="M275,50 L273,120 Q271,138 269,150" class="organ"/>
+  <path d="M295,50 L293,120 Q291,138 289,150" class="organ"/>
+
+  <!-- Stomach outer wall -->
+  <path d="M269,150 Q252,165 236,190 Q218,220 210,255 Q202,295 208,335 Q215,370 235,395 Q260,418 290,425 Q322,428 350,415 Q375,398 388,370 Q398,340 396,305 Q393,270 384,242 Q374,218 360,198 Q348,182 334,170 Q320,160 308,155 Q298,152 289,150" class="highlight" style="stroke-width:1.5;"/>
+
+  <!-- Stomach rugae (before plication, outer areas) -->
+  <path d="M245,210 Q255,220 252,235" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+  <path d="M355,225 Q365,235 362,250" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+
+  <!-- Plication/suture folds inside stomach (reducing volume) -->
+  <!-- Fold 1 -->
+  <path d="M270,185 Q285,195 290,215 Q292,235 285,250 Q278,262 268,268" class="suture" style="stroke-width:1.2;"/>
+  <path d="M310,185 Q295,195 290,215 Q288,235 295,250 Q302,262 312,268" class="suture" style="stroke-width:1.2;"/>
+  <!-- Fold 2 -->
+  <path d="M265,268 Q280,278 285,298 Q287,318 280,332 Q273,342 263,348" class="suture" style="stroke-width:1.2;"/>
+  <path d="M315,268 Q300,278 295,298 Q293,318 300,332 Q307,342 317,348" class="suture" style="stroke-width:1.2;"/>
+  <!-- Fold 3 -->
+  <path d="M260,348 Q275,358 280,375 Q282,392 275,402" class="suture" style="stroke-width:1.2;"/>
+  <path d="M320,348 Q305,358 300,375 Q298,392 305,402" class="suture" style="stroke-width:1.2;"/>
+
+  <!-- Suture points (stitch marks) -->
+  <!-- Top fold stitches -->
+  <line x1="287" y1="200" x2="293" y2="200" class="suture" style="stroke-width:0.8;"/>
+  <line x1="285" y1="210" x2="295" y2="210" class="suture" style="stroke-width:0.8;"/>
+  <line x1="284" y1="220" x2="296" y2="220" class="suture" style="stroke-width:0.8;"/>
+  <line x1="283" y1="230" x2="297" y2="230" class="suture" style="stroke-width:0.8;"/>
+  <line x1="284" y1="240" x2="296" y2="240" class="suture" style="stroke-width:0.8;"/>
+  <!-- Middle fold stitches -->
+  <line x1="282" y1="283" x2="298" y2="283" class="suture" style="stroke-width:0.8;"/>
+  <line x1="281" y1="293" x2="299" y2="293" class="suture" style="stroke-width:0.8;"/>
+  <line x1="280" y1="303" x2="300" y2="303" class="suture" style="stroke-width:0.8;"/>
+  <line x1="280" y1="313" x2="300" y2="313" class="suture" style="stroke-width:0.8;"/>
+  <line x1="281" y1="323" x2="299" y2="323" class="suture" style="stroke-width:0.8;"/>
+  <!-- Bottom fold stitches -->
+  <line x1="278" y1="363" x2="302" y2="363" class="suture" style="stroke-width:0.8;"/>
+  <line x1="277" y1="373" x2="303" y2="373" class="suture" style="stroke-width:0.8;"/>
+  <line x1="278" y1="383" x2="302" y2="383" class="suture" style="stroke-width:0.8;"/>
+  <line x1="279" y1="393" x2="301" y2="393" class="suture" style="stroke-width:0.8;"/>
+
+  <!-- Endoscope through esophagus -->
+  <path d="M282,50 Q283,85 283,120 Q283,145 284,170 Q285,195 286,215" class="scope"/>
+  <!-- Endoscope tip with suturing device -->
+  <circle cx="286" cy="218" r="3.5" fill="#2b3a4a" opacity="0.5"/>
+  <!-- Device arms -->
+  <line x1="282" y1="216" x2="278" y2="210" class="thin" style="stroke-width:0.8;"/>
+  <line x1="290" y1="216" x2="294" y2="210" class="thin" style="stroke-width:0.8;"/>
+
+  <!-- Reduced volume indication - bracket -->
+  <path d="M340,190 Q350,280 340,380" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="340" y1="190" x2="348" y2="195" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="340" y1="380" x2="348" y2="375" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+
+  <!-- Duodenum exit -->
+  <path d="M350,415 Q365,420 375,430 Q385,442 385,455" class="organ"/>
+  <path d="M322,428 Q340,435 352,445 Q362,455 362,468" class="organ"/>
+
+  <!-- Labels -->
+  <!-- Endoscope -->
+  <text x="320" y="100" class="label">Endoscope</text>
+  <line x1="318" y1="98" x2="293" y2="100" class="lead"/>
+
+  <!-- Suture Pattern -->
+  <text x="115" y="300" class="label">Suture Pattern</text>
+  <line x1="225" y1="298" x2="275" y2="300" class="lead"/>
+
+  <!-- Reduced Volume -->
+  <text x="370" y="290" class="label">Reduced Volume</text>
+  <line x1="368" y1="288" x2="352" y2="288" class="lead"/>
+</svg>

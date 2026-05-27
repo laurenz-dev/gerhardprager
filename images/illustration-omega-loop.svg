@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .ghost { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-dasharray: 6 4; opacity: 0.35; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Esophagus -->
+  <path d="M275,35 L275,95 Q274,110 272,120" class="organ"/>
+  <path d="M289,35 L289,95 Q288,110 286,120" class="organ"/>
+
+  <!-- Long gastric pouch (longer than Roux-en-Y) -->
+  <path d="M272,120 Q265,135 262,155 Q259,180 258,210 Q257,240 260,265 Q263,285 270,300 Q278,310 286,300 Q293,285 295,265 Q297,240 296,210 Q295,180 292,155 Q289,135 286,120" class="highlight"/>
+
+  <!-- Bypassed stomach (ghost) -->
+  <path d="M262,155 Q240,165 222,190 Q205,220 202,255 Q200,290 210,320 Q222,345 245,355 Q270,362 295,355 Q315,345 325,325 Q332,305 330,280 Q328,260 322,240 Q316,220 308,205 Q300,190 295,175" class="ghost"/>
+  <!-- Ghost interior folds -->
+  <path d="M228,220 Q238,235 233,255" class="ghost" style="stroke-width:0.6;"/>
+  <path d="M222,280 Q232,295 228,315" class="ghost" style="stroke-width:0.6;"/>
+
+  <!-- Duodenum from bypassed stomach -->
+  <path d="M295,355 Q310,365 320,378 Q328,395 322,410" class="ghost"/>
+
+  <!-- Single anastomosis - loop connection from pouch to jejunum -->
+  <circle cx="270" cy="300" r="4" fill="none" stroke="#2b3a4a" stroke-width="1.5"/>
+
+  <!-- Jejunal loop coming up to anastomosis -->
+  <path d="M270,304 Q260,320 255,340 Q250,365 260,385 Q270,400 290,405 Q310,408 325,400 Q340,390 345,370 Q348,350 342,335 Q335,320 322,410" class="organ" style="stroke-width:1.3;"/>
+
+  <!-- Biliopancreatic loop (afferent limb going up) -->
+  <path d="M270,304 Q258,315 250,330 Q240,350 238,370 Q236,390 245,405 Q255,418 270,420 Q290,422 305,415 Q322,410 325,400" class="thin"/>
+
+  <!-- Efferent limb going down -->
+  <path d="M325,400 Q335,410 340,425 Q345,445 340,460 Q335,470 325,475" class="organ" style="stroke-width:1.3;"/>
+
+  <!-- Anastomosis suture marks -->
+  <line x1="265" y1="296" x2="261" y2="300" class="thin" style="stroke-width:0.8;"/>
+  <line x1="267" y1="293" x2="263" y2="297" class="thin" style="stroke-width:0.8;"/>
+  <line x1="275" y1="296" x2="279" y2="300" class="thin" style="stroke-width:0.8;"/>
+  <line x1="273" y1="293" x2="277" y2="297" class="thin" style="stroke-width:0.8;"/>
+
+  <!-- Flow arrows -->
+  <polygon points="262,260 258,254 266,254" fill="#2b3a4a" opacity="0.5"/>
+  <polygon points="338,460 334,454 342,454" fill="#2b3a4a" opacity="0.5"/>
+
+  <!-- Labels -->
+  <!-- Pouch -->
+  <text x="330" y="200" class="label">Pouch</text>
+  <line x1="328" y1="198" x2="298" y2="210" class="lead"/>
+
+  <!-- Single Anastomosis -->
+  <text x="100" y="305" class="label">Single Anastomosis</text>
+  <line x1="250" y1="303" x2="264" y2="302" class="lead"/>
+
+  <!-- Bypassed Stomach -->
+  <text x="365" y="290" class="label">Bypassed Stomach</text>
+  <line x1="363" y1="288" x2="330" y2="285" class="lead"/>
+
+  <!-- Biliopancreatic Loop -->
+  <text x="90" y="405" class="label">Biliopancreatic Loop</text>
+  <line x1="238" y1="403" x2="248" y2="400" class="lead"/>
+</svg>

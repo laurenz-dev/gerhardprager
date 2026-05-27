@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .balloon { stroke: #2b3a4a; fill: #e8e4df; stroke-width: 1.5; opacity: 0.9; }
+      .scope { stroke: #2b3a4a; fill: none; stroke-width: 1.2; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Esophagus -->
+  <path d="M272,55 L270,120 Q268,140 266,155" class="organ"/>
+  <path d="M290,55 L288,120 Q286,140 284,155" class="organ"/>
+
+  <!-- Stomach outline -->
+  <path d="M266,155 Q248,168 232,190 Q215,218 208,250 Q200,288 206,325 Q212,355 230,375 Q252,395 280,400 Q310,402 335,390 Q355,375 365,350 Q372,325 370,295 Q368,265 360,240 Q352,218 340,200 Q328,185 318,172 Q308,162 298,157 Q292,155 284,155" class="highlight" style="stroke-width:1.5;"/>
+
+  <!-- Stomach interior rugae folds -->
+  <path d="M240,210 Q252,222 248,240" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <path d="M225,270 Q238,282 234,300" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <path d="M235,330 Q248,342 245,358" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+
+  <!-- Duodenum exit -->
+  <path d="M335,390 Q350,395 362,405 Q372,415 375,430" class="organ"/>
+  <path d="M310,402 Q325,408 338,418 Q348,428 350,440" class="organ"/>
+
+  <!-- Intragastric balloon -->
+  <ellipse cx="285" cy="285" rx="62" ry="55" class="balloon"/>
+  <!-- Balloon surface reflection lines -->
+  <path d="M248,265 Q258,255 272,258" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+  <path d="M242,280 Q250,272 262,274" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+
+  <!-- Balloon valve at top -->
+  <ellipse cx="285" cy="232" rx="6" ry="4" fill="#e8e4df" stroke="#2b3a4a" stroke-width="1"/>
+
+  <!-- Endoscope line through esophagus -->
+  <path d="M278,55 Q279,90 279,120 Q279,150 280,180 Q281,210 283,228" class="scope" style="stroke-dasharray: none;"/>
+  <!-- Endoscope tip -->
+  <circle cx="283" cy="228" r="3" fill="#2b3a4a" opacity="0.6"/>
+  <!-- Endoscope camera lines -->
+  <line x1="280" y1="226" x2="278" y2="222" class="thin" style="stroke-width:0.6;"/>
+  <line x1="286" y1="226" x2="288" y2="222" class="thin" style="stroke-width:0.6;"/>
+
+  <!-- Inflation tube from balloon -->
+  <path d="M285,232 Q286,218 284,200 Q282,180 280,160" class="thin" style="stroke-width:0.8; stroke-dasharray: 2 2;"/>
+
+  <!-- Labels -->
+  <!-- Intragastric Balloon -->
+  <text x="370" y="280" class="label">Intragastric Balloon</text>
+  <line x1="368" y1="278" x2="348" y2="282" class="lead"/>
+
+  <!-- Stomach -->
+  <text x="110" y="355" class="label">Stomach</text>
+  <line x1="168" y1="353" x2="215" y2="348" class="lead"/>
+
+  <!-- Endoscope -->
+  <text x="320" y="120" class="label">Endoscope</text>
+  <line x1="318" y1="118" x2="285" y2="118" class="lead"/>
+</svg>

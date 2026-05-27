@@ -160,7 +160,16 @@
     </style>
 </head>
 <body>
-    <div class="container">
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" style="display:none;">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text">Diese Website verwendet Cookies und Analysetools, um Ihnen die bestmögliche Nutzungserfahrung zu bieten. Weitere Informationen finden Sie in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="cookie-banner__actions">
+      <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Ablehnen</button>
+      <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Akzeptieren</button>
+    </div>
+  </div>
+</div>
 
         <div class="language-toggle">
             <button class="active" onclick="showLanguage('de')">Deutsch</button>
@@ -191,7 +200,7 @@
             <h2>Vision für die Zukunft</h2>
             <div class="quote">
                 "Die metabolische Chirurgie befindet sich an einem Wendepunkt. Nicht nur technologische Innovationen, sondern auch ein tieferes Verständnis der komplexen Beziehungen zwischen chirurgischen Interventionen und Stoffwechselveränderungen eröffnen uns neue Möglichkeiten, unseren Patienten ein besseres und erfolgreicheres Leben zu ermöglichen. Die Zukunft liegt in personalisiertem, präzisionsbasiertem Ansatz der Adipositas-Behandlung."<br>
-                <strong>— Prof. Dr. Gerhard Prager</strong>
+                <strong>- Prof. Dr. Gerhard Prager</strong>
             </div>
 
             <h2>Bedeutung für Patienten und Ärzte</h2>
@@ -232,7 +241,7 @@
             <h2>Vision for the Future</h2>
             <div class="quote">
                 "Metabolic surgery is at a pivotal moment. Beyond technological innovations, a deeper understanding of the complex relationships between surgical interventions and metabolic changes opens new possibilities to enable our patients to lead better, more successful lives. The future lies in personalized, precision-based approaches to obesity treatment."<br>
-                <strong>— Prof. Dr. Gerhard Prager</strong>
+                <strong>- Prof. Dr. Gerhard Prager</strong>
             </div>
 
             <h2>Significance for Patients and Physicians</h2>
@@ -270,5 +279,6 @@
             event.target.classList.add('active');
         }
     </script>
+<script src="cookie-consent.js"></script>
 </body>
 </html>

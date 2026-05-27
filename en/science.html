@@ -4,24 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#1e2328">
-  <title>Research &amp; Science — Univ.-Prof. Dr. Gerhard Prager | MedUni Vienna</title>
+  <title>Research &amp; Science - Univ.-Prof. Dr. Gerhard Prager | MedUni Vienna</title>
   <meta name="description" content="435+ publications, research on diabetes remission, NASH and obesity. Teaching at IRCAD Strasbourg. Univ.-Prof. Dr. Gerhard Prager, MedUni Vienna.">
-  <meta property="og:title" content="Research & Science — Univ.-Prof. Dr. Gerhard Prager | MedUni Vienna">
+  <meta property="og:title" content="Research & Science - Univ.-Prof. Dr. Gerhard Prager | MedUni Vienna">
   <meta property="og:description" content="435+ publications, research on diabetes remission, NASH and obesity. Teaching at IRCAD Strasbourg. Univ.-Prof. Dr. Gerhard Prager, MedUni Vienna.">
   <meta property="og:image" content="/images/foto-2.jpeg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.gerhardprager.eu/en/science">
   <link rel="canonical" href="https://www.gerhardprager.eu/en/science">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Research & Science — Univ.-Prof. Dr. Gerhard Prager",
+    "name": "Research & Science - Univ.-Prof. Dr. Gerhard Prager",
     "description": "435+ publications, research on diabetes remission, NASH and obesity. Teaching at IRCAD Strasbourg.",
     "url": "https://www.gerhardprager.eu/en/science",
     "mainEntity": {
@@ -37,7 +34,16 @@
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to content</a>
-
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie Settings" style="display:none;">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text">This website uses cookies and analytics tools to provide you with the best possible experience. For more information, please see our <a href="/datenschutz.html">Privacy Policy</a>.</p>
+    <div class="cookie-banner__actions">
+      <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Decline</button>
+      <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Accept</button>
+    </div>
+  </div>
+</div>
 
   <!-- NAVIGATION -->
   <nav class="nav nav--hero" id="nav">
@@ -51,19 +57,23 @@
         <div class="mega-dropdown">
           <div>
             <div class="mega-dropdown__header">Bariatric Surgery</div>
-            <a href="procedures.html#bariatrisch" class="mega-dropdown__link">Gastric Bypass (Roux-en-Y)</a>
-            <a href="procedures.html#bariatrisch" class="mega-dropdown__link">Sleeve Gastrectomy</a>
-            <a href="procedures.html#bariatrisch" class="mega-dropdown__link">Omega-Loop Gastric Bypass</a>
-            <a href="procedures.html#bariatrisch" class="mega-dropdown__link">SADI-S</a>
-
-            <a href="procedures.html#bariatrisch" class="mega-dropdown__link">BPD/DS</a>
-            <a href="procedures.html#bariatrisch" class="mega-dropdown__link">Gastric Balloon Orbera&reg;</a>
+            <a href="magenbypass.html">Gastric Bypass (Roux-en-Y)</a>
+            <a href="schlauchmagen.html">Sleeve Gastrectomy</a>
+            <a href="omega-loop.html">Omega-Loop Bypass</a>
+            <a href="sadi-s.html">SADI-S</a>
+            <a href="bpd-ds.html">BPD/DS</a>
+            <a href="magenballon.html">Gastric Balloon</a>
           </div>
           <div>
             <div class="mega-dropdown__header">Endocrine Surgery</div>
-            <a href="procedures.html#endokrine" class="mega-dropdown__link">Thyroid Surgery</a>
-            <a href="procedures.html#endokrine" class="mega-dropdown__link">Parathyroid Surgery</a>
-            <a href="procedures.html#endokrine" class="mega-dropdown__link">Adrenal Surgery</a>
+            <a href="schilddruese.html">Thyroid Surgery</a>
+            <a href="nebenschilddruese.html">Parathyroid Surgery</a>
+            <a href="nebenniere.html">Adrenal Surgery</a>
+            <div class="mega-dropdown__header" style="margin-top:12px">General Surgery</div>
+            <a href="hernienchirurgie.html">Hernia Surgery</a>
+            <a href="hiatushernie.html">Hiatal Hernia</a>
+            <a href="gallenblasenentfernung.html">Gallbladder Removal</a>
+            <a href="darmchirurgie.html">Colorectal Surgery</a>
           </div>
           <div class="mega-dropdown__photo">
             <img src="../images/foto-2.jpeg" alt="Univ.-Prof. Dr. Gerhard Prager at his desk">
@@ -89,21 +99,34 @@
   </nav>
 
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-hidden="true" aria-label="Navigation menu">
-    <div class="mobile-menu__header">Bariatric Surgery</div>
-    <div class="mobile-menu__sub">
-      <a href="procedures.html#bariatrisch">Gastric Bypass</a>
-      <a href="procedures.html#bariatrisch">Sleeve Gastrectomy</a>
-      <a href="procedures.html#bariatrisch">Omega-Loop Bypass</a>
-      <a href="procedures.html#bariatrisch">SADI-S</a>
-
-      <a href="procedures.html#bariatrisch">BPD/DS</a>
-      <a href="procedures.html#bariatrisch">Gastric Balloon</a>
+    <div class="mobile-menu__section">
+      <button class="mobile-menu__toggle" data-target="mobileBariatric" aria-expanded="false">
+        Bariatric Surgery
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-menu__sub" id="mobileBariatric">
+        <a href="magenbypass.html">Gastric Bypass</a>
+        <a href="schlauchmagen.html">Sleeve Gastrectomy</a>
+        <a href="omega-loop.html">Omega-Loop Bypass</a>
+        <a href="sadi-s.html">SADI-S</a>
+        <a href="bpd-ds.html">BPD/DS</a>
+        <a href="magenballon.html">Gastric Balloon</a>
+      </div>
     </div>
-    <div class="mobile-menu__header">Endocrine Surgery</div>
-    <div class="mobile-menu__sub">
-      <a href="procedures.html#endokrine">Thyroid</a>
-      <a href="procedures.html#endokrine">Parathyroid</a>
-      <a href="procedures.html#endokrine">Adrenal Gland</a>
+    <div class="mobile-menu__section">
+      <button class="mobile-menu__toggle" data-target="mobileEndocrine" aria-expanded="false">
+        Endocrine &amp; General Surgery
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-menu__sub" id="mobileEndocrine">
+        <a href="schilddruese.html">Thyroid</a>
+        <a href="nebenschilddruese.html">Parathyroid</a>
+        <a href="nebenniere.html">Adrenal Gland</a>
+        <a href="hernienchirurgie.html">Hernia Surgery</a>
+        <a href="hiatushernie.html">Hiatal Hernia</a>
+        <a href="gallenblasenentfernung.html">Gallbladder Removal</a>
+        <a href="darmchirurgie.html">Colorectal Surgery</a>
+      </div>
     </div>
     <a href="about.html">About</a>
     <a href="science.html">Science</a>
@@ -113,8 +136,7 @@
   </div>
 
   <!-- PAGE HERO -->
-  <main id="main-content">
-  <section class="page-hero">
+  <section class="page-hero" id="main-content">
     <div class="container">
       <p class="overline fade-up">RESEARCH &amp; SCIENCE</p>
       <h1 class="page-hero__title fade-up">Research &amp;<br>Science</h1>
@@ -131,12 +153,48 @@
           <div class="trust-bar__label">Publications</div>
         </div>
         <div class="trust-bar__item fade-up">
-          <div class="trust-bar__num" data-count="50" data-suffix="+">0</div>
-          <div class="trust-bar__label">Training Countries</div>
+          <div class="trust-bar__num" data-count="15300" data-suffix="+">0</div>
+          <div class="trust-bar__label">Citations</div>
         </div>
         <div class="trust-bar__item fade-up">
-          <div class="trust-bar__num" data-count="9900" data-suffix="+">0</div>
-          <div class="trust-bar__label">Procedures</div>
+          <div class="trust-bar__num" data-count="63" data-suffix="">0</div>
+          <div class="trust-bar__label">H-Index</div>
+        </div>
+        <div class="trust-bar__item fade-up">
+          <div class="trust-bar__num" data-count="75000" data-suffix="+">0</div>
+          <div class="trust-bar__label">Readers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH IMPACT -->
+  <section class="research-impact">
+    <div class="container">
+      <div class="research-impact__header fade-up">
+        <p class="overline">Research Impact</p>
+        <h2>What These Numbers Mean</h2>
+      </div>
+      <div class="research-impact__grid">
+        <div class="research-impact__card fade-up">
+          <div class="research-impact__icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 28 L6 12 L12 12 L12 28"/><path d="M13 28 L13 6 L19 6 L19 28"/><path d="M20 28 L20 16 L26 16 L26 28"/></svg></div>
+          <h3>15,300+ Citations</h3>
+          <p>This is how often the work of Univ.-Prof. Dr. Gerhard Prager has been referenced in other scientific publications. Citations are the most important indicator that research findings are being adopted and advanced by the scientific community.</p>
+        </div>
+        <div class="research-impact__card fade-up">
+          <div class="research-impact__icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M16 8 L16 16 L22 16"/><path d="M10 22 L22 10" stroke-dasharray="2 2"/></svg></div>
+          <h3>H-Index 63</h3>
+          <p>The H-Index measures both productivity and impact: an H-Index of 63 means that at least 63 publications have each been cited at least 63 times. It is considered the most meaningful measure of a scientist&rsquo;s sustained influence.</p>
+        </div>
+        <div class="research-impact__card fade-up">
+          <div class="research-impact__icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6 L28 6 L28 26 L4 26 Z"/><path d="M4 10 L28 10"/><circle cx="10" cy="18" r="3"/><path d="M16 16 L24 16"/><path d="M16 20 L22 20"/></svg></div>
+          <h3>75,000+ Readers</h3>
+          <p>Over 75,000 times, the publications have been read by fellow scientists worldwide. This number demonstrates the international reach and relevance of the research in daily clinical practice.</p>
+        </div>
+        <div class="research-impact__card fade-up">
+          <div class="research-impact__icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4 L20 12 L28 13 L22 19 L23 28 L16 24 L9 28 L10 19 L4 13 L12 12 Z"/></svg></div>
+          <h3>Research Interest Score 7,575.5</h3>
+          <p>The RI Score from ResearchGate evaluates the scientific community&rsquo;s interest in a researcher&rsquo;s work. A score of 7,575.5 is higher than 99% of all researchers worldwide &ndash; a sign of extraordinary scientific impact.</p>
         </div>
       </div>
     </div>
@@ -179,6 +237,13 @@
       <div class="lehre-grid">
         <div class="lehre-card fade-up">
           <div class="lehre-card__icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="12" r="4"/><path d="M8 28 C8 22 12 18 16 18 C20 18 24 22 24 28"/><path d="M22 12 L28 6"/><path d="M26 6 L28 6 L28 8"/></svg>
+          </div>
+          <h3>Clinical Immersions at AKH Vienna</h3>
+          <p>Observership programs for surgeons from around the world. Accompaniment in clinical routine, OR observation and scientific exchange.</p>
+        </div>
+        <div class="lehre-card fade-up">
+          <div class="lehre-card__icon">
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12 L16 6 L28 12 L16 18 Z"/><path d="M8 14 L8 24 C8 24 12 28 16 28 C20 28 24 24 24 24 L24 14"/><line x1="28" y1="12" x2="28" y2="24"/></svg>
           </div>
           <h3>IRCAD Strasbourg</h3>
@@ -190,13 +255,6 @@
           </div>
           <h3>Masterclass in Bariatric Surgery</h3>
           <p>Annual masterclass in Vienna for advanced bariatric surgeons. A combination of theory, live surgeries and case discussions.</p>
-        </div>
-        <div class="lehre-card fade-up">
-          <div class="lehre-card__icon">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="4" width="20" height="24" rx="2"/><path d="M6 10 L26 10"/><line x1="10" y1="16" x2="22" y2="16"/><line x1="10" y1="20" x2="18" y2="20"/><line x1="10" y1="24" x2="20" y2="24"/></svg>
-          </div>
-          <h3>Clinical Immersions at AKH Vienna</h3>
-          <p>Observership programs for surgeons from around the world. Accompaniment in clinical routine, OR observation and scientific exchange.</p>
         </div>
         <div class="lehre-card fade-up">
           <div class="lehre-card__icon">
@@ -241,7 +299,407 @@
         <div class="ifso-timeline__item">
           <div class="ifso-timeline__dot"></div>
           <div class="ifso-timeline__year">Current</div>
-          <div class="ifso-timeline__label">Immediate Past President</div>
+          <div class="ifso-timeline__label">Past President</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="publikationen-section">
+    <div class="container">
+      <div class="publikationen-section__header fade-up">
+        <p class="overline">Publication List</p>
+        <h2>Scientific Publications</h2>
+        <p class="publikationen-section__sub">Selected publications from over 35 years of research in bariatric-metabolic and endocrine surgery.</p>
+      </div>
+      <div class="pub-search fade-up">
+        <svg class="pub-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="pub-search__input" id="pubSearch" placeholder="Search publications (author, title, journal...)">
+        <div class="pub-search__count" id="pubCount">237 Publications</div>
+      </div>
+      <div class="publikationen-list" id="publikationen">
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2026</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Mohajer-Bastami, A., et al., <em>A Critical Analysis of Transformational Leadership and How It Can Improve Culture and Service Outcomes Within the Health Care System.</em> J Patient Saf, 2026. <strong>22</strong>(1): p. 73-77.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>Same-day Discharge Metabolic and Bariatric Surgery: a GRADE-based International Federation for the Surgery and Other Therapies for Obesity (IFSO) Position Statement.</em> Obes Surg, 2026.</li>
+            <li class="pub-item">Kartnig, F.I., et al., <em>N-terminal pro B-type natriuretic peptide increase after bariatric surgery is linked to decreased insulin resistance and is more pronounced in women.</em> Surg Obes Relat Dis, 2026. <strong>22</strong>(1): p. 106-112.</li>
+            <li class="pub-item">Gensthaler, L., et al., <em>A Case Series and Technical Note on Endoluminal Vacuum Therapy via Pull-Through Technique for Leakage after Metabolic Bariatric Surgery.</em> Obes Surg, 2026.</li>
+            <li class="pub-item">Felsenreich, D.M. and G. Prager, <em>[Metabolic/bariatric surgery is effective : What is the evidence regarding hard endpoints and long-term outcomes?].</em> Chirurgie (Heidelb), 2026. <strong>97</strong>(1): p. 4-10.</li>
+            <li class="pub-item">Cohen, R.V., et al., <em>The International Federation for Surgery and Other Therapies for Obesity (IFSO) Consensus on Clinical Practice in Endoscopic Sleeve Gastroplasty.</em> Obes Surg, 2026.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2025</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Scherer, T., et al., <em>A direct effect of the hematocrit on blood glucose: Evidence from hypoxia- and erythropoietin-treated mice.</em> Sci Adv, 2025. <strong>11</strong>(16): p. eadt7366.</li>
+            <li class="pub-item">Mairinger, M., et al., <em>Progression of liver fibrosis after metabolic bariatric surgery in a MASLD rat model.</em> Clin Nutr, 2025. <strong>52</strong>: p. 225-233.</li>
+            <li class="pub-item">Lehner, L., et al., <em>Health Status and Patients&#x27; Satisfaction on the Long Term after Metabolic/Bariatric Surgery.</em> Obes Facts, 2025: p. 1-9.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>AI-assisted assessment of the IFSO consensus on obesity management medications in the context of metabolic bariatric surgery.</em> PLOS Digit Health, 2025. <strong>4</strong>(12): p. e0001132.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>International expert consensus on surgery for type 2 diabetes mellitus.</em> BMC Endocr Disord, 2025. <strong>25</strong>(1): p. 151.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>International expert consensus on the current status and future prospects of artificial intelligence in metabolic and bariatric surgery.</em> Sci Rep, 2025. <strong>15</strong>(1): p. 9312.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>One anastomosis gastric bypass in children and adolescents: An international expert survey.</em> Clin Obes, 2025. <strong>15</strong>(5): p. e70018.</li>
+            <li class="pub-item">Joerg, R., et al., <em>The effect of long-chain n-3 PUFA on liver transcriptome in human obesity.</em> Prostaglandins Leukot Essent Fatty Acids, 2025. <strong>204</strong>: p. 102663.</li>
+            <li class="pub-item">Herz, C.T., et al., <em>Bariatric surgery promotes recruitment of brown fat linked to alterations in the gut microbiota.</em> Eur J Endocrinol, 2025. <strong>192</strong>(5): p. 603-611.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Update on esophageal function, acid and non-acid reflux after one-anastomosis gastric bypass (OAGB): high-resolution manometry, impedance-24-h pH-metry, and gastroscopy in a prospective mid-term study.</em> Surg Endosc, 2025. <strong>39</strong>(4): p. 2335-2345.</li>
+            <li class="pub-item">Dominik, N., et al., <em>UDFF and Auto pSWE accurately assess liver steatosis and fibrosis risk in obese patients with MASLD.</em> Ultraschall Med, 2025.</li>
+            <li class="pub-item">De Luca, M., et al., <em>Meta-analysis of randomized controlled trials for the development of the International Federation for Surgery of Obesity and Metabolic Disorders-</em><em>European Chapter (IFSO-EC) guidelines on multimodal strategies for the surgical treatment of obesity.</em> Diabetes Obes Metab, 2025. <strong>27</strong>(6): p. 3347-3356.</li>
+            <li class="pub-item">Cohen, R.V., G. Prager, and P. Salminen, <em>Obesity is more than a number: a framework for treatment.</em> Br J Surg, 2025. <strong>112</strong>(5).</li>
+            <li class="pub-item">Cohen, R.V., et al., <em>International Federation for the Surgery of Obesity statement on metabolic bariatric surgery after pharmacotherapy-induced weight loss in clinical obesity.</em> Lancet Diabetes Endocrinol, 2025. <strong>13</strong>(9): p. 733-736.</li>
+            <li class="pub-item">Cohen, R.V., et al., <em>International Federation for the Surgery and Other Therapies for Obesity (IFSO) global consensus recommendations for optimizing outcomes after sleeve gastrectomy.</em> Br J Surg, 2025. <strong>112</strong>(10).</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2024</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Salminen, P., et al., <em>IFSO Consensus on Definitions and Clinical Practice Guidelines for Obesity Management-an International Delphi Study.</em> Obes Surg, 2024. <strong>34</strong>(1): p. 30-42.</li>
+            <li class="pub-item">Ponce de Leon-Ballesteros, G., et al., <em>Single Anastomosis Duodeno-Ileostomy with Sleeve Gastrectomy/Single Anastomosis Duodenal Switch (SADI-S/SADS) IFSO Position Statement-Update 2023.</em> Obes Surg, 2024. <strong>34</strong>(10): p. 3639-3685.</li>
+            <li class="pub-item">Ponce de Leon-Ballesteros, G., et al., <em>Metabolic and Bariatric Surgery in Patients with Obesity Class V (BMI &gt; 60 kg/m(2)): a Modified Delphi Study.</em> Obes Surg, 2024.</li>
+            <li class="pub-item">Nixdorf, L., et al., <em>Rapid improvement of hepatic steatosis and liver stiffness after metabolic/bariatric surgery: a prospective study.</em> Sci Rep, 2024. <strong>14</strong>(1): p. 17558.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>Metabolic and Bariatric Surgeon Criteria-An International Experts&#x27; Consensus.</em> Obes Surg, 2024. <strong>34</strong>(9): p. 3216-3228.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>Revision/Conversion Surgeries After One Anastomosis Gastric Bypass-An Experts&#x27; Modified Delphi Consensus.</em> Obes Surg, 2024. <strong>34</strong>(7): p. 2399-2410.</li>
+            <li class="pub-item">Haddad, A., et al., <em>Therapeutic Options for Recurrence of Weight and Obesity Related Complications After Metabolic and Bariatric Surgery: An IFSO Position Statement.</em> Obes Surg, 2024. <strong>34</strong>(11): p. 3944-3962.</li>
+            <li class="pub-item">Gensthaler, L., et al., <em>Endoluminal Vacuum Therapy as Effective Treatment for Patients with Postoperative Leakage After Metabolic Bariatric Surgery-A Single-Center Experience.</em> Obes Surg, 2024. <strong>34</strong>(9): p. 3306-3314.</li>
+            <li class="pub-item">De Luca, M., et al., <em>Scientific evidence for the updated guidelines on indications for metabolic and bariatric surgery (IFSO/ASMBS).</em> Surg Obes Relat Dis, 2024. <strong>20</strong>(11): p. 991-1025.</li>
+            <li class="pub-item">De Luca, M., et al., <em>Scientific Evidence for the Updated Guidelines on Indications for Metabolic and Bariatric Surgery (IFSO/ASMBS).</em> Obes Surg, 2024. <strong>34</strong>(11): p. 3963-4096.</li>
+            <li class="pub-item">De Luca, M., et al., <em>Development of the International Federation for Surgery of Obesity and Metabolic Disorders-European Chapter (IFSO-EC) Grade-Based Guidelines on the Surgical Treatment of Obesity Using Multimodal Strategies: Design and Methodological Aspects.</em> J Clin Med, 2024. <strong>13</strong>(17).</li>
+            <li class="pub-item">Dayyeh, B.K.A., et al., <em>IFSO Bariatric Endoscopy Committee Evidence-Based Review and Position Statement on Endoscopic Sleeve Gastroplasty for Obesity Management.</em> Obes Surg, 2024.</li>
+            <li class="pub-item">Cohen, R.V., et al., <em>Role of obesity-management medications before and after metabolic bariatric surgery: a systematic review.</em> Br J Surg, 2024. <strong>111</strong>(12).</li>
+            <li class="pub-item">Cohen, R.V., et al., <em>International consensus position statement on the role of obesity management medications in the context of metabolic bariatric surgery: expert guideline by the International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO).</em> Br J Surg, 2024. <strong>111</strong>(12).</li>
+            <li class="pub-item">Abu Dayyeh, B.K., et al., <em>Correction: IFSO Bariatric Endoscopy Committee Evidence-Based Review and Position Statement on Endoscopic Sleeve Gastroplasty for Obesity Management.</em> Obes Surg, 2024.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2023</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Ulbing, S., et al., <em>Author&#x27;s Reply to the &quot;Letter to the Editor Regarding &#x27;The Performance of Opioid-Free Anesthesia for Bariatric Surgery in Clinical Practice&#x27;&quot;.</em> Obes Surg, 2023.</li>
+            <li class="pub-item">Jedamzik, J., et al., <em>The male patient with obesity undergoing metabolic and bariatric surgery: changes in testosterone levels correlate with weight loss after one-anastomosis gastric bypass and Roux-en-Y gastric bypass.</em> Surg Obes Relat Dis, 2023. <strong>19</strong>(7): p. 699-705.</li>
+            <li class="pub-item">Ghobrial, S., et al., <em>Outcome of Gastric Bypass Surgery on Patients with Polycystic Ovary Syndrome: A Review.</em> J Clin Med, 2023. <strong>12</strong>(12).</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Potential Risk of Hypoglycaemia in Gastric Bypass Patients with Their Profession in Public Transportation System.</em> Obes Surg, 2023. <strong>33</strong>(11): p. 3687-3688.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>[Indications and preoperative planning for bariatric surgery].</em> Wien Klin Wochenschr, 2023. <strong>135</strong>(Suppl 6): p. 721-728.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Intrathoracic pouch migration in one-anastomosis gastric bypass with and without hiatoplasty: A 3-dimensional-computed tomography volumetry study.</em> Surg Obes Relat Dis, 2023. <strong>19</strong>(5): p. 492-499.</li>
+            <li class="pub-item">Brix, J.M., et al., <em>[Overweight and obesity in adults: general principles of treatment and conservative management].</em> Wien Klin Wochenschr, 2023. <strong>135</strong>(Suppl 6): p. 706-720.</li>
+            <li class="pub-item">Beiglbock, H., et al., <em>The Timing of Pregnancies After Bariatric Surgery has No Impact on Children&#x27;s Health-a Nationwide Population-based Registry Analysis.</em> Obes Surg, 2023. <strong>33</strong>(1): p. 149-155.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2022</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Walter, E., et al., <em>Impact of metabolic surgery on cost and long-term health outcome: a cost-effectiveness approach.</em> Surg Obes Relat Dis, 2022. <strong>18</strong>(2): p. 260-270.</li>
+            <li class="pub-item">Salminen, P., G. Prager, and P.R. Schauer, <em>Is COVID-19 the Newest Comorbidity of Obesity Mitigated by Bariatric Surgery?</em> JAMA Surg, 2022. <strong>157</strong>(3): p. 230.</li>
+            <li class="pub-item">Ranzenberger-Haider, T., et al., <em>Evaluation of a Bariatric Monitoring Pass for Primary Care Physicians.</em> Obes Facts, 2022. <strong>15</strong>(5): p. 629-637.</li>
+            <li class="pub-item">Nixdorf, L., et al., <em>Surgical Technique for Weight Regain after Roux-en-Y Gastric Bypass: Pouch-resizing and the MiniMIZER(R) Gastric Ring.</em> Surg Technol Int, 2022. <strong>41</strong>.</li>
+            <li class="pub-item">Kulterer, O.C., et al., <em>Brown Adipose Tissue Prevalence Is Lower in Obesity but Its Metabolic Activity Is Intact.</em> Front Endocrinol (Lausanne), 2022. <strong>13</strong>: p. 858417.</li>
+            <li class="pub-item">Kermansaravi, M., et al., <em>Patient Selection in One Anastomosis/Mini Gastric Bypass-an Expert Modified Delphi Consensus.</em> Obes Surg, 2022. <strong>32</strong>(8): p. 2512-2524.</li>
+            <li class="pub-item">Jedamzik, J., D.M. Felsenreich, and G. Prager, <em>Reply to comment on: Conversion from one-anastomosis gastric bypass to Roux-en-Y gastric bypass.</em> Surg Obes Relat Dis, 2022. <strong>18</strong>(5): p. 675-676.</li>
+            <li class="pub-item">Jedamzik, J., et al., <em>Conversion from one-anastomosis gastric bypass to Roux-en-Y gastric bypass: when and why-a single-center experience of all consecutive OAGB procedures.</em> Surg Obes Relat Dis, 2022. <strong>18</strong>(2): p. 225-232.</li>
+            <li class="pub-item">Herz, C.T., et al., <em>Obesity is associated with a higher Torque Teno viral load compared to leanness.</em> Front Endocrinol (Lausanne), 2022. <strong>13</strong>: p. 962090.</li>
+            <li class="pub-item">Gensthaler, L., et al., <em>Trends of Overweight and Obesity in Male Adolescents: Prevalence, Socioeconomic Status, and Impact on Cardiovascular Risk in a Central European Country.</em> Obes Surg, 2022. <strong>32</strong>(4): p. 1024-1033.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Outcome of Sleeve Gastrectomy Converted to Roux-en-Y Gastric Bypass and One-Anastomosis Gastric Bypass.</em> Obes Surg, 2022. <strong>32</strong>(3): p. 643-651.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Reply to the Letter to the Editor Concerning Outcome of Sleeve Gastrectomy to Roux-en-Y Gastric Bypass and One-Anastomosis Gastric Bypass.</em> Obes Surg, 2022. <strong>32</strong>(8): p. 2793-2794.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Fifteen Years after Sleeve Gastrectomy: Gastroscopies, Manometries, and 24-h pH-Metries in a Long-Term Follow-Up: A Multicenter Study.</em> Obes Facts, 2022. <strong>15</strong>(5): p. 666-673.</li>
+            <li class="pub-item">Eichelter, J., et al., <em>Surgical Technique of Single Anastomosis Duodeno-Ileal Bypass with Sleeve Gastrectomy (SADI-S).</em> Surg Technol Int, 2022. <strong>41</strong>.</li>
+            <li class="pub-item">Carrano, F.M., et al., <em>EAES rapid guideline: systematic review, network meta-analysis, CINeMA and GRADE assessment, and European consensus on bariatric surgery-extension 2022.</em> Surg Endosc, 2022. <strong>36</strong>(3): p. 1709-1725.</li>
+            <li class="pub-item">Beiglbock, H., et al., <em>Sex-Specific Differences in Mortality of Patients with a History of Bariatric Surgery: a Nation-Wide Population-Based Study.</em> Obes Surg, 2022. <strong>32</strong>(1): p. 8-17.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2021</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Pouwels, S., et al., <em>The First Modified Delphi Consensus Statement for Resuming Bariatric and Metabolic Surgery in the COVID-19 Times.</em> Obes Surg, 2021. <strong>31</strong>(1): p. 451-456.</li>
+            <li class="pub-item">Kroh, M., et al., <em>Returning to Surgery-Experience, Discussions and Consensus.</em> Obes Surg, 2021. <strong>31</strong>(3): p. 1336-1338.</li>
+            <li class="pub-item">Herz, C.T., et al., <em>Active Brown Adipose Tissue is Associated With a Healthier Metabolic Phenotype in Obesity.</em> Diabetes, 2021.</li>
+            <li class="pub-item">Herz, C.T., et al., <em>Sex differences in brown adipose tissue activity and cold-induced thermogenesis.</em> Mol Cell Endocrinol, 2021. <strong>534</strong>: p. 111365.</li>
+            <li class="pub-item">Herz, C.T., et al., <em>Characterization of endogenous bile acid composition in individuals with cold-activated brown adipose tissue.</em> Mol Cell Endocrinol, 2021. <strong>536</strong>: p. 111403.</li>
+            <li class="pub-item">Hamp, T., et al., <em>Duration of safe apnea in patients with morbid obesity during passive oxygenation using high-flow nasal insufflation versus regular flow nasal insufflation, a randomized trial.</em> Surg Obes Relat Dis, 2021. <strong>17</strong>(2): p. 347-355.</li>
+            <li class="pub-item">Gero, D., et al., <em>Defining Global Benchmarks in Elective Secondary Bariatric Surgery Comprising Conversional, Revisional, and Reversal Procedures.</em> Ann Surg, 2021. <strong>274</strong>(5): p. 821-828.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Surgical Technique of Diverted One-Anastomosis Gastric Bypass.</em> Surg Technol Int, 2021. <strong>39</strong>: p. 107-112.</li>
+            <li class="pub-item">Eilenberg, M., et al., <em>Accuracy of non-invasive liver stiffness measurement and steatosis quantification in patients with severe and morbid obesity.</em> Hepatobiliary Surg Nutr, 2021. <strong>10</strong>(5): p. 610-622.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2020</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Winzer, E., et al., <em>Course of depressive symptomatology and its association with serum uric acid in one-anastomosis gastric bypass patients.</em> Sci Rep, 2020. <strong>10</strong>(1): p. 18405.</li>
+            <li class="pub-item">Poglitsch, M., et al., <em>Plasma homocysteine after laparoscopic Roux-en-Y gastric bypass increases in the early postoperative phase but decreases in the long-term follow-up. A retrospective analysis.</em> Surg Obes Relat Dis, 2020. <strong>16</strong>(3): p. 372-380.</li>
+            <li class="pub-item">Mahawar, K.K., et al., <em>The first consensus statement on revisional bariatric surgery using a modified Delphi approach.</em> Surg Endosc, 2020. <strong>34</strong>(4): p. 1648-1657.</li>
+            <li class="pub-item">Kruschitz, R., et al., <em>Effect of one-anastomosis gastric bypass on cardiovascular risk factors in patients with vitamin D deficiency and morbid obesity: A secondary analysis.</em> Nutr Metab Cardiovasc Dis, 2020. <strong>30</strong>(12): p. 2379-2388.</li>
+            <li class="pub-item">Kristo, I., et al., <em>Silent Gastroesophageal Reflux Disease in Patients with Morbid Obesity Prior to Primary Metabolic Surgery.</em> Obes Surg, 2020. <strong>30</strong>(12): p. 4885-4891.</li>
+            <li class="pub-item">Jedamzik, J., et al., <em>Impact of limb length on nutritional status in one-anastomosis gastric bypass: 3-year results.</em> Surg Obes Relat Dis, 2020. <strong>16</strong>(4): p. 476-484.</li>
+            <li class="pub-item">Felsenreich, D.M., F.B. Langer, and G. Prager, <em>Reply to the Letter to the Editor Concerning Anti-reflux Mucosectomy (ARMS) in Sleeve Gastrectomy Patients with GERD and Barrett&#x27;s Esophagus.</em> Obes Surg, 2020. <strong>30</strong>(6): p. 2417-2418.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Roux-en-Y Gastric Bypass as a Treatment for Barrett&#x27;s Esophagus after Sleeve Gastrectomy.</em> Obes Surg, 2020. <strong>30</strong>(4): p. 1273-1279.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Sleeve Gastrectomy: Surgical Technique, Outcomes, and Complications.</em> Surg Technol Int, 2020. <strong>36</strong>: p. 63-69.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Surgical Technique for One-Anastomosis Gastric Bypass.</em> Surg Technol Int, 2020. <strong>37</strong>: p. 57-61.</li>
+            <li class="pub-item">Di Lorenzo, N., et al., <em>Clinical practice guidelines of the European Association for Endoscopic Surgery (EAES) on bariatric surgery: update 2020 endorsed by IFSO-EC, EASO and ESPCOP.</em> Surg Endosc, 2020. <strong>34</strong>(6): p. 2332-2358.</li>
+            <li class="pub-item">Beiglbock, H., et al., <em>Psychopharmacological Medication Has No Influence on Vitamin Status After Bariatric Surgery in Long-term Follow-up.</em> Obes Surg, 2020.</li>
+            <li class="pub-item">Arnoldner, M.A., et al., <em>Pouch volume and pouch migration after Roux-en-Y gastric bypass: a comparison of gastroscopy and 3 D-CT volumetry: is there a &quot;migration crisis&quot;?</em> Surg Obes Relat Dis, 2020. <strong>16</strong>(12): p. 1902-1908.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2019</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Winzer, E., et al., <em>Differences in Serum Magnesium Levels in Diabetic and Non-Diabetic Patients Following One-Anastomosis Gastric Bypass.</em> Nutrients, 2019. <strong>11</strong>(9).</li>
+            <li class="pub-item">Wanko, B., et al., <em>Antibody-mediated targeting of cleavage-specific OPN-T cell interactions.</em> PLoS One, 2019. <strong>14</strong>(4): p. e0214938.</li>
+            <li class="pub-item">Staufer, K., et al., <em>Evaluation and comparison of six noninvasive tests for prediction of significant or advanced fibrosis in nonalcoholic fatty liver disease.</em> United European Gastroenterol J, 2019. <strong>7</strong>(8): p. 1113-1123.</li>
+            <li class="pub-item">Staufer, K., M. Eilenberg, and G. Prager, <em>Author&#x27;s Reply to &quot;Liver Dysfunction with Both Roux-en-Y and One Anastomosis Gastric Bypass Is Almost Exclusively Seen with Longer Than Standard Limb Lengths&quot; by Kamal K. Mahawar.</em> Obes Surg, 2019. <strong>29</strong>(1): p. 301-302.</li>
+            <li class="pub-item">Setayesh, T., et al., <em>Impact of Weight Loss Strategies on Obesity-Induced DNA Damage.</em> Mol Nutr Food Res, 2019. <strong>63</strong>(17): p. e1900045.</li>
+            <li class="pub-item">Poglitsch, M., et al., <em>Plasma homocysteine after laparoscopic Roux-en-Y gastric bypass increases in the early postoperative phase but decreases in the long-term follow-up. A retrospective analysis.</em> Surg Obes Relat Dis, 2019.</li>
+            <li class="pub-item">Mahawar, K.K., et al., <em>The first consensus statement on revisional bariatric surgery using a modified Delphi approach.</em> Surg Endosc, 2019.</li>
+            <li class="pub-item">Kristo, I., et al., <em>Modern Esophageal Function Testing and Gastroesophageal Reflux Disease in Morbidly Obese Patients.</em> Obes Surg, 2019.</li>
+            <li class="pub-item">Jedamzik, J., et al., <em>Impact of limb length on nutritional status in one-anastomosis gastric bypass: 3-year results.</em> Surg Obes Relat Dis, 2019.</li>
+            <li class="pub-item">Gero, D., et al., <em>Defining Global Benchmarks in Bariatric Surgery: A Retrospective Multicenter Analysis of Minimally Invasive Roux-en-Y Gastric Bypass and Sleeve Gastrectomy.</em> Ann Surg, 2019. <strong>270</strong>(5): p. 859-867.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Quality of Life 10 Years after Sleeve Gastrectomy: A Multicenter Study.</em> Obes Facts, 2019. <strong>12</strong>(2): p. 157-166.</li>
+            <li class="pub-item">Felsenreich, D.M., F.B. Langer, and G. Prager, <em>Weight Loss and Resolution of Comorbidities After Sleeve Gastrectomy: A Review of Long-Term Results.</em> Scand J Surg, 2019. <strong>108</strong>(1): p. 3-9.</li>
+            <li class="pub-item">Felsenreich, D.M., F.B. Langer, and G. Prager, <em>Comments on the Letter to the Editor &quot;The Gastric Migration Crisis in Obesity Surgery&quot;.</em> Obes Surg, 2019. <strong>29</strong>(7): p. 2305-2306.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Surgical therapy of weight regain after Roux-en-Y gastric bypass.</em> Surg Obes Relat Dis, 2019. <strong>15</strong>(10): p. 1719-1728.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Roux-en-Y Gastric Bypass as a Treatment for Barrett&#x27;s Esophagus after Sleeve Gastrectomy.</em> Obes Surg, 2019.</li>
+            <li class="pub-item">Amor, M., et al., <em>Serum Myostatin is Upregulated in Obesity and Correlates with Insulin Resistance in Humans.</em> Exp Clin Endocrinol Diabetes, 2019. <strong>127</strong>(8): p. 550-556.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2018</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Xia, W., et al., <em>Loss of ABHD15 Impairs the Anti-lipolytic Action of Insulin by Altering PDE3B Stability and Contributes to Insulin Resistance.</em> Cell Rep, 2018. <strong>23</strong>(7): p. 1948-1961.</li>
+            <li class="pub-item">Mahawar, K.K., et al., <em>The First Consensus Statement on One Anastomosis/Mini Gastric Bypass (OAGB/MGB) Using a Modified Delphi Approach.</em> Obes Surg, 2018. <strong>28</strong>(2): p. 303-312.</li>
+            <li class="pub-item">Luger, M., et al., <em>Changes in Bone Mineral Density Following Weight Loss Induced by One-Anastomosis Gastric Bypass in Patients with Vitamin D Supplementation.</em> Obes Surg, 2018. <strong>28</strong>(11): p. 3454-3465.</li>
+            <li class="pub-item">Harreiter, J., et al., <em>Management of Pregnant Women after Bariatric Surgery.</em> J Obes, 2018. <strong>2018</strong>: p. 4587064.</li>
+            <li class="pub-item">Harpain, F., et al., <em>A siphon-like retrogastric transverse colon: A case report.</em> Int J Surg Case Rep, 2018. <strong>44</strong>: p. 110-113.</li>
+            <li class="pub-item">Felsenreich, D.M., F.B. Langer, and G. Prager, <em>Weight Loss and Resolution of Comorbidities After Sleeve Gastrectomy: A Review of Long-Term Results.</em> Scand J Surg, 2018: p. 1457496918798192.</li>
+            <li class="pub-item">Felsenreich, D.M., F.B. Langer, and G. Prager, <em>Reply to the Letter to the Editor &quot;Does Sleeve Gastrectomy Cause Barrett&#x27;s Oesophagus?&quot;.</em> Obes Surg, 2018.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Update: 10 Years of Sleeve Gastrectomy-the First 103 Patients.</em> Obes Surg, 2018. <strong>28</strong>(11): p. 3586-3594.</li>
+            <li class="pub-item">Falcone, V., et al., <em>Pregnancy after bariatric surgery: a narrative literature review and discussion of impact on pregnancy management and outcome.</em> BMC Pregnancy Childbirth, 2018. <strong>18</strong>(1): p. 507.</li>
+            <li class="pub-item">Eilenberg, M., et al., <em>Significant Liver-Related Morbidity After Bariatric Surgery and Its Reversal-a Case Series.</em> Obes Surg, 2018. <strong>28</strong>(3): p. 812-819.</li>
+            <li class="pub-item">Amor, M., et al., <em>Serum Myostatin is Upregulated in Obesity and Correlates with Insulin Resistance in Humans.</em> Exp Clin Endocrinol Diabetes, 2018.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2017</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Wagner, G., et al., <em>HO-1 inhibits preadipocyte proliferation and differentiation at the onset of obesity via ROS dependent activation of Akt2.</em> Sci Rep, 2017. <strong>7</strong>: p. 40881.</li>
+            <li class="pub-item">Tardelli, M., et al., <em>Adiponectin regulates aquaglyceroporin expression in hepatic stellate cells altering their functional state.</em> J Gastroenterol Hepatol, 2017. <strong>32</strong>(1): p. 253-260.</li>
+            <li class="pub-item">Staufer, K., et al., <em>The non-invasive serum biomarker soluble Axl accurately detects advanced liver fibrosis and cirrhosis.</em> Cell Death Dis, 2017. <strong>8</strong>(10): p. e3135.</li>
+            <li class="pub-item">Selberherr, A., et al., <em>&quot;Silent&quot; kidney stones in &quot;asymptomatic&quot; primary hyperparathyroidism-a comparison of multidetector computed tomography and ultrasound.</em> Langenbecks Arch Surg, 2017. <strong>402</strong>(2): p. 289-293.</li>
+            <li class="pub-item">Luger, M., et al., <em>Vitamin D3 Loading Is Superior to Conventional Supplementation After Weight Loss Surgery in Vitamin D-Deficient Morbidly Obese Patients: a Double-Blind Randomized Placebo-Controlled Trial.</em> Obes Surg, 2017. <strong>27</strong>(5): p. 1196-1207.</li>
+            <li class="pub-item">Kruschitz, R., et al., <em>Concerning the Manuscript &quot;The Effect of Roux-en-Y vs Omega-Loop Gastric Bypass on Liver, Metabolic Parameters and Weight Loss&quot;.</em> Obes Surg, 2017. <strong>27</strong>(5): p. 1341-1342.</li>
+            <li class="pub-item">Jurets, A., et al., <em>Upregulated TNF Expression 1 Year After Bariatric Surgery Reflects a Cachexia-Like State in Subcutaneous Adipose Tissue.</em> Obes Surg, 2017. <strong>27</strong>(6): p. 1514-1523.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Reflux, Sleeve Dilation, and Barrett&#x27;s Esophagus after Laparoscopic Sleeve Gastrectomy: Long-Term Follow-Up.</em> Obes Surg, 2017. <strong>27</strong>(12): p. 3092-3101.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2016</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Wolf, P., et al., <em>Hormone Substitution after Gastric Bypass Surgery in Patients with Hypopituitarism Secondary to Craniopharyngioma.</em> Endocr Pract, 2016. <strong>22</strong>(5): p. 595-601.</li>
+            <li class="pub-item">Tardelli, M., et al., <em>Adiponectin regulates aquaglyceroporin expression in hepatic stellate cells altering their functional state.</em> J Gastroenterol Hepatol, 2016.</li>
+            <li class="pub-item">Luger, M., et al., <em>Prevalence of Liver Fibrosis and its Association with Non-invasive Fibrosis and Metabolic Markers in Morbidly Obese Patients with Vitamin D Deficiency.</em> Obes Surg, 2016.</li>
+            <li class="pub-item">Kruschitz, R., et al., <em>The Effect of Roux-en-Y vs. Omega-Loop Gastric Bypass on Liver, Metabolic Parameters, and Weight Loss.</em> Obes Surg, 2016.</li>
+            <li class="pub-item">Felsenreich, D.M., et al., <em>Weight loss, weight regain, and conversions to Roux-en-Y gastric bypass: 10-year results of laparoscopic sleeve gastrectomy.</em> Surg Obes Relat Dis, 2016. <strong>12</strong>(9): p. 1655-1662.</li>
+            <li class="pub-item">Ekmekcioglu, C., et al., <em>Salt taste after bariatric surgery and weight loss in obese persons.</em> PeerJ, 2016. <strong>4</strong>: p. e2086.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2015</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Yasuo, S., et al., <em>Topic: Inguinal Hernia - Unsolved problem in the daily practice.</em> Hernia, 2015. <strong>19 Suppl 1</strong>: p. S293-304.</li>
+            <li class="pub-item">Shakeri-Leidenmuhler, S., et al., <em>Surgical Elimination of the Gastric Digestion by Roux-en-Y Gastric Bypass Impacts on Food Sensitisation-a Pilot Study.</em> Obes Surg, 2015.</li>
+            <li class="pub-item">Luger, M., et al., <em>The link between obesity and vitamin D in bariatric patients with omega-loop gastric bypass surgery - a vitamin D supplementation trial to compare the efficacy of postoperative cholecalciferol loading (LOAD): study protocol for a randomized controlled trial.</em> Trials, 2015. <strong>16</strong>: p. 328.</li>
+            <li class="pub-item">Luger, M., et al., <em>Effects of omega-loop gastric bypass on vitamin d and bone metabolism in morbidly obese bariatric patients.</em> Obes Surg, 2015. <strong>25</strong>(6): p. 1056-62.</li>
+            <li class="pub-item">Leitner, L., et al., <em>Immunological blockade of adipocyte inflammation caused by increased matrix metalloproteinase-cleaved osteopontin in obesity.</em> Obesity (Silver Spring), 2015. <strong>23</strong>(4): p. 779-85.</li>
+            <li class="pub-item">Leitner, L., et al., <em>Osteopontin promotes aromatase expression and estradiol production in human adipocytes.</em> Breast Cancer Res Treat, 2015. <strong>154</strong>(1): p. 63-9.</li>
+            <li class="pub-item">Kefurt, R., et al., <em>Hypoglycemia after Roux-En-Y gastric bypass: detection rates of continuous glucose monitoring (CGM) versus mixed meal test.</em> Surg Obes Relat Dis, 2015. <strong>11</strong>(3): p. 564-9.</li>
+            <li class="pub-item">Felberbauer, F.X., et al., <em>Post-Bariatric Body-Contouring Surgery: Fewer Procedures, Less Demand, and Lower Costs.</em> Obes Surg, 2015. <strong>25</strong>(7): p. 1198-202.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2014</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Itariu, B.K., et al., <em>Insulin-Like Growth Factor 1 Predicts Post-Load Hypoglycemia following Bariatric Surgery: A Prospective Cohort Study.</em> PLoS One, 2014. <strong>9</strong>(4): p. e94613.</li>
+            <li class="pub-item">Borsoi, L., et al., <em>Cushing&#x27;s Syndrome in a Morbidly Obese Patient Undergoing Evaluation before Bariatric Surgery.</em> Obes Facts, 2014. <strong>7</strong>(3): p. 191-6.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2013</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Zeyda, M., et al., <em>Severe obesity increases adipose tissue expression of interleukin-33 and its receptor ST2, both predominantly detectable in endothelial cells of human adipose tissue.</em> Int J Obes (Lond), 2013. <strong>37</strong>(5): p. 658-65.</li>
+            <li class="pub-item">Schwameis, K., et al., <em>The implementation of minimally-invasive esophagectomy does not impact short-term outcome in a high-volume center.</em> Anticancer Res, 2013. <strong>33</strong>(5): p. 2085-91.</li>
+            <li class="pub-item">Schoppmann, S.F., et al., <em>Outcome and complications of long-term self-expanding esophageal stenting.</em> Diseases of the esophagus : official journal of the International Society for Diseases of the Esophagus / I.S.D.E, 2013. <strong>26</strong>(2): p. 154-8.</li>
+            <li class="pub-item">Lindroos, J., et al., <em>Human but Not Mouse Adipogenesis Is Critically Dependent on LMO3.</em> Cell Metab, 2013. <strong>18</strong>(1): p. 62-74.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Weight loss and weight regain-5-year follow-up for circular- vs. linear-stapled gastrojejunostomy in laparoscopic Roux-en-Y gastric bypass.</em> Obes Surg, 2013. <strong>23</strong>(6): p. 776-81.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2012</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Zeyda, M., et al., <em>Severe obesity increases adipose tissue expression of interleukin-33 and its receptor ST2, both predominantly detectable in endothelial cells of human adipose tissue.</em> International journal of obesity, 2012.</li>
+            <li class="pub-item">Schoppmann, S.F., et al., <em>Outcome and complications of long-term self-expanding esophageal stenting.</em> Diseases of the esophagus : official journal of the International Society for Diseases of the Esophagus / I.S.D.E, 2012.</li>
+            <li class="pub-item">Rosenthal, R.J., et al., <em>International Sleeve Gastrectomy Expert Panel Consensus Statement: best practice guidelines based on experience of &gt;12,000 cases.</em> Surgery for obesity and related diseases : official journal of the American Society for Bariatric Surgery, 2012. <strong>8</strong>(1): p. 8-19.</li>
+            <li class="pub-item">Kitzinger, H.B., et al., <em>The prevalence of body contouring surgery after gastric bypass surgery.</em> Obesity surgery, 2012. <strong>22</strong>(1): p. 8-12.</li>
+            <li class="pub-item">Kitzinger, H.B., et al., <em>After massive weight loss: patients&#x27; expectations of body contouring surgery.</em> Obesity surgery, 2012. <strong>22</strong>(4): p. 544-8.</li>
+            <li class="pub-item">Jankovic, D., et al., <em>Prevalence of endocrine disorders in morbidly obese patients and the effects of bariatric surgery on endocrine and metabolic parameters.</em> Obesity surgery, 2012. <strong>22</strong>(1): p. 62-9.</li>
+            <li class="pub-item">Itariu, B.K., et al., <em>Long-chain n-3 PUFAs reduce adipose tissue and systemic inflammation in severely obese nondiabetic patients: a randomized controlled trial.</em> Am J Clin Nutr, 2012. <strong>96</strong>(5): p. 1137-49.</li>
+            <li class="pub-item">Bohdjalian, A., et al., <em>Gastric Stimulation in the Digestive Period Modifies Length and Contractility of the Inter-digestive Period in Obese Non-diabetic and Diabetic Subjects.</em> Obesity surgery, 2012.</li>
+            <li class="pub-item">Anderwald, C.H., et al., <em>Alterations in gastrointestinal, endocrine, and metabolic processes after bariatric Roux-en-Y gastric bypass surgery.</em> Diabetes Care, 2012. <strong>35</strong>(12): p. 2580-7.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2011</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Zeyda, M., et al., <em>Inflammation correlates with markers of T-cell subsets including regulatory T cells in adipose tissue from obese patients.</em> Obesity, 2011. <strong>19</strong>(4): p. 743-8.</li>
+            <li class="pub-item">Zeyda, M., et al., <em>Osteopontin Is an Activator of Human Adipose Tissue Macrophages and Directly Affects Adipocyte Function.</em> Endocrinology, 2011.</li>
+            <li class="pub-item">Widhalm, K., et al., <em>Bariatric surgery in morbidly obese adolescents: long-term follow-up.</em> International journal of pediatric obesity : IJPO : an official journal of the International Association for the Study of Obesity, 2011. <strong>6 Suppl 1</strong>: p. 65-9.</li>
+            <li class="pub-item">Vila, G., et al., <em>The relationship between insulin resistance and the cardiovascular biomarker growth differentiation factor-15 in obese patients.</em> Clin Chem, 2011. <strong>57</strong>(2): p. 309-16.</li>
+            <li class="pub-item">Todoric, J., et al., <em>Cross-talk between interferon-gamma and hedgehog signaling regulates adipogenesis.</em> Diabetes, 2011. <strong>60</strong>(6): p. 1668-76.</li>
+            <li class="pub-item">Silberhumer, G.R., et al., <em>Long-term results after laparoscopic adjustable gastric banding in adolescent patients: follow-up of the Austrian experience.</em> Surgical endoscopy, 2011. <strong>25</strong>(9): p. 2993-9.</li>
+            <li class="pub-item">Rieder, E., et al., <em>Mesh fixation in laparoscopic incisional hernia repair: glue fixation provides attachment strength similar to absorbable tacks but differs substantially in different meshes.</em> Journal of the American College of Surgeons, 2011. <strong>212</strong>(1): p. 80-6.</li>
+            <li class="pub-item">Promintzer-Schifferl, M., et al., <em>Effects of Gastric Bypass Surgery on Insulin Resistance and Insulin Secretion in Nondiabetic Obese Patients.</em> Obesity (Silver Spring), 2011.</li>
+            <li class="pub-item">Kitzinger, H.B., et al., <em>The Prevalence of Body Contouring Surgery After Gastric Bypass Surgery.</em> Obesity surgery, 2011.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2010</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Zeyda, M., et al., <em>Inflammation Correlates With Markers of T-Cell Subsets Including Regulatory T Cells in Adipose Tissue From Obese Patients.</em> Obesity (Silver Spring), 2010.</li>
+            <li class="pub-item">Schoppmann, S.F., et al., <em>Open versus minimally invasive esophagectomy: a single-center case controlled study.</em> Surg Endosc, 2010.</li>
+            <li class="pub-item">Rieder, E., et al., <em>Mesh fixation in laparoscopic incisional hernia repair: glue fixation provides attachment strength similar to absorbable tacks but differs substantially in different meshes.</em> J Am Coll Surg, 2010. <strong>212</strong>(1): p. 80-6.</li>
+            <li class="pub-item">Pospisilik, J.A., et al., <em>Drosophila genome-wide obesity screen reveals hedgehog as a determinant of brown versus white adipose cell fate.</em> Cell, 2010. <strong>140</strong>(1): p. 148-60.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Strategies for weight regain after sleeve gastrectomy.</em> Surg Laparosc Endosc Percutan Tech, 2010. <strong>20</strong>(3): p. 159-61.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Temporary placement of self-expanding oesophageal stents as bridging for neo-adjuvant therapy.</em> Ann Surg Oncol, 2010. <strong>17</strong>(2): p. 470-5.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Solving the problem of difficult stent removal due to tissue ingrowth in partially uncovered esophageal self-expanding metal stents.</em> Ann Thorac Surg, 2010. <strong>89</strong>(5): p. 1691-2.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Conversion from sleeve gastrectomy to Roux-en-Y gastric bypass--indications and outcome.</em> Obes Surg, 2010. <strong>20</strong>(7): p. 835-40.</li>
+            <li class="pub-item">Kabon, B., et al., <em>Supplemental postoperative oxygen and tissue oxygen tension in morbidly obese patients.</em> Obes Surg, 2010. <strong>20</strong>(7): p. 885-94.</li>
+            <li class="pub-item">Handisurya, A., et al., <em>Serum vaspin concentrations in relation to insulin sensitivity following RYGB-induced weight loss.</em> Obes Surg, 2010. <strong>20</strong>(2): p. 198-203.</li>
+            <li class="pub-item">Bohdjalian, A., et al., <em>Sleeve Gastrectomy as Sole and Definitive Bariatric Procedure: 5-Year Results for Weight Loss and Ghrelin.</em> Obes Surg, 2010.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2009</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Vila, G., et al., <em>Plasma MR-proADM correlates to BMI and decreases in relation to leptin after gastric bypass surgery.</em> Obesity (Silver Spring), 2009. <strong>17</strong>(6): p. 1184-8.</li>
+            <li class="pub-item">Silberhumer, G.R., et al., <em>Surgery for gastrointestinal stromal tumors of the stomach.</em> J Gastrointest Surg, 2009. <strong>13</strong>(7): p. 1213-9.</li>
+            <li class="pub-item">Silberhumer, G.R., et al., <em>The Value of Protecting the Longitudinal Staple Line with Invaginating Sutures during Esophageal Reconstruction by Gastric Tube Pull-Up.</em> Dig Surg, 2009. <strong>26</strong>(4): p. 337-341.</li>
+            <li class="pub-item">Shakeri-Manesch, S., et al., <em>Diminished upregulation of visceral adipose heme oxygenase-1 correlates with waist-to-hip ratio and insulin resistance.</em> Int J Obes (Lond), 2009.</li>
+            <li class="pub-item">Schoppmann, S.F., et al., <em>Fifty-five minimally invasive Esophagectomies: a single centre experience.</em> Anticancer Res, 2009. <strong>29</strong>(7): p. 2719-25.</li>
+            <li class="pub-item">Bohdjalian, A., et al., <em>Improvement in glycemic control in morbidly obese type 2 diabetic subjects by gastric stimulation.</em> Obes Surg, 2009. <strong>19</strong>(9): p. 1221-7.</li>
+            <li class="pub-item">Bohdjalian, A., et al., <em>Improvement in glycemic control by gastric electrical stimulation (TANTALUS) in overweight subjects with type 2 diabetes.</em> Surg Endosc, 2009. <strong>23</strong>(9): p. 1955-60.</li>
+            <li class="pub-item">Bohdjalian, A., et al., <em>Circular- vs. linear-stapled gastrojejunostomy in laparoscopic Roux-en-Y gastric bypass.</em> Obes Surg, 2009. <strong>20</strong>(4): p. 440-6.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2008</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Widhalm, K., et al., <em>Bariatric surgery in morbidly obese adolescents: a 4-year follow-up of ten patients.</em> Int J Pediatr Obes, 2008. <strong>3 Suppl 1</strong>: p. 78-82.</li>
+            <li class="pub-item">Silberhumer, G.R., et al., <em>Design and instrumentation of new devices for performing appendectomy at colonoscopy (with video).</em> Gastrointest Endosc, 2008. <strong>68</strong>(1): p. 139-45.</li>
+            <li class="pub-item">Ringhofer, C., et al., <em>Histopathology of the endoscopic esophagogastric junction in patients with gastroesophageal reflux disease.</em> Wien Klin Wochenschr, 2008. <strong>120</strong>(11-12): p. 350-9.</li>
+            <li class="pub-item">Riedl, M., et al., <em>Plasma osteopontin increases after bariatric surgery and correlates with markers of bone turnover but not with insulin resistance.</em> J Clin Endocrinol Metab, 2008. <strong>93</strong>(6): p. 2307-12.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Inadequate weight loss vs secondary weight regain: laparoscopic conversion from gastric banding to Roux-en-Y gastric bypass.</em> Obes Surg, 2008. <strong>18</strong>(11): p. 1381-6.</li>
+            <li class="pub-item">Kiefer, F.W., et al., <em>Osteopontin expression in human and murine obesity: extensive local up-regulation in adipose tissue but minimal systemic alterations.</em> Endocrinology, 2008. <strong>149</strong>(3): p. 1350-7.</li>
+            <li class="pub-item">Huber, J., et al., <em>CC chemokine and CC chemokine receptor profiles in visceral and subcutaneous adipose tissue are altered in human obesity.</em> J Clin Endocrinol Metab, 2008. <strong>93</strong>(8): p. 3215-21.</li>
+            <li class="pub-item">Felberbauer, F.X., et al., <em>Laparoscopic sleeve gastrectomy as an isolated bariatric procedure: intermediate-term results from a large series in three Austrian centers.</em> Obes Surg, 2008. <strong>18</strong>(7): p. 814-8.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2007</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Ringhofer, C., et al., <em>Videoendoscopy and histopathology of the esophagogastric junction in patients with gastroesophageal reflux disease.</em> Wien Klin Wochenschr, 2007. <strong>119</strong>(9-10): p. 283-90.</li>
+            <li class="pub-item">Lenglinger, J., et al., <em>Histopathology of columnar-lined esophagus in patients with gastroesophageal reflux disease.</em> Wien Klin Wochenschr, 2007. <strong>119</strong>(13-14): p. 405-11.</li>
+            <li class="pub-item">Lenglinger, J., G. Prager, and M. Riegler, <em>Adequate biopsy sampling for exclusion of columnar-lined esophagus in the obese.</em> Obes Surg, 2007. <strong>17</strong>(7): p. 993; author reply 994.</li>
+            <li class="pub-item">Haider, D.G., et al., <em>Serum retinol-binding protein 4 is reduced after weight loss in morbidly obese subjects.</em> J Clin Endocrinol Metab, 2007. <strong>92</strong>(3): p. 1168-71.</li>
+            <li class="pub-item">Haider, D.G., et al., <em>Plasma adipocyte and epidermal fatty acid binding protein is reduced after weight loss in obesity.</em> Diabetes Obes Metab, 2007. <strong>9</strong>(5): p. 761-3.</li>
+            <li class="pub-item">Anderwald, C., et al., <em>The Clamp-Like Index: a novel and highly sensitive insulin sensitivity index to calculate hyperinsulinemic clamp glucose infusion rates from oral glucose tolerance tests in nondiabetic subjects.</em> Diabetes Care, 2007. <strong>30</strong>(9): p. 2374-80.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2006</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Silberhumer, G.R., et al., <em>Laparoscopic adjustable gastric banding in adolescents: the Austrian experience.</em> Obes Surg, 2006. <strong>16</strong>(8): p. 1062-7.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Does gastric dilatation limit the success of sleeve gastrectomy as a sole operation for morbid obesity?</em> Obes Surg, 2006. <strong>16</strong>(2): p. 166-71.</li>
+            <li class="pub-item">Kaczirek, K., et al., <em>Novel parathyroid hormone (1-84) assay as basis for parathyroid hormone monitoring in renal hyperparathyroidism.</em> Arch Surg, 2006. <strong>141</strong>(2): p. 129-34; discussion 134.</li>
+            <li class="pub-item">Haider, D.G., et al., <em>Increased plasma visfatin concentrations in morbidly obese subjects are reduced after gastric banding.</em> J Clin Endocrinol Metab, 2006. <strong>91</strong>(4): p. 1578-81.</li>
+            <li class="pub-item">Haider, D.G., et al., <em>Free fatty acids normalize a rosiglitazone-induced visfatin release.</em> Am J Physiol Endocrinol Metab, 2006. <strong>291</strong>(5): p. E885-90.</li>
+            <li class="pub-item">Bohdjalian, A., et al., <em>One-year experience with Tantalus: a new surgical approach to treat morbid obesity.</em> Obes Surg, 2006. <strong>16</strong>(5): p. 627-34.</li>
+            <li class="pub-item">Bieglmayer, C., et al., <em>Parathyroid hormone monitoring during total parathyroidectomy for renal hyperparathyroidism: pilot study of the impact of renal function and assay specificity.</em> Clin Chem, 2006. <strong>52</strong>(6): p. 1112-9.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2005</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Langer, F.B., et al., <em>Management of postoperative esophageal leaks with the Polyflex self-expanding covered plastic stent.</em> Ann Thorac Surg, 2005. <strong>79</strong>(2): p. 398-403; discussion 404.</li>
+            <li class="pub-item">Langer, F.B., et al., <em>Sleeve gastrectomy and gastric banding: effects on plasma ghrelin levels.</em> Obes Surg, 2005. <strong>15</strong>(7): p. 1024-9.</li>
+            <li class="pub-item">Kaczirek, K., et al., <em>Quick PTH assay cannot predict incomplete parathyroidectomy in patients with renal hyperparathyroidism.</em> Surgery, 2005. <strong>137</strong>(4): p. 431-5.</li>
+            <li class="pub-item">Fleischmann, E., et al., <em>Tissue oxygenation in obese and non-obese patients during laparoscopy.</em> Obes Surg, 2005. <strong>15</strong>(6): p. 813-9.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2004</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Widhalm, K., S. Dietrich, and G. Prager, <em>Adjustable gastric banding surgery in morbidly obese adolescents: experiences with eight patients.</em> Int J Obes Relat Metab Disord, 2004. <strong>28 Suppl 3</strong>: p. S42-5.</li>
+            <li class="pub-item">Stadler, A., et al., <em>CT density measurements for characterization of adrenal tumors ex vivo: variability among three CT scanners.</em> AJR Am J Roentgenol, 2004. <strong>182</strong>(3): p. 671-5.</li>
+            <li class="pub-item">Schindler, K., et al., <em>Impact of laparoscopic adjustable gastric banding on plasma ghrelin, eating behaviour and body weight.</em> Eur J Clin Invest, 2004. <strong>34</strong>(8): p. 549-54.</li>
+            <li class="pub-item">Prager, G., et al., <em>Applicability of laparoscopic adrenalectomy in a prospective study in 150 consecutive patients.</em> Arch Surg, 2004. <strong>139</strong>(1): p. 46-9.</li>
+            <li class="pub-item">Passler, C., et al., <em>Prognostic factors of papillary and follicular thyroid cancer: differences in an iodine-replete endemic goiter region.</em> Endocr Relat Cancer, 2004. <strong>11</strong>(1): p. 131-9.</li>
+            <li class="pub-item">Kaczirek, K., et al., <em>Cytotoxic activity of camptothecin and paclitaxel in newly established continuous human medullary thyroid carcinoma cell lines.</em> J Clin Endocrinol Metab, 2004. <strong>89</strong>(5): p. 2397-401.</li>
+            <li class="pub-item">Bohdjalian, A., et al., <em>[Surgical treatment of obesity].</em> Wien Med Wochenschr, 2004. <strong>154</strong>(13-14): p. 329-33.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2003</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Stift, A., et al., <em>The early response of p53-dependent proteins during radiotherapy in human rectal carcinoma and in adjacent normal tissue.</em> Int J Oncol, 2003. <strong>23</strong>(5): p. 1269-75.</li>
+            <li class="pub-item">Saeger, W., et al., <em>High diagnostic accuracy of adrenal core biopsy: results of the German and Austrian adrenal network multicenter trial in 220 consecutive patients.</em> Hum Pathol, 2003. <strong>34</strong>(2): p. 180-6.</li>
+            <li class="pub-item">Rauhofer, U., et al., <em>Cystic echinococcosis of the thyroid gland in children and adults.</em> Thyroid, 2003. <strong>13</strong>(5): p. 497-502.</li>
+            <li class="pub-item">Prager, G., et al., <em>The role of intraoperative quick PTH measurements in primary hyperparathyroidism.</em> Ann Ital Chir, 2003. <strong>74</strong>(4): p. 395-9.</li>
+            <li class="pub-item">Prager, G., et al., <em>Impact of localization studies on feasibility of minimally invasive parathyroidectomy in an endemic goiter region.</em> J Am Coll Surg, 2003. <strong>196</strong>(4): p. 541-8.</li>
+            <li class="pub-item">Passler, C., et al., <em>Follicular variant of papillary thyroid carcinoma: a long-term follow-up.</em> Arch Surg, 2003. <strong>138</strong>(12): p. 1362-6.</li>
+            <li class="pub-item">Passler, C., et al., <em>Application of staging systems for differentiated thyroid carcinoma in an endemic goiter region with iodine substitution.</em> Ann Surg, 2003. <strong>237</strong>(2): p. 227-34.</li>
+            <li class="pub-item">Niederle, B., et al., <em>[Minimally invasive endocrine surgery: aspects of diagnostic imaging].</em> Wien Klin Wochenschr, 2003. <strong>115 Suppl 2</strong>: p. 10-8.</li>
+            <li class="pub-item">Kaczirek, K., et al., <em>Nesidioblastosis in adults: a challenging cause of organic hyperinsulinism.</em> Eur J Clin Invest, 2003. <strong>33</strong>(6): p. 488-92.</li>
+            <li class="pub-item">Kaczirek, K., et al., <em>Combined transmission and (99m)Tc-sestamibi emission tomography for localization of mediastinal parathyroid glands.</em> Nuklearmedizin, 2003. <strong>42</strong>(5): p. 220-3.</li>
+            <li class="pub-item">Heinz-Peer, G., et al., <em>[Imaging of tumours of the adrenal gland].</em> Wien Klin Wochenschr, 2003. <strong>115 Suppl 2</strong>: p. 65-70.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2002</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Zettinig, G., et al., <em>[Value of a structured report for the interpretation of parathyroid scintigraphy in primary essential hyperthyroidism].</em> Acta Med Austriaca, 2002. <strong>29</strong>(2): p. 68-71.</li>
+            <li class="pub-item">Zettinig, G., et al., <em>&#x27;Suppressed&#x27; double adenoma--a rare pitfall in minimally invasive parathyroidectomy.</em> Horm Res, 2002. <strong>57</strong>(1-2): p. 57-60.</li>
+            <li class="pub-item">Schindl, M., et al., <em>Treatment of small intestinal neuroendocrine tumors: is an extended multimodal approach justified?</em> World J Surg, 2002. <strong>26</strong>(8): p. 976-84.</li>
+            <li class="pub-item">Prager, G., et al., <em>Parathyroidectomy improves concentration and retentiveness in patients with primary hyperparathyroidism.</em> Surgery, 2002. <strong>132</strong>(6): p. 930-5; discussion 935-6.</li>
+            <li class="pub-item">Prager, G., et al., <em>Can dynamic gadolinium-enhanced magnetic resonance imaging with chemical shift studies predict the status of adrenal masses?</em> World J Surg, 2002. <strong>26</strong>(8): p. 958-64.</li>
+            <li class="pub-item">Prager, G., et al., <em>Surgical strategy in adrenal masses.</em> Eur J Radiol, 2002. <strong>41</strong>(1): p. 70-7.</li>
+            <li class="pub-item">Passler, C., et al., <em>Thyroid surgery in the geriatric patient.</em> Arch Surg, 2002. <strong>137</strong>(11): p. 1243-8.</li>
+            <li class="pub-item">Kaczirek, K., et al., <em>Multiple endocrine neoplasia 1--current recommendations for diagnosis and treatment.</em> Wien Klin Wochenschr, 2002. <strong>114</strong>(7): p. 258-66.</li>
+            <li class="pub-item">Honigschnabl, S., et al., <em>How accurate is MR imaging in characterisation of adrenal masses: update of a long-term study.</em> Eur J Radiol, 2002. <strong>41</strong>(2): p. 113-22.</li>
+            <li class="pub-item">Hoda, M.R., et al., <em>[Pregnancy and labor after adjustable gastric banding for therapy of morbid obesity].</em> Wien Klin Wochenschr, 2002. <strong>114</strong>(17-18): p. 781-4.</li>
+            <li class="pub-item">Bieglmayer, C., G. Prager, and B. Niederle, <em>Kinetic analyses of parathyroid hormone clearance as measured by three rapid immunoassays during parathyroidectomy.</em> Clin Chem, 2002. <strong>48</strong>(10): p. 1731-8.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2001</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Zettinig, G., et al., <em>Images in thyroidology. A man with a 99mTc-pertechnetate-enhancing mediastinal mass.</em> Thyroid, 2001. <strong>11</strong>(8): p. 805.</li>
+            <li class="pub-item">Prager, G., et al., <em>Minimally invasive open parathyroidectomy in an endemic goiter area: a prospective study.</em> Arch Surg, 2001. <strong>136</strong>(7): p. 810-6.</li>
+            <li class="pub-item">Felberbauer, F.X., G. Prager, and E. Wenzl, <em>The inflatable band and exercise machines.</em> Obes Surg, 2001. <strong>11</strong>(4): p. 532.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">2000</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Neunteufl, T., et al., <em>Effects of successful parathyroidectomy on altered arterial reactivity in patients with hypercalcaemia: results of a 3-year follow-up study.</em> Clin Endocrinol (Oxf), 2000. <strong>53</strong>(2): p. 229-33.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">1999</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Scheuba, C., et al., <em>Is medullary thyroid cancer predictable? A prospective study of 86 patients with abnormal pentagastrin tests.</em> Surgery, 1999. <strong>126</strong>(6): p. 1089-95; discussion 1096.</li>
+            <li class="pub-item">Prager, G., et al., <em>[The value of preoperative localization studies in primary hyperparathyroidism].</em> Chirurg, 1999. <strong>70</strong>(10): p. 1082-8.</li>
+            <li class="pub-item">Passler, C., et al., <em>Anaplastic (undifferentiated) thyroid carcinoma (ATC). A retrospective analysis.</em> Langenbecks Arch Surg, 1999. <strong>384</strong>(3): p. 284-93.</li>
+          </ul>
+        </div>
+        <div class="pub-year-group fade-up">
+          <h3 class="pub-year">1991</h3>
+          <ul class="pub-list">
+            <li class="pub-item">Kraupp, M., et al., <em>Adenine and hypoxanthine transport in human erythrocytes: distinct substrate effects on carrier mobility.</em> Biochim Biophys Acta, 1991. <strong>1070</strong>(1): p. 157-62.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -271,68 +729,101 @@
       <h2 class="cta__headline">Evidence meets empathy.</h2>
       <p>Scientific excellence is the foundation &ndash; but the patient is always at the center.</p>
       <span class="cta__phone"><a href="tel:+436604895851">+43 660 489 58 51</a></span>
-      <a href="contact.html" class="btn btn-white btn-lg">Request an Appointment</a>
-      <p class="cta__sub">Private Practice Vienna 7 &middot; Wednesday 4&ndash;8 PM</p>
+      <a href="tel:+436604895851" class="btn btn-white btn-lg">Schedule a Personal Consultation</a>
+      <p class="cta__sub">By telephone appointment</p>
     </div>
   </section>
 
-  </main>
-
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <div class="footer__brand-name">Univ.-Prof. Dr. Gerhard Prager</div>
-          <p>Professor of Bariatric Surgery<br>MedUni Vienna / AKH Vienna<br><br>Former World President of IFSO &ndash; International Federation for the Surgery of Obesity and Metabolic Disorders</p>
+        <!-- Col 1: Brand -->
+        <div class="footer__col footer__col--brand">
+          <div class="footer__brand">
+            <span class="footer__brand-name">Univ.-Prof. Dr. Gerhard Prager</span>
+            <span class="footer__brand-sub">Bariatric &amp; Endocrine Surgery</span>
+          </div>
+          <p class="footer__brand-text">IFSO World President 2023/2024. University Professor at MedUni Vienna. Over 9,900 procedures.</p>
         </div>
-        <div>
-          <h4>Procedures</h4>
+        <!-- Col 2: Bariatric Surgery -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Bariatric Surgery</h4>
           <ul class="footer__links">
-            <li><a href="procedures.html#bariatrisch">Gastric Bypass</a></li>
-            <li><a href="procedures.html#bariatrisch">Sleeve Gastrectomy</a></li>
-            <li><a href="procedures.html#bariatrisch">Omega-Loop Bypass</a></li>
-            <li><a href="procedures.html#bariatrisch">SADI-S</a></li>
-
-            <li><a href="procedures.html#bariatrisch">BPD/DS</a></li>
-            <li><a href="procedures.html#bariatrisch">Gastric Balloon</a></li>
-            <li><a href="procedures.html#endokrine">Thyroid</a></li>
+            <li><a href="magenbypass.html">Gastric Bypass</a></li>
+            <li><a href="schlauchmagen.html">Sleeve Gastrectomy</a></li>
+            <li><a href="omega-loop.html">Omega-Loop Bypass</a></li>
+            <li><a href="sadi-s.html">SADI-S</a></li>
+            <li><a href="bpd-ds.html">BPD/DS</a></li>
+            <li><a href="magenballon.html">Gastric Balloon</a></li>
+            <li><a href="esg.html">ESG (Gastric Sleeve)</a></li>
+            <li><a href="tore.html">TORE (Revision)</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Navigation</h4>
+        <!-- Col 3: Further Procedures -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Further Procedures</h4>
           <ul class="footer__links">
-            <li><a href="about.html">About Univ.-Prof. Dr. Gerhard Prager</a></li>
+            <li><a href="schilddruese.html">Thyroid Surgery</a></li>
+            <li><a href="nebenschilddruese.html">Parathyroid Surgery</a></li>
+            <li><a href="nebenniere.html">Adrenal Surgery</a></li>
+            <li><a href="hernienchirurgie.html">Hernia Surgery</a></li>
+            <li><a href="hiatushernie.html">Hiatal Hernia</a></li>
+            <li><a href="gallenblasenentfernung.html">Gallbladder Removal</a></li>
+            <li><a href="darmchirurgie.html">Colorectal Surgery</a></li>
+          </ul>
+        </div>
+        <!-- Col 4: Navigation -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Navigation</h4>
+          <ul class="footer__links">
+            <li><a href="procedures.html">All Procedures</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="science.html">Science</a></li>
-            <li><a href="press.html">Press &amp; Media</a></li>
+            <li><a href="press.html">Press</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="../blog/">Blog &amp; Resources</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Contact</h4>
-          <div class="footer__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Kaiserstra&szlig;e 43/4a<br>1070 Vienna, Austria</span>
-          </div>
-          <div class="footer__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+436604895851">+43 660 489 58 51</a>
-          </div>
-          <div class="footer__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:gerhard.prager@meduniwien.ac.at">gerhard.prager@meduniwien.ac.at</a>
-          </div>
-          <div class="footer__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Wed 4:00&ndash;8:00 PM</span>
-          </div>
+        <!-- Col 5: Contact -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contact</h4>
+          <ul class="footer__contact">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11.35V13.35C14 13.75 13.68 14.08 13.28 14.1C12.58 14.16 11.89 14.1 11.22 13.93C9.84 13.58 8.55 12.93 7.44 12.02C6.41 11.18 5.54 10.16 4.88 9.01C4.01 7.61 3.44 6.06 3.22 4.45C3.18 4.14 3.38 3.86 3.68 3.78L5.62 3.22C5.93 3.14 6.25 3.3 6.37 3.59L7.18 5.59C7.28 5.84 7.2 6.12 6.98 6.28L6.08 6.98C6.71 8.4 7.86 9.55 9.28 10.18L9.98 9.28C10.14 9.06 10.42 8.98 10.67 9.08L12.67 9.89C12.96 10.01 13.12 10.33 13.04 10.64L14 11.35Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="tel:+436604895851">+43 660 489 58 51</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 4L8 9L14 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <a href="mailto:office@gerhardprager.eu">office@gerhardprager.eu</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 1C5.24 1 3 3.24 3 6C3 9.5 8 15 8 15C8 15 13 9.5 13 6C13 3.24 10.76 1 8 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="8" cy="6" r="2" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span>Kaiserstraße, 1070 Vienna</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 4V8L10.5 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>By appointment</span>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Univ.-Prof. Dr. Gerhard Prager</p>
+        <p>&copy; 2026 Univ.-Prof. Dr. Gerhard Prager. All rights reserved.</p>
         <div class="footer__bottom-links">
-          <a href="#">Legal Notice</a>
-          <a href="#">Privacy Policy</a>
+          <a href="../impressum.html">Imprint</a>
+          <a href="../datenschutz.html">Privacy Policy</a>
         </div>
       </div>
     </div>
@@ -435,6 +926,78 @@
       }, { threshold: 0.5 });
       document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
     }
+
+    // === PUBLICATIONS: COLLAPSE / TOGGLE / SEARCH ===
+    (function() {
+      var list = document.getElementById('publikationen');
+      var searchInput = document.getElementById('pubSearch');
+      var countEl = document.getElementById('pubCount');
+      if (!list) return;
+
+      var yearGroups = list.querySelectorAll('.pub-year-group');
+      var INITIAL_SHOW = 5;
+
+      // Collapse older year groups
+      yearGroups.forEach(function(g, i) {
+        if (i >= INITIAL_SHOW) g.style.display = 'none';
+      });
+
+      // Add "show more / show less" toggle button
+      if (yearGroups.length > INITIAL_SHOW) {
+        var toggleBtn = document.createElement('button');
+        toggleBtn.className = 'pub-toggle fade-up';
+        toggleBtn.textContent = 'Show all years \u2193';
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        list.after(toggleBtn);
+        var expanded = false;
+        toggleBtn.addEventListener('click', function() {
+          expanded = !expanded;
+          yearGroups.forEach(function(g, i) {
+            if (i >= INITIAL_SHOW) g.style.display = expanded ? '' : 'none';
+          });
+          toggleBtn.textContent = expanded ? 'Show less \u2191' : 'Show all years \u2193';
+          toggleBtn.setAttribute('aria-expanded', expanded);
+          if (!expanded) {
+            list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+
+      // Search
+      if (searchInput && countEl) {
+        searchInput.addEventListener('input', function() {
+          var q = this.value.toLowerCase().trim();
+          var total = 0;
+          yearGroups.forEach(function(g) {
+            var items = g.querySelectorAll('.pub-item');
+            var groupVisible = 0;
+            items.forEach(function(item) {
+              var match = !q || item.textContent.toLowerCase().indexOf(q) !== -1;
+              item.style.display = match ? '' : 'none';
+              if (match) groupVisible++;
+            });
+            g.style.display = groupVisible > 0 ? '' : 'none';
+            total += groupVisible;
+          });
+          countEl.textContent = total + ' Publication' + (total !== 1 ? 's' : '');
+
+          // When searching, show all year groups; when cleared, re-collapse
+          var toggleBtn = document.querySelector('.pub-toggle');
+          if (toggleBtn) {
+            toggleBtn.style.display = q ? 'none' : '';
+            if (!q) {
+              yearGroups.forEach(function(g, i) {
+                if (i >= INITIAL_SHOW) g.style.display = 'none';
+                g.querySelectorAll('.pub-item').forEach(function(item) { item.style.display = ''; });
+              });
+              toggleBtn.setAttribute('aria-expanded', 'false');
+              toggleBtn.textContent = 'Show all years \u2193';
+            }
+          }
+        });
+      }
+    })();
   </script>
+<script src="../cookie-consent.js"></script>
 </body>
 </html>

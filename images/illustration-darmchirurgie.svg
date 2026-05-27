@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .resect { stroke: #2b3a4a; fill: #e8e4df; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .staple { stroke: #2b3a4a; stroke-width: 1.2; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Cecum / Appendix area -->
+  <path d="M465,180 Q480,195 488,220 Q492,245 485,265 Q478,280 465,285" class="organ"/>
+  <!-- Appendix hint -->
+  <path d="M480,268 Q490,280 495,295 Q498,308 492,315" class="thin" style="stroke-width:0.8; opacity:0.5;"/>
+
+  <!-- Ascending colon (right side) -->
+  <path d="M455,120 Q462,135 468,160 Q472,180 472,200" class="organ"/>
+  <path d="M485,120 Q490,135 494,160 Q498,180 498,200" class="organ"/>
+  <!-- Haustra marks ascending -->
+  <path d="M462,140 Q470,148 462,158" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+  <path d="M464,170 Q472,178 464,188" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+
+  <!-- Hepatic flexure -->
+  <path d="M455,120 Q450,108 440,100 Q425,92 410,90" class="organ"/>
+  <path d="M485,120 Q482,108 472,100 Q458,92 440,90" class="organ"/>
+
+  <!-- Transverse colon -->
+  <path d="M410,90 Q350,82 300,78 Q250,75 200,80 Q170,85 155,92" class="organ"/>
+  <path d="M440,90 Q380,82 330,78 Q280,75 230,80 Q195,85 178,95" class="organ"/>
+  <!-- Haustra marks transverse -->
+  <path d="M380,84 Q378,76 370,84" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+  <path d="M320,78 Q318,70 310,78" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+  <path d="M260,78 Q258,70 250,78" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+
+  <!-- Splenic flexure -->
+  <path d="M155,92 Q140,100 130,115 Q122,132 120,150" class="organ"/>
+  <path d="M178,95 Q162,105 150,120 Q142,138 140,155" class="organ"/>
+
+  <!-- Descending colon (left side) -->
+  <path d="M120,150 Q118,180 116,210 Q115,240 118,270 Q120,295 125,320" class="organ"/>
+  <path d="M140,155 Q138,185 136,215 Q135,245 138,275 Q140,300 145,325" class="organ"/>
+  <!-- Haustra marks descending -->
+  <path d="M124,190 Q116,198 124,208" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+  <path d="M126,250 Q118,258 126,268" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+
+  <!-- Sigmoid colon - RESECTION AREA -->
+  <path d="M125,320 Q130,345 145,365 Q165,388 190,400 Q220,410 250,405 Q275,398 290,382 Q302,365 305,345 Q306,325 300,310" class="resect"/>
+  <path d="M145,325 Q150,348 165,368 Q182,388 205,398 Q232,406 258,400 Q278,393 292,378 Q302,362 305,345" class="resect"/>
+  <!-- Haustra in sigmoid -->
+  <path d="M150,352 Q158,360 165,352" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+  <path d="M210,402 Q218,410 226,402" class="thin" style="stroke-width:0.5; opacity:0.4;"/>
+
+  <!-- Staple lines at resection points -->
+  <!-- Proximal staple -->
+  <line x1="118" y1="316" x2="148" y2="320" class="staple" style="stroke-width:1.5;"/>
+  <line x1="118" y1="320" x2="148" y2="324" class="staple" style="stroke-width:1.5;"/>
+  <!-- Cross marks on staple -->
+  <line x1="125" y1="314" x2="125" y2="326" class="staple" style="stroke-width:0.6;"/>
+  <line x1="132" y1="315" x2="132" y2="327" class="staple" style="stroke-width:0.6;"/>
+  <line x1="139" y1="316" x2="139" y2="328" class="staple" style="stroke-width:0.6;"/>
+
+  <!-- Distal staple -->
+  <line x1="296" y1="306" x2="310" y2="342" class="staple" style="stroke-width:1.5;"/>
+  <line x1="300" y1="304" x2="314" y2="340" class="staple" style="stroke-width:1.5;"/>
+  <!-- Cross marks -->
+  <line x1="295" y1="312" x2="304" y2="310" class="staple" style="stroke-width:0.6;"/>
+  <line x1="297" y1="322" x2="306" y2="320" class="staple" style="stroke-width:0.6;"/>
+  <line x1="299" y1="332" x2="308" y2="330" class="staple" style="stroke-width:0.6;"/>
+
+  <!-- Rectum continuing down -->
+  <path d="M300,310 Q310,330 315,355 Q318,380 315,405 Q312,430 305,450" class="organ"/>
+  <path d="M320,315 Q328,335 332,360 Q335,385 332,410 Q328,435 320,455" class="organ"/>
+
+  <!-- Labels -->
+  <!-- Ascending Colon -->
+  <text x="505" y="170" class="label">Ascending</text>
+  <text x="505" y="184" class="label">Colon</text>
+  <line x1="503" y1="175" x2="498" y2="175" class="lead"/>
+
+  <!-- Transverse Colon -->
+  <text x="270" y="55" class="label">Transverse Colon</text>
+  <line x1="330" y1="60" x2="330" y2="75" class="lead"/>
+
+  <!-- Sigmoid -->
+  <text x="80" y="400" class="label">Sigmoid</text>
+  <line x1="135" y1="398" x2="160" y2="390" class="lead"/>
+
+  <!-- Resection -->
+  <text x="260" y="440" class="label">Resection</text>
+  <line x1="290" y1="432" x2="275" y2="405" class="lead"/>
+</svg>

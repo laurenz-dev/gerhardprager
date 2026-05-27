@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .layer { stroke: #2b3a4a; fill: none; stroke-width: 1.2; stroke-linecap: round; }
+      .mesh { stroke: #2b3a4a; stroke-width: 0.6; fill: none; opacity: 0.5; }
+    </style>
+  </defs>
+
+  <!-- Skin layer (outermost) -->
+  <path d="M80,80 L520,80 L520,110 L80,110 Z" fill="#f0ede9" stroke="#2b3a4a" stroke-width="1.2"/>
+  <!-- Skin texture dots -->
+  <circle cx="120" cy="95" r="0.8" fill="#2b3a4a" opacity="0.3"/>
+  <circle cx="180" cy="92" r="0.8" fill="#2b3a4a" opacity="0.3"/>
+  <circle cx="250" cy="97" r="0.8" fill="#2b3a4a" opacity="0.3"/>
+  <circle cx="350" cy="93" r="0.8" fill="#2b3a4a" opacity="0.3"/>
+  <circle cx="420" cy="96" r="0.8" fill="#2b3a4a" opacity="0.3"/>
+  <circle cx="480" cy="91" r="0.8" fill="#2b3a4a" opacity="0.3"/>
+
+  <!-- Subcutaneous fat -->
+  <path d="M80,110 L520,110 L520,140 L80,140 Z" fill="#e8e4df" stroke="#2b3a4a" stroke-width="1"/>
+  <!-- Fat texture -->
+  <path d="M100,118 Q115,128 130,118" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+  <path d="M200,120 Q215,130 230,120" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+  <path d="M380,118 Q395,128 410,118" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+
+  <!-- External oblique muscle -->
+  <path d="M80,140 L520,140 L520,175 L80,175 Z" fill="none" stroke="#2b3a4a" stroke-width="1.2"/>
+  <!-- Muscle fiber lines -->
+  <line x1="90" y1="148" x2="110" y2="168" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="130" y1="148" x2="150" y2="168" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="170" y1="148" x2="190" y2="168" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="380" y1="148" x2="400" y2="168" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="420" y1="148" x2="440" y2="168" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="460" y1="148" x2="480" y2="168" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+
+  <!-- Internal oblique / transversalis -->
+  <path d="M80,175 L520,175 L520,210 L80,210 Z" fill="none" stroke="#2b3a4a" stroke-width="1.2"/>
+  <!-- Muscle fibers -->
+  <line x1="100" y1="182" x2="90" y2="202" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="140" y1="182" x2="130" y2="202" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="430" y1="182" x2="420" y2="202" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+  <line x1="470" y1="182" x2="460" y2="202" class="thin" style="stroke-width:0.4; opacity:0.35;"/>
+
+  <!-- Peritoneum -->
+  <path d="M80,210 L235,210 Q240,210 240,215 L240,215" class="layer"/>
+  <path d="M360,215 L360,215 Q360,210 365,210 L520,210" class="layer"/>
+
+  <!-- Hernia defect gap in muscle/peritoneum layers -->
+  <!-- Gap in external oblique -->
+  <path d="M220,140 L220,175" class="thin" style="stroke-width:0; opacity:0;"/>
+  <!-- Gap in internal oblique -->
+
+  <!-- Hernia sac bulging down -->
+  <path d="M240,210 Q235,235 238,260 Q242,290 260,320 Q280,345 300,350 Q320,345 340,320 Q358,290 362,260 Q365,235 360,210" class="highlight" style="stroke-width:1.2;"/>
+
+  <!-- Intestine inside hernia sac -->
+  <path d="M260,240 Q268,250 275,260 Q282,275 278,290 Q272,305 265,310 Q280,318 295,315 Q310,310 315,295 Q318,280 312,265 Q305,252 298,245 Q290,238 280,235 Q270,235 260,240" fill="#e8e4df" stroke="#2b3a4a" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Intestine tube going up through defect -->
+  <path d="M260,240 Q255,228 260,218 Q268,210 278,208" class="organ" style="stroke-width:1.2;"/>
+  <path d="M298,245 Q310,232 318,218 Q322,210 330,208" class="organ" style="stroke-width:1.2;"/>
+
+  <!-- Mesh overlay (grid pattern) - placed over defect area -->
+  <rect x="210" y="155" width="180" height="65" rx="8" fill="none" stroke="#2b3a4a" stroke-width="1.5" stroke-dasharray="none" opacity="0.6"/>
+  <!-- Mesh grid lines horizontal -->
+  <line x1="215" y1="168" x2="385" y2="168" class="mesh"/>
+  <line x1="215" y1="181" x2="385" y2="181" class="mesh"/>
+  <line x1="215" y1="194" x2="385" y2="194" class="mesh"/>
+  <line x1="215" y1="207" x2="385" y2="207" class="mesh"/>
+  <!-- Mesh grid lines vertical -->
+  <line x1="230" y1="158" x2="230" y2="217" class="mesh"/>
+  <line x1="250" y1="158" x2="250" y2="217" class="mesh"/>
+  <line x1="270" y1="158" x2="270" y2="217" class="mesh"/>
+  <line x1="290" y1="158" x2="290" y2="217" class="mesh"/>
+  <line x1="310" y1="158" x2="310" y2="217" class="mesh"/>
+  <line x1="330" y1="158" x2="330" y2="217" class="mesh"/>
+  <line x1="350" y1="158" x2="350" y2="217" class="mesh"/>
+  <line x1="370" y1="158" x2="370" y2="217" class="mesh"/>
+
+  <!-- Layer labels on right side -->
+  <text x="535" y="98" class="label" style="font-size:9px;">Skin</text>
+  <text x="535" y="128" class="label" style="font-size:9px;">Fat</text>
+  <text x="535" y="160" class="label" style="font-size:9px;">Muscle</text>
+
+  <!-- Labels -->
+  <!-- Hernia Defect -->
+  <text x="80" y="290" class="label">Hernia Defect</text>
+  <line x1="204" y1="288" x2="245" y2="275" class="lead"/>
+
+  <!-- Mesh -->
+  <text x="420" y="165" class="label">Mesh</text>
+  <line x1="418" y1="163" x2="392" y2="170" class="lead"/>
+
+  <!-- Peritoneum -->
+  <text x="80" y="218" class="label">Peritoneum</text>
+  <line x1="172" y1="216" x2="220" y2="212" class="lead"/>
+
+  <!-- Abdominal Wall -->
+  <text x="420" y="200" class="label">Abdominal Wall</text>
+  <line x1="418" y1="198" x2="395" y2="192" class="lead"/>
+</svg>

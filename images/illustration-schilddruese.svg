@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .nerve { stroke: #2b3a4a; fill: none; stroke-width: 0.8; stroke-linecap: round; }
+      .parathyroid { fill: #e8e4df; stroke: #2b3a4a; stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <!-- Neck outline (subtle) -->
+  <path d="M180,40 Q175,60 172,90 Q170,120 172,160 Q175,200 180,240 Q188,290 200,340 Q215,390 235,430" class="thin" style="stroke-width:0.5; opacity:0.25;"/>
+  <path d="M420,40 Q425,60 428,90 Q430,120 428,160 Q425,200 420,240 Q412,290 400,340 Q385,390 365,430" class="thin" style="stroke-width:0.5; opacity:0.25;"/>
+
+  <!-- Trachea -->
+  <path d="M288,60 L288,420" class="organ" style="stroke-width:1.2;"/>
+  <path d="M312,60 L312,420" class="organ" style="stroke-width:1.2;"/>
+  <!-- Tracheal rings -->
+  <line x1="288" y1="80" x2="312" y2="80" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="288" y1="100" x2="312" y2="100" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="288" y1="120" x2="312" y2="120" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="288" y1="310" x2="312" y2="310" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="288" y1="330" x2="312" y2="330" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="288" y1="350" x2="312" y2="350" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="288" y1="370" x2="312" y2="370" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="288" y1="390" x2="312" y2="390" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+
+  <!-- Thyroid - Left lobe -->
+  <path d="M288,155 Q280,160 265,175 Q245,200 235,230 Q228,258 235,280 Q242,298 260,305 Q278,308 288,300" class="highlight"/>
+  <!-- Internal texture left lobe -->
+  <path d="M262,210 Q268,225 264,240" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+  <path d="M255,250 Q262,262 258,275" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+
+  <!-- Thyroid - Right lobe -->
+  <path d="M312,155 Q320,160 335,175 Q355,200 365,230 Q372,258 365,280 Q358,298 340,305 Q322,308 312,300" class="highlight"/>
+  <!-- Internal texture right lobe -->
+  <path d="M338,210 Q332,225 336,240" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+  <path d="M345,250 Q338,262 342,275" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+
+  <!-- Isthmus -->
+  <path d="M288,228 Q295,222 305,222 Q312,222 312,228" class="highlight" style="stroke-width:1.5;"/>
+  <path d="M288,240 Q295,246 305,246 Q312,246 312,240" class="highlight" style="stroke-width:1.5;"/>
+  <rect x="288" y="228" width="24" height="12" fill="#f0ede9" stroke="none"/>
+  <line x1="288" y1="228" x2="312" y2="228" stroke="#2b3a4a" stroke-width="1.5"/>
+  <line x1="288" y1="240" x2="312" y2="240" stroke="#2b3a4a" stroke-width="1.5"/>
+
+  <!-- Recurrent laryngeal nerve - left -->
+  <path d="M272,135 Q265,155 260,180 Q255,210 254,240 Q253,270 256,295 Q258,315 262,340 Q266,370 270,400" class="nerve" style="stroke-dasharray: 4 3;"/>
+
+  <!-- Recurrent laryngeal nerve - right -->
+  <path d="M328,135 Q335,155 340,180 Q345,210 346,240 Q347,270 344,295 Q342,315 338,340 Q334,370 330,400" class="nerve" style="stroke-dasharray: 4 3;"/>
+
+  <!-- Parathyroid glands (4 small ovals) -->
+  <ellipse cx="248" cy="195" rx="6" ry="8" class="parathyroid"/>
+  <ellipse cx="248" cy="285" rx="6" ry="8" class="parathyroid"/>
+  <ellipse cx="352" cy="195" rx="6" ry="8" class="parathyroid"/>
+  <ellipse cx="352" cy="285" rx="6" ry="8" class="parathyroid"/>
+
+  <!-- Labels -->
+  <!-- Thyroid -->
+  <text x="400" y="230" class="label">Thyroid</text>
+  <line x1="398" y1="228" x2="368" y2="232" class="lead"/>
+
+  <!-- Trachea -->
+  <text x="335" y="365" class="label">Trachea</text>
+  <line x1="333" y1="363" x2="314" y2="363" class="lead"/>
+
+  <!-- Recurrent Laryngeal Nerve -->
+  <text x="90" y="340" class="label">Recurrent Laryngeal</text>
+  <text x="90" y="354" class="label">Nerve</text>
+  <line x1="232" y1="340" x2="260" y2="335" class="lead"/>
+
+  <!-- Parathyroid Glands -->
+  <text x="380" y="190" class="label">Parathyroid</text>
+  <text x="380" y="204" class="label">Glands</text>
+  <line x1="378" y1="195" x2="360" y2="195" class="lead"/>
+</svg>

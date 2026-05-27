@@ -24,3 +24,6 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://www.gerhardprager.eu/sitemap.xml
+
+# LLM Context
+Llms-txt: https://www.gerhardprager.eu/llms.txt

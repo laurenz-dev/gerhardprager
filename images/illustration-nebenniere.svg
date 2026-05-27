@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .trocar { fill: none; stroke: #2b3a4a; stroke-width: 1; }
+      .tumor { fill: #e8e4df; stroke: #2b3a4a; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <!-- Kidney (bean shape, lateral view) -->
+  <path d="M300,180 Q340,185 370,210 Q400,240 415,280 Q425,320 420,360 Q412,400 390,425 Q365,448 335,455 Q305,458 278,448 Q252,435 235,412 Q218,388 212,358 Q208,325 215,290 Q225,255 245,230 Q268,208 300,195" class="highlight" style="stroke-width:1.5;"/>
+  <!-- Kidney hilum (medial notch) -->
+  <path d="M245,300 Q255,310 258,325 Q258,340 252,355 Q245,365 238,370" class="organ" style="stroke-width:1.2;"/>
+  <!-- Renal artery/vein at hilum -->
+  <path d="M250,320 Q230,315 210,312 L170,310" class="thin" style="stroke-width:1;"/>
+  <path d="M248,340 Q228,345 208,348 L170,350" class="thin" style="stroke-width:1;"/>
+  <!-- Ureter -->
+  <path d="M240,372 Q235,400 232,430 Q230,455 232,475" class="thin" style="stroke-width:0.8;"/>
+
+  <!-- Internal kidney structure hints -->
+  <path d="M290,250 Q310,270 305,295" class="thin" style="stroke-width:0.5; opacity:0.25;"/>
+  <path d="M280,310 Q300,330 295,355" class="thin" style="stroke-width:0.5; opacity:0.25;"/>
+  <path d="M320,280 Q335,300 330,325" class="thin" style="stroke-width:0.5; opacity:0.25;"/>
+
+  <!-- Adrenal gland (cap-like, sitting on top of kidney) -->
+  <path d="M260,175 Q270,145 290,130 Q310,120 335,125 Q358,132 372,148 Q382,165 378,182 Q372,195 358,200 Q340,205 325,200 Q310,195 300,188 Q290,195 278,200 Q265,202 258,195 Q254,188 260,175" class="highlight" style="stroke-width:1.8;"/>
+
+  <!-- Adrenal gland cortex/medulla texture -->
+  <path d="M280,148 Q295,140 312,142" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <path d="M275,162 Q292,155 315,158" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <path d="M340,145 Q350,152 355,165" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+
+  <!-- Tumor within adrenal gland -->
+  <circle cx="320" cy="158" r="18" class="tumor"/>
+  <!-- Tumor internal detail -->
+  <path d="M312,152 Q318,148 325,152" class="thin" style="stroke-width:0.4; opacity:0.4;"/>
+  <path d="M310,160 Q318,156 326,160" class="thin" style="stroke-width:0.4; opacity:0.4;"/>
+  <path d="M315,168 Q320,164 325,168" class="thin" style="stroke-width:0.4; opacity:0.4;"/>
+
+  <!-- Trocar ports (laparoscopic) -->
+  <circle cx="150" cy="120" r="5" class="trocar"/>
+  <circle cx="150" cy="120" r="2" fill="#2b3a4a" opacity="0.3"/>
+
+  <circle cx="200" cy="85" r="5" class="trocar"/>
+  <circle cx="200" cy="85" r="2" fill="#2b3a4a" opacity="0.3"/>
+
+  <circle cx="420" cy="100" r="5" class="trocar"/>
+  <circle cx="420" cy="100" r="2" fill="#2b3a4a" opacity="0.3"/>
+
+  <circle cx="470" cy="150" r="5" class="trocar"/>
+  <circle cx="470" cy="150" r="2" fill="#2b3a4a" opacity="0.3"/>
+
+  <!-- Instrument lines from trocars -->
+  <path d="M200,85 Q240,110 280,140" stroke="#2b3a4a" stroke-width="0.8" stroke-dasharray="8 4" fill="none"/>
+  <path d="M420,100 Q390,130 355,155" stroke="#2b3a4a" stroke-width="0.8" stroke-dasharray="8 4" fill="none"/>
+
+  <!-- Labels -->
+  <!-- Adrenal Gland -->
+  <text x="100" y="155" class="label">Adrenal Gland</text>
+  <line x1="218" y1="153" x2="258" y2="165" class="lead"/>
+
+  <!-- Tumor -->
+  <text x="380" y="148" class="label">Tumor</text>
+  <line x1="378" y1="152" x2="340" y2="158" class="lead"/>
+
+  <!-- Kidney -->
+  <text x="430" y="340" class="label">Kidney</text>
+  <line x1="428" y1="338" x2="415" y2="340" class="lead"/>
+
+  <!-- Trocar Ports -->
+  <text x="470" y="175" class="label">Trocar Ports</text>
+  <line x1="468" y1="165" x2="476" y2="155" class="lead"/>
+</svg>

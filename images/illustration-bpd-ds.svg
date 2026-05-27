@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .ghost { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-dasharray: 6 4; opacity: 0.35; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .staple { stroke: #2b3a4a; stroke-width: 1; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Esophagus -->
+  <path d="M248,35 L248,90 Q246,102 244,112" class="organ"/>
+  <path d="M264,35 L264,90 Q262,102 260,112" class="organ"/>
+
+  <!-- Sleeve stomach -->
+  <path d="M244,112 Q236,125 232,145 Q228,170 226,200 Q224,232 226,260 Q228,285 236,305 Q244,320 256,325 Q268,322 274,305 Q280,285 282,260 Q284,232 283,200 Q282,170 278,145 Q274,125 268,115 Q264,112 260,112" class="highlight"/>
+
+  <!-- Staple line -->
+  <line x1="238" y1="130" x2="232" y2="134" class="staple"/>
+  <line x1="234" y1="155" x2="228" y2="159" class="staple"/>
+  <line x1="231" y1="180" x2="225" y2="184" class="staple"/>
+  <line x1="229" y1="210" x2="223" y2="214" class="staple"/>
+  <line x1="229" y1="240" x2="223" y2="244" class="staple"/>
+  <line x1="231" y1="268" x2="225" y2="272" class="staple"/>
+  <line x1="234" y1="293" x2="228" y2="297" class="staple"/>
+
+  <!-- Pylorus -->
+  <path d="M256,325 Q266,332 278,336" class="organ"/>
+  <ellipse cx="273" cy="333" rx="9" ry="3.5" class="thin" style="stroke-width:0.8;"/>
+
+  <!-- Duodenum (short segment, then cut) -->
+  <path d="M278,336 Q295,342 305,352 Q312,362 310,372" class="organ" style="stroke-width:1.3;"/>
+
+  <!-- Duodenal switch - cut and anastomosis -->
+  <line x1="302" y1="369" x2="318" y2="369" class="thin" style="stroke-width:1.5;"/>
+  <line x1="302" y1="374" x2="318" y2="374" class="thin" style="stroke-width:1.5;"/>
+  <circle cx="310" cy="372" r="5" fill="none" stroke="#2b3a4a" stroke-width="1.5"/>
+
+  <!-- Bypassed duodenum/jejunum (ghost - long biliopancreatic limb) -->
+  <path d="M310,377 Q315,395 322,415 Q332,438 348,448 Q368,455 388,448 Q405,438 412,420 Q418,400 415,378 Q410,358 400,342 Q388,328 375,322 Q360,318 348,322 Q338,328 332,340 Q328,352 328,365" class="ghost"/>
+
+  <!-- More bypassed bowel loops -->
+  <path d="M388,448 Q395,462 388,475 Q378,485 365,482 Q350,478 342,468 Q335,458 340,448" class="ghost"/>
+
+  <!-- Alimentary limb - duodenum connected to distal ileum -->
+  <path d="M310,377 Q305,395 300,415 Q295,438 298,455 Q302,470 312,478" class="organ" style="stroke-width:1.3;"/>
+
+  <!-- Short common channel (shorter than SADI-S) -->
+  <path d="M312,478 Q325,482 335,478 Q342,472 342,462" class="organ" style="stroke-width:1.8;"/>
+
+  <!-- Cecum/colon hint at bottom -->
+  <path d="M342,462 Q345,450 350,442" class="organ" style="stroke-width:1;"/>
+
+  <!-- Flow arrows -->
+  <polygon points="302,410 298,404 306,404" fill="#2b3a4a" opacity="0.5"/>
+  <polygon points="340,455 336,461 344,461" fill="#2b3a4a" opacity="0.5"/>
+
+  <!-- Labels -->
+  <!-- Sleeve -->
+  <text x="115" y="215" class="label">Sleeve</text>
+  <line x1="160" y1="213" x2="224" y2="215" class="lead"/>
+
+  <!-- Duodenal Switch -->
+  <text x="345" y="355" class="label">Duodenal Switch</text>
+  <line x1="343" y1="353" x2="318" y2="365" class="lead"/>
+
+  <!-- Biliopancreatic Limb -->
+  <text x="420" y="400" class="label">Biliopancreatic</text>
+  <text x="420" y="414" class="label">Limb</text>
+  <line x1="418" y1="405" x2="400" y2="410" class="lead"/>
+
+  <!-- Common Channel -->
+  <text x="355" y="480" class="label">Common Channel</text>
+  <line x1="353" y1="478" x2="342" y2="470" class="lead"/>
+</svg>

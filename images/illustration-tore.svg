@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .scope { stroke: #2b3a4a; fill: none; stroke-width: 1.3; stroke-linecap: round; }
+      .suture { stroke: #2b3a4a; stroke-width: 1.2; stroke-linecap: round; }
+      .dilated { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-dasharray: 5 3; opacity: 0.4; }
+    </style>
+  </defs>
+
+  <!-- Esophagus -->
+  <path d="M272,40 L270,105 Q268,120 266,132" class="organ"/>
+  <path d="M296,40 L294,105 Q292,120 290,132" class="organ"/>
+
+  <!-- Gastric pouch (from prior bypass - small) -->
+  <path d="M266,132 Q255,142 250,162 Q246,185 252,205 Q260,220 275,228 Q284,230 290,228 Q305,220 312,205 Q318,185 314,162 Q310,142 302,135 Q298,132 290,132" class="highlight"/>
+
+  <!-- Pouch interior folds -->
+  <path d="M264,165 Q272,175 268,188" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+  <path d="M295,170 Q302,178 298,192" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+
+  <!-- Gastrojejunal anastomosis area -->
+  <!-- Dilated outlet (before - shown as dashed wider opening) -->
+  <ellipse cx="282" cy="240" rx="24" ry="10" class="dilated"/>
+  <!-- Arrow indicating dilation -->
+  <line x1="255" y1="240" x2="248" y2="240" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="248" y1="237" x2="248" y2="243" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="309" y1="240" x2="316" y2="240" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <line x1="316" y1="237" x2="316" y2="243" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+
+  <!-- Reduced anastomosis (after - smaller, with suture marks) -->
+  <ellipse cx="282" cy="240" rx="12" ry="6" fill="#f0ede9" stroke="#2b3a4a" stroke-width="1.8"/>
+
+  <!-- Suture marks around reduced anastomosis -->
+  <line x1="270" y1="236" x2="268" y2="232" class="suture"/>
+  <line x1="275" y1="234" x2="274" y2="230" class="suture"/>
+  <line x1="282" y1="234" x2="282" y2="229" class="suture"/>
+  <line x1="289" y1="234" x2="290" y2="230" class="suture"/>
+  <line x1="294" y1="236" x2="296" y2="232" class="suture"/>
+  <!-- Bottom sutures -->
+  <line x1="270" y1="244" x2="268" y2="248" class="suture"/>
+  <line x1="275" y1="246" x2="274" y2="250" class="suture"/>
+  <line x1="282" y1="246" x2="282" y2="251" class="suture"/>
+  <line x1="289" y1="246" x2="290" y2="250" class="suture"/>
+  <line x1="294" y1="244" x2="296" y2="248" class="suture"/>
+
+  <!-- Jejunum (Roux limb below anastomosis) -->
+  <path d="M270,246 Q262,265 258,290 Q254,320 260,345 Q268,368 282,378" class="organ" style="stroke-width:1.3;"/>
+  <path d="M294,246 Q302,265 306,290 Q310,320 305,345 Q298,368 288,378" class="organ" style="stroke-width:1.3;"/>
+  <!-- Jejunal folds -->
+  <path d="M268,290 Q275,300 272,315" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+  <path d="M296,300 Q302,310 298,325" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+
+  <!-- Jejunum continuing down -->
+  <path d="M282,378 Q275,395 272,415 L270,440" class="organ" style="stroke-width:1.2;"/>
+  <path d="M288,378 Q295,395 298,415 L300,440" class="organ" style="stroke-width:1.2;"/>
+
+  <!-- Endoscope with suturing device -->
+  <path d="M280,40 Q281,70 281,100 Q281,130 282,160 Q282,185 282,200" class="scope"/>
+  <!-- Endoscope tip -->
+  <circle cx="282" cy="203" r="3.5" fill="#2b3a4a" opacity="0.5"/>
+  <!-- Suturing device arms extending down to anastomosis -->
+  <path d="M278,206 Q274,215 272,228 Q270,235 270,240" class="thin" style="stroke-width:0.8;"/>
+  <path d="M286,206 Q290,215 292,228 Q294,235 294,240" class="thin" style="stroke-width:0.8;"/>
+  <!-- Device needle hint -->
+  <path d="M270,240 Q275,245 282,246" class="thin" style="stroke-width:0.6; opacity:0.6;"/>
+
+  <!-- Labels -->
+  <!-- Gastric Pouch -->
+  <text x="345" y="175" class="label">Gastric Pouch</text>
+  <line x1="343" y1="173" x2="316" y2="178" class="lead"/>
+
+  <!-- Dilated Outlet -->
+  <text x="340" y="242" class="label">Dilated Outlet</text>
+  <line x1="338" y1="240" x2="318" y2="240" class="lead"/>
+
+  <!-- Endoscopic Sutures -->
+  <text x="110" y="235" class="label">Endoscopic Sutures</text>
+  <line x1="248" y1="233" x2="268" y2="236" class="lead"/>
+</svg>

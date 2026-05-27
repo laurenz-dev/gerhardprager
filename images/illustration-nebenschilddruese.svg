@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .parathyroid-normal { fill: #e8e4df; stroke: #2b3a4a; stroke-width: 1.2; }
+      .parathyroid-adenoma { fill: #f0ede9; stroke: #2b3a4a; stroke-width: 2; }
+      .thyroid-bg { fill: none; stroke: #2b3a4a; stroke-width: 1; opacity: 0.35; stroke-dasharray: 5 3; }
+    </style>
+  </defs>
+
+  <!-- Neck outline (very subtle) -->
+  <path d="M190,40 Q186,70 184,110 Q182,150 185,200 Q190,260 198,320" class="thin" style="stroke-width:0.4; opacity:0.2;"/>
+  <path d="M410,40 Q414,70 416,110 Q418,150 415,200 Q410,260 402,320" class="thin" style="stroke-width:0.4; opacity:0.2;"/>
+
+  <!-- Trachea -->
+  <path d="M288,55 L288,430" class="organ" style="stroke-width:1.2;"/>
+  <path d="M312,55 L312,430" class="organ" style="stroke-width:1.2;"/>
+  <!-- Tracheal rings -->
+  <line x1="288" y1="75" x2="312" y2="75" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <line x1="288" y1="95" x2="312" y2="95" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <line x1="288" y1="115" x2="312" y2="115" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <line x1="288" y1="320" x2="312" y2="320" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <line x1="288" y1="340" x2="312" y2="340" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <line x1="288" y1="360" x2="312" y2="360" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <line x1="288" y1="380" x2="312" y2="380" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+  <line x1="288" y1="400" x2="312" y2="400" class="thin" style="stroke-width:0.5; opacity:0.35;"/>
+
+  <!-- Thyroid - Left lobe (background, dashed) -->
+  <path d="M288,150 Q278,156 262,172 Q244,195 236,225 Q230,255 236,280 Q244,300 262,308 Q280,312 288,304" class="thyroid-bg"/>
+
+  <!-- Thyroid - Right lobe (background, dashed) -->
+  <path d="M312,150 Q322,156 338,172 Q356,195 364,225 Q370,255 364,280 Q356,300 338,308 Q320,312 312,304" class="thyroid-bg"/>
+
+  <!-- Isthmus (background) -->
+  <rect x="288" y="226" width="24" height="14" fill="none" stroke="#2b3a4a" stroke-width="1" opacity="0.35" stroke-dasharray="5 3"/>
+
+  <!-- Parathyroid glands - posterior view -->
+  <!-- Right superior (normal) -->
+  <ellipse cx="352" cy="190" rx="9" ry="12" class="parathyroid-normal"/>
+  <!-- Right inferior (normal) -->
+  <ellipse cx="350" cy="285" rx="9" ry="12" class="parathyroid-normal"/>
+
+  <!-- Left superior - ADENOMA (enlarged) -->
+  <ellipse cx="248" cy="185" rx="16" ry="20" class="parathyroid-adenoma"/>
+  <!-- Adenoma internal detail (nodular appearance) -->
+  <path d="M242,178 Q248,172 254,178" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <path d="M240,188 Q248,182 256,188" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+  <path d="M244,196 Q248,190 252,196" class="thin" style="stroke-width:0.6; opacity:0.4;"/>
+
+  <!-- Left inferior (normal) -->
+  <ellipse cx="250" cy="288" rx="9" ry="12" class="parathyroid-normal"/>
+
+  <!-- Connecting tissue hints -->
+  <path d="M257" class="thin" style="stroke-width:0.3; opacity:0.2;"/>
+
+  <!-- Size comparison arrow for adenoma -->
+  <line x1="230" y1="168" x2="230" y2="202" stroke="#2b3a4a" stroke-width="0.6" opacity="0.5"/>
+  <line x1="228" y1="168" x2="232" y2="168" stroke="#2b3a4a" stroke-width="0.6" opacity="0.5"/>
+  <line x1="228" y1="202" x2="232" y2="202" stroke="#2b3a4a" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- Labels -->
+  <!-- Parathyroid Adenoma -->
+  <text x="80" y="185" class="label">Parathyroid</text>
+  <text x="80" y="199" class="label">Adenoma</text>
+  <line x1="160" y1="192" x2="232" y2="188" class="lead"/>
+
+  <!-- Normal Parathyroids -->
+  <text x="390" y="285" class="label">Normal</text>
+  <text x="390" y="299" class="label">Parathyroids</text>
+  <line x1="388" y1="290" x2="362" y2="288" class="lead"/>
+
+  <!-- Thyroid -->
+  <text x="380" y="225" class="label">Thyroid</text>
+  <line x1="378" y1="223" x2="358" y2="228" class="lead"/>
+</svg>

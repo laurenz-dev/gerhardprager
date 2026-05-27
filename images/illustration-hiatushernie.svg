@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <style>
+      .label { font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: #5a5550; }
+      .lead { stroke: #5a5550; stroke-width: 0.5; stroke-dasharray: 3 3; fill: none; }
+      .organ { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .highlight { stroke: #2b3a4a; fill: #f0ede9; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke: #2b3a4a; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .muscle { fill: #e8e4df; stroke: #2b3a4a; stroke-width: 1.5; }
+      .wrap { stroke: #2b3a4a; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: none; }
+    </style>
+  </defs>
+
+  <!-- Esophagus coming from top -->
+  <path d="M278,40 L278,175" class="organ"/>
+  <path d="M298,40 L298,175" class="organ"/>
+
+  <!-- Esophageal lumen detail -->
+  <path d="M284,60 Q288,68 284,76" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+  <path d="M292,90 Q288,98 292,106" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+  <path d="M284,120 Q288,128 284,136" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+
+  <!-- Diaphragm (thick muscle band) -->
+  <path d="M80,200 Q140,190 200,195 Q240,200 265,210 Q275,215 278,218" class="muscle" style="stroke-width:2;"/>
+  <path d="M298,218 Q305,215 315,210 Q340,200 400,195 Q460,190 520,200" class="muscle" style="stroke-width:2;"/>
+  <!-- Diaphragm lower edge -->
+  <path d="M80,230 Q140,220 200,225 Q240,230 265,240 Q275,245 278,248" class="muscle" style="stroke-width:2;"/>
+  <path d="M298,248 Q305,245 315,240 Q340,230 400,225 Q460,220 520,230" class="muscle" style="stroke-width:2;"/>
+  <!-- Fill between diaphragm edges -->
+  <path d="M80,200 Q140,190 200,195 Q240,200 265,210 Q275,215 278,218 L278,248 Q275,245 265,240 Q240,230 200,225 Q140,220 80,230 Z" fill="#e8e4df" stroke="none"/>
+  <path d="M298,218 Q305,215 315,210 Q340,200 400,195 Q460,190 520,200 L520,230 Q460,220 400,225 Q340,230 315,240 Q305,245 298,248 Z" fill="#e8e4df" stroke="none"/>
+  <!-- Muscle fiber texture -->
+  <path d="M120,200 Q130,210 140,200" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+  <path d="M180,198 Q190,208 200,198" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+  <path d="M380,198 Q390,208 400,198" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+  <path d="M440,196 Q450,206 460,196" class="thin" style="stroke-width:0.4; opacity:0.3;"/>
+
+  <!-- Hiatus opening - esophagus passes through -->
+  <path d="M278,175 Q276,195 278,218" class="organ"/>
+  <path d="M298,175 Q300,195 298,218" class="organ"/>
+
+  <!-- Below diaphragm - esophagus continues -->
+  <path d="M278,248 Q276,260 274,272" class="organ"/>
+  <path d="M298,248 Q300,260 302,272" class="organ"/>
+
+  <!-- Fundoplication wrap around lower esophagus -->
+  <path d="M258,255 Q248,260 242,272 Q238,288 245,302 Q255,312 270,315 Q276,316 280,315" class="wrap" style="stroke-width:2;"/>
+  <path d="M318,255 Q328,260 334,272 Q338,288 332,302 Q322,312 306,315 Q300,316 296,315" class="wrap" style="stroke-width:2;"/>
+  <!-- Wrap suture marks -->
+  <line x1="280" y1="312" x2="296" y2="312" stroke="#2b3a4a" stroke-width="1"/>
+  <line x1="278" y1="308" x2="298" y2="308" stroke="#2b3a4a" stroke-width="1"/>
+  <line x1="276" y1="304" x2="300" y2="304" stroke="#2b3a4a" stroke-width="1"/>
+  <!-- Stitch marks -->
+  <line x1="279" y1="310" x2="283" y2="314" class="thin" style="stroke-width:0.8;"/>
+  <line x1="289" y1="310" x2="293" y2="314" class="thin" style="stroke-width:0.8;"/>
+
+  <!-- Stomach below -->
+  <path d="M274,272 Q258,285 242,310 Q225,340 218,375 Q212,410 220,440 Q230,462 252,472 Q280,480 310,475 Q338,465 350,445 Q360,420 358,390 Q355,360 345,335 Q335,312 322,295 Q312,282 302,272" class="highlight" style="stroke-width:1.5;"/>
+
+  <!-- Stomach fundus (the part that wraps) -->
+  <path d="M258,255 Q250,262 245,275 Q240,290 242,310" class="organ" style="stroke-width:1.2; opacity:0.6;"/>
+  <path d="M318,255 Q326,262 330,275 Q335,290 335,312" class="organ" style="stroke-width:1.2; opacity:0.6;"/>
+
+  <!-- Stomach rugae -->
+  <path d="M245,350 Q255,362 250,378" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+  <path d="M240,400 Q252,412 248,428" class="thin" style="stroke-width:0.5; opacity:0.3;"/>
+
+  <!-- Labels -->
+  <!-- Diaphragm -->
+  <text x="410" y="212" class="label">Diaphragm</text>
+  <line x1="408" y1="210" x2="380" y2="215" class="lead"/>
+
+  <!-- Fundoplication -->
+  <text x="370" y="295" class="label">Fundoplication</text>
+  <line x1="368" y1="293" x2="336" y2="295" class="lead"/>
+
+  <!-- Esophagus -->
+  <text x="320" y="120" class="label">Esophagus</text>
+  <line x1="318" y1="118" x2="300" y2="118" class="lead"/>
+
+  <!-- Stomach -->
+  <text x="120" y="420" class="label">Stomach</text>
+  <line x1="180" y1="418" x2="225" y2="415" class="lead"/>
+</svg>
