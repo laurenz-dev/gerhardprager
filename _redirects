@@ -1,0 +1,13 @@
+# Clean URLs -> echte Dateien (Rewrite, URL bleibt sichtbar = clean)
+/eingriffe      /procedures.html   200
+/ueber-mich     /about.html        200
+/wissenschaft   /science.html      200
+/presse         /press.html        200
+/kontakt        /contact.html      200
+
+# Datei-Slugs -> clean URL (301, gegen Duplicate Content)
+/procedures     /eingriffe         301
+/about          /ueber-mich        301
+/science        /wissenschaft      301
+/press          /presse            301
+/contact        /kontakt           301
