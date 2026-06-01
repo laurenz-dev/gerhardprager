@@ -4,3 +4,38 @@
 /science        /wissenschaft    301
 /press          /presse          301
 /contact        /kontakt         301
+
+# =========================================================
+#  ALTE JOOMLA-URLS (/index.php/...) -> neue Seiten
+#  301 = permanent. Loest Duplikate + 5xx-Fehler auf einen Schlag
+#  und vererbt die Autoritaet der alten Seite an die neue.
+#  Reihenfolge: spezifisch -> allgemein (erste Treffer-Regel gewinnt)
+# =========================================================
+
+# --- Deutsch: praezise Zuordnung (Zielseiten sicher vorhanden) ---
+/index.php/de/person*              /ueber-mich     301
+/index.php/de/leistungen*          /eingriffe      301
+/index.php/de/publikationen*       /wissenschaft   301
+/index.php/de/kontakt-anfahrt*     /kontakt        301
+
+# --- Englisch: praezise Zuordnung (en/-Zielseiten verifiziert vorhanden) ---
+/index.php/en/person*              /en/about       301
+/index.php/en/leistungen*          /en/procedures  301
+/index.php/en/publikationen*       /en/science     301
+/index.php/en/kontakt-anfahrt*     /en/contact     301
+
+# --- Arabisch: praezise Zuordnung (ar/-Zielseiten verifiziert vorhanden) ---
+/index.php/ar/person*              /ar/about       301
+/index.php/ar/leistungen*          /ar/procedures  301
+/index.php/ar/publikationen*       /ar/science     301
+/index.php/ar/kontakt-anfahrt*     /ar/contact     301
+
+# --- Sprach-Startseiten / restliche alte URLs pro Sprache ---
+/index.php/de/*                    /               301
+/index.php/en/*                    /en/            301
+/index.php/ar/*                    /ar/            301
+/index.php/ru/*                    /               301
+
+# --- Auffangregel: ALLES uebrige unter /index.php/ ---
+/index.php/*                       /               301
+/index.php                         /               301
