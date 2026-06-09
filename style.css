@@ -3936,14 +3936,7 @@ img.mural__image {
     padding: 1.75rem 1.5rem;
   }
   .verbaende__card--featured .verbaende__card-stats { margin-left: 0; }
-  /* Breite Tabellen (Blog) auf Mobile horizontal scrollbar statt Seiten-Overflow */
-  table {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+
 }
 
 @media (max-width: 480px) {
@@ -6379,11 +6372,15 @@ main.container {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
-.article-content table,
-.classification-table, .comparison-table, .price-table {
-  display: block;
-  width: 100%;
-  max-width: 100%;
+.blog-table-scroll {
   overflow-x: auto;
+  max-width: 100%;
   -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
 }
+.blog-table-scroll table { display: table !important; width: auto; min-width: 100%; margin: 0; white-space: normal; }
+
+/* --- Blog: Grid/Flex-Items dürfen schrumpfen (verhindert Tabellen-Overflow) --- */
+.blog-article > *, .article-content, .article-header { min-width: 0; max-width: 100%; }
+.article-content > * { max-width: 100%; }
+.blog-table-scroll { width: 100%; }
