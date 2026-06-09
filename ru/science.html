@@ -387,13 +387,13 @@
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      var isOpen = mobileMenu.classList.contains('open');
+      mobileMenu.classList.toggle('mobile-menu--open');
+      var isOpen = mobileMenu.classList.contains('mobile-menu--open');
       menuBtn.setAttribute('aria-expanded', isOpen);
       mobileMenu.setAttribute('aria-hidden', !isOpen);
     });
     mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
+      mobileMenu.classList.remove('mobile-menu--open');
       menuBtn.setAttribute('aria-expanded', false);
       mobileMenu.setAttribute('aria-hidden', true);
     }));

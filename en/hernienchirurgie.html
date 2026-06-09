@@ -530,14 +530,20 @@
 
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
+    document.querySelectorAll('.mobile-menu__toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var t = document.getElementById(this.getAttribute('data-target'));
+        if (t) { var o = t.classList.toggle('mobile-menu__sub--open'); this.classList.toggle('mobile-menu__toggle--open', o); }
+      });
+    });
     menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      var isOpen = mobileMenu.classList.contains('open');
+      mobileMenu.classList.toggle('mobile-menu--open');
+      var isOpen = mobileMenu.classList.contains('mobile-menu--open');
       menuBtn.setAttribute('aria-expanded', isOpen);
       mobileMenu.setAttribute('aria-hidden', !isOpen);
     });
     mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
+      mobileMenu.classList.remove('mobile-menu--open');
       menuBtn.setAttribute('aria-expanded', false);
       mobileMenu.setAttribute('aria-hidden', true);
     }));

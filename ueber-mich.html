@@ -543,13 +543,13 @@
     var mobileMenu = document.getElementById('mobileMenu');
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', function() {
-        var isOpen = mobileMenu.classList.toggle('open');
+        var isOpen = mobileMenu.classList.toggle('mobile-menu--open');
         menuBtn.setAttribute('aria-expanded', isOpen);
         mobileMenu.setAttribute('aria-hidden', !isOpen);
       });
       mobileMenu.querySelectorAll('a').forEach(function(l) {
         l.addEventListener('click', function() {
-          mobileMenu.classList.remove('open');
+          mobileMenu.classList.remove('mobile-menu--open');
           menuBtn.setAttribute('aria-expanded', 'false');
           mobileMenu.setAttribute('aria-hidden', 'true');
         });

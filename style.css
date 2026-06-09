@@ -710,6 +710,12 @@ button:focus:not(:focus-visible) {
   max-height: 500px;
 }
 
+/* Statische Sub-Menus (header + sub, ohne Akkordeon-Button) immer sichtbar */
+.mobile-menu__header + .mobile-menu__sub {
+  max-height: none;
+  overflow: visible;
+}
+
 .mobile-menu__sub a {
   display: block;
   font-family: var(--font-body);

@@ -520,10 +520,41 @@
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('nav--solid', window.scrollY > 50));
 
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+        var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.toggle('mobile-menu--open');
+        menuBtn.classList.toggle('nav__menu-btn--open', isOpen);
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+        document.body.classList.toggle('no-scroll', isOpen);
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('mobile-menu--open')) {
+          mobileMenu.classList.remove('mobile-menu--open');
+          menuBtn.classList.remove('nav__menu-btn--open');
+          document.body.classList.remove('no-scroll');
+        }
+      });
+      document.querySelectorAll('.mobile-menu__toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var target = document.getElementById(this.getAttribute('data-target'));
+          if (target) {
+            var o = target.classList.toggle('mobile-menu__sub--open');
+            this.classList.toggle('mobile-menu__toggle--open', o);
+          }
+        });
+      });
+      mobileMenu.querySelectorAll('a').forEach(function(l) {
+        l.addEventListener('click', function() {
+          mobileMenu.classList.remove('mobile-menu--open');
+          menuBtn.classList.remove('nav__menu-btn--open');
+          document.body.classList.remove('no-scroll');
+        });
+      });
+    }
 
     // === FADE-UP ANIMATIONS ===
     var fadeEls = document.querySelectorAll('.fade-up');
