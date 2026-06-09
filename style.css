@@ -3936,6 +3936,14 @@ img.mural__image {
     padding: 1.75rem 1.5rem;
   }
   .verbaende__card--featured .verbaende__card-stats { margin-left: 0; }
+  /* Breite Tabellen (Blog) auf Mobile horizontal scrollbar statt Seiten-Overflow */
+  table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (max-width: 480px) {
@@ -4330,7 +4338,7 @@ img.mural__image {
     font-size: clamp(28px, 7vw, 40px);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    hyphens: auto;
+    hyphens: manual;
   }
 
   /* Presse Cards */
