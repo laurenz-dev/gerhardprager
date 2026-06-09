@@ -40,7 +40,7 @@
         .bmi-normal { color: #28a745; font-weight: bold; }
         .bmi-overweight { color: #ffc107; font-weight: bold; }
         .bmi-obese { color: #dc3545; font-weight: bold; }
-        .classification-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .classification-table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 20px 0; }
         .classification-table th, .classification-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
         .classification-table th { background-color: #1e5a96; color: white; }
         .classification-table tr:nth-child(even) { background-color: #f9f9f9; }
@@ -48,6 +48,9 @@
         .faq-section { background-color: #fafbfc; padding: 20px; margin: 20px 0; border-radius: 4px; }
         .faq-question { font-weight: bold; color: #1e5a96; margin-top: 15px; }
         .faq-answer { margin-top: 10px; }
+    
+        /* Tabellen auf schmalen Screens horizontal scrollbar */
+        table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
     </style>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
