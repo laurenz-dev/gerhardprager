@@ -1,3 +1,10 @@
+# =========================================================
+#  HOST-KANONISIERUNG: non-www -> www (301)
+#  (Beide Domains haengen am selben Cloudflare-Pages-Projekt.
+#   Alternative: Cloudflare Bulk Redirect Rule auf Zone-Ebene.)
+# =========================================================
+https://gerhardprager.eu/* https://www.gerhardprager.eu/:splat 301
+
 # Alte englische Datei-Slugs -> neue deutsche clean URLs (301)
 /procedures     /eingriffe       301
 /about          /ueber-mich      301
@@ -39,3 +46,79 @@
 # --- Auffangregel: ALLES uebrige unter /index.php/ ---
 /index.php/*                       /               301
 /index.php                         /               301
+
+# =========================================================
+#  .html -> Clean URL (301) — Canonical-Konsolidierung
+#  Sitemap & Canonicals nutzen Clean URLs; alte .html-Links
+#  (intern & extern) werden hart umgeleitet.
+# =========================================================
+/index.html                                             /                                             301
+/eingriffe.html                                         /eingriffe                                    301
+/ueber-mich.html                                        /ueber-mich                                   301
+/wissenschaft.html                                      /wissenschaft                                 301
+/presse.html                                            /presse                                       301
+/kontakt.html                                           /kontakt                                      301
+/magenbypass.html                                       /magenbypass                                  301
+/schlauchmagen.html                                     /schlauchmagen                                301
+/omega-loop.html                                        /omega-loop                                   301
+/sadi-s.html                                            /sadi-s                                       301
+/bpd-ds.html                                            /bpd-ds                                       301
+/magenballon.html                                       /magenballon                                  301
+/esg.html                                               /esg                                          301
+/tore.html                                              /tore                                         301
+/schilddruese.html                                      /schilddruese                                 301
+/nebenschilddruese.html                                 /nebenschilddruese                            301
+/nebenniere.html                                        /nebenniere                                   301
+/hernienchirurgie.html                                  /hernienchirurgie                             301
+/hiatushernie.html                                      /hiatushernie                                 301
+/gallenblasenentfernung.html                            /gallenblasenentfernung                       301
+/darmchirurgie.html                                     /darmchirurgie                                301
+/impressum.html                                         /impressum                                    301
+/datenschutz.html                                       /datenschutz                                  301
+/blog/abnehmspritze-oder-operation.html                 /blog/abnehmspritze-oder-operation            301
+/blog/adipositas-behandlung-erster-schritt-wien.html    /blog/adipositas-behandlung-erster-schritt-wien 301
+/blog/adipositas-behandlung-wien.html                   /blog/adipositas-behandlung-wien              301
+/blog/adipositas-chirurgie-krankenkasse-oesterreich.html /blog/adipositas-chirurgie-krankenkasse-oesterreich 301
+/blog/adipositas-operation-krankenkasse.html            /blog/adipositas-operation-krankenkasse       301
+/blog/bariatric-surgery-vienna.html                     /blog/bariatric-surgery-vienna                301
+/blog/best-bariatric-surgeon-vienna.html                /blog/best-bariatric-surgeon-vienna           301
+/blog/bmi-rechner-adipositas.html                       /blog/bmi-rechner-adipositas                  301
+/blog/diabetes-typ-2-operation.html                     /blog/diabetes-typ-2-operation                301
+/blog/gastric-sleeve-vienna.html                        /blog/gastric-sleeve-vienna                   301
+/blog/index.html                                        /blog/                                        301
+/blog/leben-nach-magenbypass.html                       /blog/leben-nach-magenbypass                  301
+/blog/life-after-bariatric-surgery.html                 /blog/life-after-bariatric-surgery            301
+/blog/magenbypass-vs-schlauchmagen.html                 /blog/magenbypass-vs-schlauchmagen            301
+/blog/magenbypass-wien.html                             /blog/magenbypass-wien                        301
+/blog/magenverkleinerung-kosten-oesterreich.html        /blog/magenverkleinerung-kosten-oesterreich   301
+/blog/nach-ozempic-wieder-zugenommen.html               /blog/nach-ozempic-wieder-zugenommen          301
+/blog/obesity-surgery-europe.html                       /blog/obesity-surgery-europe                  301
+/blog/omega-loop-magenbypass.html                       /blog/omega-loop-magenbypass                  301
+/blog/ozempic-nebenwirkungen.html                       /blog/ozempic-nebenwirkungen                  301
+/blog/ozempic-wirkt-nicht-mehr.html                     /blog/ozempic-wirkt-nicht-mehr                301
+/blog/reflux-operation-wien.html                        /blog/reflux-operation-wien                   301
+/blog/schilddruese-operation-ablauf.html                /blog/schilddruese-operation-ablauf           301
+/blog/schilddruese-operation-wien.html                  /blog/schilddruese-operation-wien             301
+/blog/schlauchmagen-wien.html                           /blog/schlauchmagen-wien                      301
+/blog/weight-loss-surgery-cost-austria.html             /blog/weight-loss-surgery-cost-austria        301
+/en/about.html                                          /en/about                                     301
+/en/bpd-ds.html                                         /en/bpd-ds                                    301
+/en/contact.html                                        /en/contact                                   301
+/en/darmchirurgie.html                                  /en/darmchirurgie                             301
+/en/esg.html                                            /en/esg                                       301
+/en/gallenblasenentfernung.html                         /en/gallenblasenentfernung                    301
+/en/hernienchirurgie.html                               /en/hernienchirurgie                          301
+/en/hiatushernie.html                                   /en/hiatushernie                              301
+/en/index.html                                          /en/                                          301
+/en/magenballon.html                                    /en/magenballon                               301
+/en/magenbypass.html                                    /en/magenbypass                               301
+/en/nebenniere.html                                     /en/nebenniere                                301
+/en/nebenschilddruese.html                              /en/nebenschilddruese                         301
+/en/omega-loop.html                                     /en/omega-loop                                301
+/en/press.html                                          /en/press                                     301
+/en/procedures.html                                     /en/procedures                                301
+/en/sadi-s.html                                         /en/sadi-s                                    301
+/en/schilddruese.html                                   /en/schilddruese                              301
+/en/schlauchmagen.html                                  /en/schlauchmagen                             301
+/en/science.html                                        /en/science                                   301
+/en/tore.html                                           /en/tore                                      301
