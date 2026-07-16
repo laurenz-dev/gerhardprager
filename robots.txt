@@ -1,13 +1,8 @@
 # robots.txt — gerhardprager.eu
 # Eine Wahrheit, keine Widersprueche: alles erlaubt, Sitemap + llms.txt referenziert.
 #
-# WICHTIG (manueller Schritt im Cloudflare-Dashboard):
-# Cloudflare injiziert derzeit einen "Managed robots.txt"-Block, der GPTBot,
-# ClaudeBot, CCBot, Google-Extended u.a. per "Disallow: /" aussperrt und
-# "Content-Signal: ai-train=no" setzt. Das widerspricht der eigenen
-# AEO-/llms.txt-Strategie. Abschalten unter:
-# Cloudflare Dashboard -> Zone gerhardprager.eu -> AI Crawl Control / Bots
-# -> "Manage AI bots" bzw. "robots.txt management" deaktivieren.
+# Hinweis: Cloudflares Managed-robots.txt/AI-Bot-Blockade wurde am 15.07.2026
+# im Dashboard deaktiviert. Diese Datei ist die einzige Wahrheit.
 
 User-agent: *
 Allow: /

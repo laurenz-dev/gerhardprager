@@ -8,12 +8,14 @@
   <meta name="description" content="Terminvereinbarung bei Univ.-Prof. Dr. Gerhard Prager: +43 660 489 58 51. Kaiserstraße 43/4a, 1070 Wien. Nach Terminvereinbarung. Wahlarzt.">
   <meta property="og:title" content="Kontakt & Termin - Univ.-Prof. Dr. Gerhard Prager | Wahlarztordination Wien 7">
   <meta property="og:description" content="Terminvereinbarung bei Univ.-Prof. Dr. Gerhard Prager: +43 660 489 58 51. Kaiserstraße 43/4a, 1070 Wien. Nach Terminvereinbarung. Wahlarzt.">
-  <meta property="og:image" content="/images/foto-7.jpeg">
+  <meta property="og:image" content="https://www.gerhardprager.eu/images/foto-7.jpeg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.gerhardprager.eu/kontakt">
   <link rel="canonical" href="https://www.gerhardprager.eu/kontakt">
   <link rel="alternate" hreflang="de" href="https://www.gerhardprager.eu/kontakt">
   <link rel="alternate" hreflang="en" href="https://www.gerhardprager.eu/en/contact">
+  <link rel="alternate" hreflang="ru" href="https://www.gerhardprager.eu/ru/contact">
+  <link rel="alternate" hreflang="ar" href="https://www.gerhardprager.eu/ar/contact">
   <link rel="alternate" hreflang="x-default" href="https://www.gerhardprager.eu/kontakt">
   <link rel="stylesheet" href="style.css">
 
@@ -26,7 +28,7 @@
     "url": "https://www.gerhardprager.eu/kontakt",
     "mainEntity": {
       "@type": "Physician",
-      "name": "Univ.-Prof. Dr. Gerhard Prager",
+      "sameAs": ["https://orcid.org/0000-0001-6435-9264", "https://www.researchgate.net/profile/Gerhard-Prager", "https://www.linkedin.com/in/gerhard-prager-184a0869/", "https://www.meduniwien.ac.at/web/ueber-uns/news/2021/news-im-august-2021/gerhard-prager-tritt-professur-im-fachbereich-bariatrische-chirurgie-an/"], "name": "Univ.-Prof. Dr. Gerhard Prager",
       "telephone": "+436604895851",
       "email": "dr.prager_ordination@icloud.com",
       "address": {
@@ -264,96 +266,19 @@
     </div>
   </section>
 
-  <!-- DISKRETES KONTAKTFORMULAR -->
+  <!-- DISKRETE SCHRIFTLICHE ANFRAGE (bewusst kein Formular) -->
   <section class="form-section" id="anfrage" style="padding:64px 0; background:var(--bg-alt,#f1eeea);">
     <div class="container">
-      <div style="max-width:680px; margin:0 auto; background:var(--bg-white,#fff); border:1px solid #e5e0d8; border-radius:6px; padding:40px 36px;">
+      <div style="max-width:680px; margin:0 auto; background:var(--bg-white,#fff); border:1px solid #e5e0d8; border-radius:6px; padding:40px 36px; text-align:center;">
         <p class="overline" style="color:var(--warm,#c4a87a); letter-spacing:2px; font-size:13px; margin:0 0 8px;">VERTRAULICHE ANFRAGE</p>
         <h2 style="margin:0 0 10px; color:var(--power,#2b3a4a);">Lieber schreiben statt anrufen?</h2>
-        <p style="margin:0 0 24px; color:var(--text-secondary,#5a5550); line-height:1.6;">Kein Problem. Schreiben Sie uns Ihr Anliegen &ndash; <strong>vertraulich, unverbindlich und ohne Verpflichtung</strong>. Wir melden uns diskret bei Ihnen zur&uuml;ck. Sie m&uuml;ssen nicht telefonieren.</p>
-
-        <form id="kontaktForm" method="POST" action="/api/kontakt" novalidate>
-          <div style="margin-bottom:18px;">
-            <label for="kf-name" style="display:block; font-weight:600; margin-bottom:6px; color:var(--text,#2c2825);">Wie d&uuml;rfen wir Sie ansprechen?*</label>
-            <input id="kf-name" name="name" type="text" required style="width:100%; padding:12px 14px; border:1px solid #ccc6bc; border-radius:4px; font-size:16px;">
-          </div>
-
-          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:6px;">
-            <div style="flex:1; min-width:220px;">
-              <label for="kf-email" style="display:block; font-weight:600; margin-bottom:6px; color:var(--text,#2c2825);">Ihre E-Mail</label>
-              <input id="kf-email" name="email" type="email" style="width:100%; padding:12px 14px; border:1px solid #ccc6bc; border-radius:4px; font-size:16px;">
-            </div>
-            <div style="flex:1; min-width:220px;">
-              <label for="kf-tel" style="display:block; font-weight:600; margin-bottom:6px; color:var(--text,#2c2825);">oder Telefon (f&uuml;r diskreten R&uuml;ckruf)</label>
-              <input id="kf-tel" name="telefon" type="tel" style="width:100%; padding:12px 14px; border:1px solid #ccc6bc; border-radius:4px; font-size:16px;">
-            </div>
-          </div>
-          <p style="margin:0 0 18px; font-size:13px; color:var(--text-muted,#787370);">Bitte mindestens eine Kontaktm&ouml;glichkeit angeben.</p>
-
-          <div style="margin-bottom:18px;">
-            <span style="display:block; font-weight:600; margin-bottom:6px; color:var(--text,#2c2825);">Wie m&ouml;chten Sie kontaktiert werden?</span>
-            <label style="margin-right:18px; font-weight:400;"><input type="radio" name="kontaktart" value="E-Mail"> E-Mail</label>
-            <label style="font-weight:400;"><input type="radio" name="kontaktart" value="Rückruf"> R&uuml;ckruf</label>
-          </div>
-
-          <div style="margin-bottom:18px;">
-            <label for="kf-msg" style="display:block; font-weight:600; margin-bottom:6px; color:var(--text,#2c2825);">Ihr Anliegen (optional)</label>
-            <textarea id="kf-msg" name="nachricht" rows="4" placeholder="Sie m&uuml;ssen keine Details nennen &ndash; ein kurzer Satz gen&uuml;gt." style="width:100%; padding:12px 14px; border:1px solid #ccc6bc; border-radius:4px; font-size:16px; resize:vertical;"></textarea>
-          </div>
-
-          <!-- Spam-Honeypot (für Menschen unsichtbar) -->
-          <div aria-hidden="true" style="position:absolute; left:-9999px;">
-            <label>Bitte leer lassen <input name="website" type="text" tabindex="-1" autocomplete="off"></label>
-          </div>
-
-          <label style="display:flex; gap:10px; align-items:flex-start; margin-bottom:22px; font-weight:400; font-size:14px; color:var(--text-secondary,#5a5550); line-height:1.5;">
-            <input id="kf-consent" name="einwilligung" type="checkbox" required style="margin-top:3px;">
-            <span>Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. Es gilt die <a href="/datenschutz" style="color:var(--power,#2b3a4a); text-decoration:underline;">Datenschutzerkl&auml;rung</a>.*</span>
-          </label>
-
-          <button type="submit" class="btn btn-accent" style="background:var(--power,#2b3a4a); color:#fff; border:none; padding:14px 28px; border-radius:4px; font-size:16px; font-weight:600; cursor:pointer; width:100%;">Anfrage senden</button>
-          <p style="margin:12px 0 0; text-align:center; font-size:13px; color:var(--text-muted,#787370);">&#128274; Ihre Anfrage wird vertraulich behandelt. Oder rufen Sie an: <a href="tel:+436604895851" style="color:var(--power,#2b3a4a);">+43 660 489 58 51</a></p>
-        </form>
-
-        <div id="kontaktDanke" style="display:none; text-align:center; padding:24px 0;">
-          <div style="font-size:40px; line-height:1; margin-bottom:12px;">&#10003;</div>
-          <h3 style="margin:0 0 8px; color:var(--power,#2b3a4a);">Vielen Dank &ndash; Ihre Anfrage ist eingegangen.</h3>
-          <p style="margin:0; color:var(--text-secondary,#5a5550);">Wir melden uns diskret bei Ihnen zur&uuml;ck.</p>
-        </div>
+        <p style="margin:0 0 28px; color:var(--text-secondary,#5a5550); line-height:1.6;">Kein Problem. Schreiben Sie uns eine E-Mail &ndash; <strong>vertraulich, unverbindlich und ohne Verpflichtung</strong>. Wir melden uns diskret bei Ihnen zur&uuml;ck.</p>
+        <a href="mailto:dr.prager_ordination@icloud.com?subject=Anfrage%20Erstgespr%C3%A4ch" class="btn btn-accent" style="display:inline-block; background:var(--power,#2b3a4a); color:#fff; border:none; padding:14px 28px; border-radius:4px; font-size:16px; font-weight:600; text-decoration:none;">E-Mail schreiben &rarr;</a>
+        <p style="margin:16px 0 0; font-size:14px; color:var(--text-secondary,#5a5550);"><a href="mailto:dr.prager_ordination@icloud.com" style="color:var(--power,#2b3a4a);">dr.prager_ordination@icloud.com</a></p>
+        <p style="margin:14px 0 0; font-size:13px; color:var(--text-muted,#787370);">&#128274; Ihre Nachricht wird vertraulich behandelt. Oder rufen Sie an: <a href="tel:+436604895851" style="color:var(--power,#2b3a4a);">+43 660 489 58 51</a></p>
       </div>
     </div>
   </section>
-
-  <script>
-    (function(){
-      var form = document.getElementById('kontaktForm');
-      if(!form) return;
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var name = form.name.value.trim();
-        var email = form.email.value.trim();
-        var tel = form.telefon.value.trim();
-        var consent = document.getElementById('kf-consent').checked;
-        if(!name){ alert('Bitte geben Sie an, wie wir Sie ansprechen dürfen.'); return; }
-        if(!email && !tel){ alert('Bitte geben Sie mindestens eine Kontaktmöglichkeit an (E-Mail oder Telefon).'); return; }
-        if(!consent){ alert('Bitte bestätigen Sie die Einwilligung zur Verarbeitung Ihrer Daten.'); return; }
-        if(form.website.value){ return; } // Honeypot: stiller Abbruch bei Bots
-        var btn = form.querySelector('button[type=submit]');
-        btn.disabled = true; btn.textContent = 'Wird gesendet …';
-        var data = { name:name, email:email, telefon:tel,
-          kontaktart:(form.querySelector('input[name=kontaktart]:checked')||{}).value||'',
-          nachricht:form.nachricht.value.trim() };
-        fetch('/api/kontakt', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) })
-          .then(function(r){ if(!r.ok) throw new Error('fail');
-            form.style.display='none'; document.getElementById('kontaktDanke').style.display='block';
-          })
-          .catch(function(){
-            btn.disabled=false; btn.textContent='Anfrage senden';
-            alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut – oder rufen Sie uns an: +43 660 489 58 51');
-          });
-      });
-    })();
-  </script>
 
   <!-- GOOGLE MAPS -->
   <section class="map-section">
